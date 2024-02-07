@@ -1,0 +1,28 @@
+.l-container {
+	@apply flex w-[97.35%] mx-auto relative;
+}
+
+.l-container--wrap {
+	@apply flex-wrap;
+}
+
+.l-container--col {
+	@apply flex-col;
+}
+
+.l-px {
+	@apply px-[1.325%];
+}
+
+.page__wrap {
+	@apply flex flex-col h-full;
+}
+
+.page__container {
+	@apply min-h-full flex flex-col;
+}
+
+.page {
+	@apply relative z-[2];
+	flex: 1 0 auto;
+}

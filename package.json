@@ -1,0 +1,59 @@
+{
+	"name": "prem-website",
+	"private": true,
+	"version": "0.0.1",
+	"description": "Prem AI website",
+	"main": "vite.config.js",
+	"scripts": {
+		"prepare": "npx simple-git-hooks",
+		"start": "vite --host",
+		"build": "vite build --emptyOutDir && prettier --write dist/**/*.html",
+		"preview": "vite preview",
+		"lint:eslint": "eslint \"src/**/*.js\"",
+		"lint:prettier": "prettier --check src",
+		"fix": "run-s fix:{eslint,prettier}",
+		"fix:eslint": "npm run lint:eslint -- --fix",
+		"fix:prettier": "prettier --write src"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/premAI-io/prem-website.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/premAI-io/prem-website/issues"
+	},
+	"homepage": "https://github.com/premAI-io/prem-website#readme",
+	"devDependencies": {
+		"autoprefixer": "^10.4.17",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import": "^2.29.1",
+		"postcss": "^8.4.34",
+		"postcss-import": "^16.0.0",
+		"prettier": "^3.2.5",
+		"simple-git-hooks": "^2.9.0",
+		"tailwindcss": "^3.4.1",
+		"vite": "^5.0.12",
+		"vite-plugin-handlebars": "^2.0.0"
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix --quiet",
+			"prettier --write --log-level=error"
+		],
+		"*.{css,scss}": [
+			"prettier --write --log-level=error"
+		],
+		"*.{html,json}": [
+			"prettier --write --log-level=error"
+		]
+	},
+	"simple-git-hooks": {
+		"pre-commit": "npx lint-staged"
+	},
+	"dependencies": {
+		"gsap": "^3.12.5"
+	}
+}

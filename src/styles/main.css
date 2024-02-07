@@ -1,0 +1,114 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/* Atoms */
+@import "./atoms/typography.css";
+@import "./atoms/layout.css";
+
+/* Components */
+@import "./components/footer.css";
+
+@import "tailwindcss/utilities";
+
+:root {
+	--base-font-size: 16px;
+	--ease-elastic: cubic-bezier(0.32, 1.259, 0.375, 1.15);
+	--ease-snappy: cubic-bezier(0.694, 0.048, 0.335, 1);
+	--ease-cubic-snap: cubic-bezier(1, 0, 0.175, 1);
+	--ease-bounce: cubic-bezier(0.3, 1.4, 0.5, 0.9);
+	--ease-power4: cubic-bezier(0.215, 0.61, 0.355, 1);
+	--ease-soft: cubic-bezier(0.165, 0.84, 0.44, 1);
+	--ease-snap: cubic-bezier(0, 0.49, 0.09, 0.97);
+	--ease-sosoft: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+	--z-god: 420;
+	--z-nav: 90;
+	--z-default: 1;
+	--z-behind: -1;
+}
+
+@layer base {
+	* {
+		&,
+		&:before,
+		&:after {
+			box-sizing: border-box;
+		}
+	}
+
+	html,
+	body {
+		width: 100%;
+		height: 100%;
+	}
+
+	html {
+		position: relative;
+	}
+
+	body {
+		@apply w-full min-h-full text-black font-sans;
+		font-size: var(--base-font-size);
+		-webkit-tap-highlight-color: transparent;
+		-webkit-text-size-adjust: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	::selection,
+	::-webkit-selection {
+		background: theme("colors.black");
+		color: theme("colors.white");
+		text-shadow: none;
+	}
+
+	img::selection {
+		background: transparent;
+	}
+
+	main,
+	section {
+		width: 100%;
+		position: relative;
+	}
+
+	img,
+	picture,
+	video,
+	audio,
+	embed,
+	object,
+	input,
+	iframe {
+		max-width: 100%;
+		margin: 0;
+	}
+
+	img {
+		display: inline-block;
+
+		a:hover & {
+			border: none;
+			background: none;
+		}
+	}
+
+	x::-ms-reveal,
+	img[src*=".svg"] {
+		width: 100%;
+	}
+
+	a img {
+		border: none;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	b,
+	strong {
+		font-weight: bold;
+	}
+}
