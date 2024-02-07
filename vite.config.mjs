@@ -3,6 +3,13 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 import handlebars from "vite-plugin-handlebars";
 
+const componentsPropsConfig = {
+	button: ["disabled", "onclick", "type"],
+	input: ["disabled", "name", "placeholder", "required", "type", "value"],
+	select: ["disabled", "name", "placeholder", "required", "value"],
+	textarea: ["disabled", "name", "placeholder", "required", "value"],
+};
+
 const createEntryPoints = () => {
 	const fileNameList = fs.readdirSync(resolve(__dirname, "./src/"));
 	const htmlFileList = fileNameList.filter((file) => /.html$/.test(file));
@@ -49,6 +56,70 @@ export default defineConfig({
 			partialDirectory: resolve(__dirname, "./src/components"),
 			context(pagePath) {
 				return metadata[pagePath];
+			},
+			helpers: {
+				arr: (...args) => {
+					return Array.from(args).slice(0, args.length - 1);
+				},
+				attributes: (component, attributes, root) => {
+					if (
+						Array.isArray(componentsPropsConfig[component]) &&
+						componentsPropsConfig[component].length
+					) {
+						return Object.entries(attributes)
+							.filter(([key, value]) => {
+								return (
+									componentsPropsConfig[component].includes(key) &&
+									["string", "boolean", "number"].includes(typeof value) &&
+									(!(key in root) || root[key] !== value)
+								);
+							})
+							.map(([key, value]) => `${key}="${value}"`)
+							.join("\n");
+					} else {
+						console.warn(`No component config found for "${component}"`);
+					}
+					return null;
+				},
+				classes: (...classes) => {
+					return classes
+						.filter((c) => typeof c === "string" && c.trim().length > 0)
+						.join(" ");
+				},
+				concat: (...strings) => {
+					return strings.filter((s) => typeof s === "string" && !!s).join("");
+				},
+				ifCond: (cond, value) => {
+					if (cond) return value;
+					return null;
+				},
+				op: (v1, operator, v2) => {
+					switch (operator) {
+						case "===":
+							return v1 === v2;
+						case "!==":
+							return v1 !== v2;
+						case "<":
+							return v1 < v2;
+						case "<=":
+							return v1 <= v2;
+						case ">":
+							return v1 > v2;
+						case ">=":
+							return v1 >= v2;
+						case "&&":
+							return v1 && v2;
+						case "||":
+							return v1 || v2;
+						case "??":
+							return v1 ?? v2;
+						default:
+							return false;
+					}
+				},
+				json: (obj) => {
+					return JSON.stringify(obj);
+				},
 			},
 		}),
 	],
