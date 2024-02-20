@@ -1,0 +1,13 @@
+<button
+  class="{{classes
+    "button"
+    (concat "button--" (op theme "||" "primary"))
+    (concat "button--" (op size "||" "sm"))
+    (ifCond outline "button--outline")
+    (ifCond icon "button--icon")
+    class
+  }}"
+  {{{attributes "button" this @root}}}
+>
+  {{> @partial-block}}
+</button>

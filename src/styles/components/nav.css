@@ -1,0 +1,37 @@
+.nav {
+	@apply fixed top-0 left-0 w-full pt-10 pb-7 z-[var(--z-nav)];
+
+	&::before {
+		content: "";
+		@apply absolute top-0 left-0 w-full h-full pointer-events-none z-[1];
+		background: linear-gradient(
+			180deg,
+			rgba(40, 41, 45, 0.2) 50%,
+			rgba(40, 41, 45, 0) 140.73%
+		);
+		backdrop-filter: blur(2px);
+	}
+}
+
+.nav__container {
+	@apply justify-between items-center z-[2];
+}
+
+.nav__logo {
+	svg {
+		@apply w-auto h-[54px];
+	}
+}
+
+.nav__items {
+	@apply flex justify-center items-center py-2 px-4 gap-x-3 rounded-3xl;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav__link {
+	@apply flex py-3 px-4 rounded-3xl;
+}
+
+.nav__toggle {
+	@apply hidden;
+}

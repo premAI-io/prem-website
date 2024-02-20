@@ -1,0 +1,18 @@
+.button {
+	@apply inline-flex items-center justify-center py-3 px-8 relative overflow-hidden;
+	border-radius: 8px;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+	&.is-disabled {
+		@apply pointer-events-none opacity-30;
+	}
+}
+
+.button--primary {
+	background: var(--primary-gradient);
+}
+
+.button--secondary {
+	@apply border border-white border-opacity-30;
+	background: var(--secondary-gradient);
+}

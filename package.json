@@ -45,9 +45,6 @@
 		],
 		"*.{css,scss}": [
 			"prettier --write --log-level=error"
-		],
-		"*.{html,json}": [
-			"prettier --write --log-level=error"
 		]
 	},
 	"simple-git-hooks": {

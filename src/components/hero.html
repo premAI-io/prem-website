@@ -1,0 +1,8 @@
+<header
+	class="{{classes
+		"hero"
+		(ifCond variant (concat "hero--" (op variant "||" "default")))
+	}}"
+>
+	{{> @partial-block}}
+</header>

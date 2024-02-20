@@ -94,6 +94,9 @@ export default defineConfig({
 					if (cond) return value;
 					return null;
 				},
+				obj: (obj) => {
+					return obj.hash;
+				},
 				op: (v1, operator, v2) => {
 					switch (operator) {
 						case "===":

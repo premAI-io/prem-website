@@ -1,5 +1,5 @@
 .l-container {
-	@apply flex w-[97.35%] mx-auto relative;
+	@apply flex w-[92.6%] mx-auto relative;
 }
 
 .l-container--wrap {
@@ -11,7 +11,7 @@
 }
 
 .l-px {
-	@apply px-[1.325%];
+	@apply px-[3.7%];
 }
 
 .page__wrap {
