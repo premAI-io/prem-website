@@ -32,7 +32,7 @@ export default defineConfig({
 	},
 	root: "./src",
 	build: {
-		outDir: "../dist",
+		outDir: "../docs",
 		rollupOptions: {
 			output: {
 				assetFileNames: (assetInfo) => {

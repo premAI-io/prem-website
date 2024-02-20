@@ -7,7 +7,7 @@
 	"scripts": {
 		"prepare": "npx simple-git-hooks",
 		"start": "vite --host",
-		"build": "vite build --emptyOutDir && prettier --write dist/**/*.html",
+		"build": "vite build --emptyOutDir && prettier --write docs/**/*.html",
 		"preview": "vite preview",
 		"lint:eslint": "eslint \"src/**/*.js\"",
 		"lint:prettier": "prettier --check src",
