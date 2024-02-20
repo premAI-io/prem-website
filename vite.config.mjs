@@ -30,6 +30,7 @@ export default defineConfig({
 	server: {
 		host: true,
 	},
+	base: "",
 	root: "./src",
 	build: {
 		outDir: "../docs",
