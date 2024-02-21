@@ -1,0 +1,14 @@
+.trusted__title {
+	@apply text-center mb-11;
+}
+
+.trusted__rows {
+	@apply w-full relative overflow-hidden mb-20;
+}
+
+.trusted__divider {
+	@apply w-full;
+	svg {
+		@apply w-[960px] h-auto block mx-auto;
+	}
+}

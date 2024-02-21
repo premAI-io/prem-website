@@ -4,9 +4,14 @@
 		"title": "Home",
 		"description": "Home"
 	},
-	"/about.html": {
-		"pageName": "about",
-		"title": "about",
-		"description": "about"
+	"/company.html": {
+		"pageName": "company",
+		"title": "Company",
+		"description": "Company"
+	},
+	"/contact.html": {
+		"pageName": "contact",
+		"title": "Contact",
+		"description": "Contact"
 	}
 }

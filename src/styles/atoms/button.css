@@ -16,3 +16,28 @@
 	@apply border border-white border-opacity-30;
 	background: var(--secondary-gradient);
 }
+
+.button--icon {
+	@apply w-[42px] h-[42px] rounded-[50%] p-0;
+	background: none;
+}
+
+.button__icon {
+	@apply pointer-events-none;
+}
+
+.button__icon,
+.button__icon-inner,
+.button__icon-bg {
+	@apply w-full h-full absolute top-0 left-0;
+}
+
+.button__icon-inner {
+	@apply flex items-center justify-center;
+}
+
+.button__icon-bg {
+	svg {
+		@apply w-full h-full;
+	}
+}

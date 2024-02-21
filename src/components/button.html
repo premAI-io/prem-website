@@ -1,4 +1,4 @@
-<button
+<{{op tag "||" "button"}}
   class="{{classes
     "button"
     (concat "button--" (op theme "||" "primary"))
@@ -8,6 +8,7 @@
     class
   }}"
   {{{attributes "button" this @root}}}
+	{{{attributes "link" this @root}}}
 >
   {{> @partial-block}}
-</button>
+</{{op tag "||" "button"}}>

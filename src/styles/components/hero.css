@@ -1,0 +1,40 @@
+.hero {
+	@apply w-full relative;
+}
+
+.hero__container {
+	@apply relative items-center justify-between z-[2];
+}
+
+.hero__ill {
+	@apply absolute top-0 left-0 w-full pointer-events-none overflow-hidden opacity-70;
+	svg {
+		@apply relative w-[96%] mx-auto h-auto;
+		/* Svg width == Svg height == 96% of viewport width, minus 0.35 * viewport width */
+		top: calc((var(--v-width) * 0.61) - (var(--v-width) * 0.96));
+	}
+}
+
+.hero__post-preview {
+	@apply mb-8;
+}
+
+.hero__title {
+	@apply mb-6;
+}
+
+.hero__subtitle {
+	@apply mb-10 text-gray-200;
+}
+
+.hero__ctas {
+	@apply flex items-center gap-x-7;
+}
+
+.hero--home {
+	@apply pt-[calc(var(--v-height)*0.3506)];
+	margin-bottom: calc(var(--v-width) * 0.2);
+	.hero__container {
+		@apply max-w-[1192px] items-center;
+	}
+}

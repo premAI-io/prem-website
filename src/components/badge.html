@@ -1,0 +1,11 @@
+<{{op tag "||" "a"}}
+  class="{{classes
+    "badge"
+    (concat "badge--" (op theme "||" "primary"))
+    (concat "badge--" (op size "||" "sm"))
+    class
+  }}"
+	{{{attributes "link" this @root}}}
+>
+  {{> @partial-block}}
+</{{op tag "||" "a"}}>

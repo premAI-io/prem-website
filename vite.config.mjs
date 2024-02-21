@@ -4,6 +4,7 @@ import { defineConfig } from "vite";
 import handlebars from "vite-plugin-handlebars";
 
 const componentsPropsConfig = {
+	link: ["href", "rel", "target"],
 	button: ["disabled", "onclick", "type"],
 	input: ["disabled", "name", "placeholder", "required", "type", "value"],
 	select: ["disabled", "name", "placeholder", "required", "value"],

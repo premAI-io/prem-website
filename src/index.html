@@ -1,14 +1,53 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
 	{{> head}}
 
 	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
 		<div class="page__wrap" data-router-view="homepage">
 			{{> nav}} {{#>hero variant="home" }}
-			<h1>Home</h1>
+
+			<div class="hero__ill" aria-hidden="true">
+				{{> illustrations/space-ill}}
+			</div>
+
+			<div class="l-container hero__container">
+				<div class="hero__content">
+					<div class="hero__post-preview">
+						{{#>badge
+						href="https://blog.premai.io/announcing-our-startup-grants-program/"
+						target="_blank" rel="noopener" }}
+						<div class="badge__icon">{{> icons/sparkles}}</div>
+						<div class="badge__text">
+							We launched a Generative AI Startup Program! Apply now
+							<span class="badge__arrow">{{> icons/chevron-right}}</span>
+						</div>
+						{{/badge}}
+					</div>
+
+					<h1 class="hero__title">
+						AI that you own. <br />
+						<span class="t-grad">Always.</span>
+					</h1>
+					<p class="h4 hero__subtitle">
+						Accelerating the advent of personalized LLMS.
+					</p>
+
+					<div class="hero__ctas">
+						{{#>button tag="a" href="" }} Start building now {{/button}}
+						{{#>button tag="a" href="./contact.html" theme="secondary" }}
+						Contact sales {{/button}}
+					</div>
+				</div>
+
+				<div class="hero__recap">{{> features-carousel}}</div>
+			</div>
 			{{/hero}}
+
+			<main>{{> trusted}}</main>
+
+			{{> footer}}
 		</div>
 
-		{{> footer}}
+		{{> tail}}
 	</body>
 </html>

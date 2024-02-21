@@ -1,0 +1,30 @@
+.features-carousel {
+	@apply w-[463px];
+}
+
+.features-carousel__container {
+	@apply w-full mb-10;
+}
+
+.features-carousel__item {
+	@apply w-full h-[66px] relative overflow-hidden rounded-3xl border border-white border-opacity-30;
+	background: var(--secondary-gradient);
+	&:not(:last-child) {
+		@apply mb-3;
+	}
+}
+
+.features-carousel__item-content {
+	@apply absolute bottom-[18px] left-8;
+}
+
+.features-carousel__item-title {
+	@apply text-[18px] font-medium leading-[1.333];
+}
+
+.features-carousel__item-text {
+}
+
+.features-carousel__item-cta {
+	@apply absolute top-3 right-8 rotate-180 origin-center w-[42px] h-[42px];
+}

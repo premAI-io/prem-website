@@ -5,9 +5,13 @@
 @import "./atoms/typography.css";
 @import "./atoms/layout.css";
 @import "./atoms/button.css";
+@import "./atoms/badge.css";
 
 /* Components */
 @import "./components/nav.css";
+@import "./components/hero.css";
+@import "./components/features-carousel.css";
+@import "./components/trusted.css";
 @import "./components/footer.css";
 
 @import "tailwindcss/utilities";
@@ -72,7 +76,7 @@
 
 	::selection,
 	::-webkit-selection {
-		@apply bg-gray-800 text-white;
+		@apply bg-white text-gray-800;
 		text-shadow: none;
 	}
 

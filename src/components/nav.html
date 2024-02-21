@@ -1,6 +1,6 @@
 <nav class="nav">
 	<div class="l-container nav__container">
-		<div class="nav__logo">{{> icons/logo}}</div>
+		<a href="./" class="nav__logo">{{> icons/logo}}</a>
 
 		<ul class="nav__items">
 			<li class="nav__item">
@@ -21,7 +21,8 @@
 		</ul>
 
 		<div class="nav__cta">
-			{{#>button theme="secondary" }} Signup {{/button}}
+			{{#>button tag="a" href="https://app.premai.io/accounts/signup/"
+			target="_blank" rel="noopener" theme="secondary" }} Signup {{/button}}
 		</div>
 
 		<div class="nav__toggle js-nav-toggle"></div>
