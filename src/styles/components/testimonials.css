@@ -1,0 +1,76 @@
+.testimonials {
+	@apply w-full relative py-[calc(var(--v-height)*0.3)] mb-28;
+}
+
+.testimonials__ill {
+	@apply absolute top-1/2 left-0 w-full -translate-y-1/2 overflow-hidden opacity-45;
+	svg {
+		@apply w-full h-auto;
+	}
+}
+
+.testimonials__container {
+	@apply flex-col max-w-[900px] z-[2];
+}
+
+.testimonials__head {
+	@apply mb-20 text-center;
+}
+
+.testimonials__label {
+	@apply mb-8;
+}
+
+.testimonials__title {
+	@apply mb-6;
+}
+
+.testimonials__text {
+	@apply max-w-[594px] mx-auto text-gray-200;
+}
+
+.testimonials__stack {
+	@apply w-full relative;
+}
+
+.testimonial__card {
+	@apply w-full rounded-2xl py-10 px-8 border border-white border-opacity-30;
+	background: var(--secondary-gradient);
+}
+
+.testimonial__card__body {
+	@apply mb-16;
+}
+
+.testimonial__card__text {
+	@apply font-normal;
+}
+
+.testimonial__card__end__inner {
+	@apply w-full flex items-center justify-between pt-4;
+}
+
+.testimonial__card__author {
+	@apply flex items-center;
+}
+
+.testimonial__card__author__avatar {
+	@apply w-14 h-14 rounded-[50%] border border-white border-opacity-30 flex items-center justify-center;
+	background: var(--secondary-gradient);
+}
+
+.testimonial__card__author__letter {
+	@apply text-gray-200 text-[22px] font-normal leading-[1.09];
+}
+
+.testimonial__card__author__content {
+	@apply ml-4;
+}
+
+.testimonial__card__author__title {
+	@apply text-white font-medium text-[22px] leading-[1.27] tracking-[0.2px] mb-1;
+}
+
+.testimonial__card__author__subtitle {
+	@apply text-gray-200 font-medium text-[14px] leading-[1.285];
+}

@@ -6,12 +6,23 @@
 @import "./atoms/layout.css";
 @import "./atoms/button.css";
 @import "./atoms/badge.css";
+@import "./atoms/divider-label.css";
 
 /* Components */
 @import "./components/nav.css";
 @import "./components/hero.css";
 @import "./components/features-carousel.css";
 @import "./components/trusted.css";
+@import "./components/collaborate.css";
+@import "./components/platform.css";
+@import "./components/models.css";
+@import "./components/solution.css";
+@import "./components/compute.css";
+@import "./components/testimonials.css";
+@import "./components/status.css";
+@import "./components/blog.css";
+@import "./components/book.css";
+@import "./components/newsletter.css";
 @import "./components/footer.css";
 
 @import "tailwindcss/utilities";

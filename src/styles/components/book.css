@@ -1,0 +1,43 @@
+.book__section {
+	@apply mb-56;
+}
+
+.book__ill {
+	@apply absolute top-1/2 left-0 w-full h-auto -translate-y-1/2 pointer-events-none z-[1];
+	img {
+		@apply w-full h-auto;
+	}
+}
+
+.book__bg {
+	@apply absolute inset-0 pointer-events-none z-[2];
+	background: radial-gradient(
+		45.89% 45.89% at 50.03% 54.89%,
+		rgba(245, 142, 142, 0.25) 0%,
+		rgba(127, 150, 255, 0) 88.5%
+	);
+}
+
+.book__content {
+	@apply relative z-[3];
+}
+
+.book__label {
+	@apply mb-6;
+}
+
+.book__title {
+	@apply text-center mb-7;
+}
+
+.book__text {
+	@apply text-center mx-auto max-w-[600px] mb-10;
+}
+
+.book__img {
+	@apply block w-[290px] h-auto mx-auto mb-12;
+}
+
+.book__cta {
+	@apply w-full flex justify-center mb-20;
+}

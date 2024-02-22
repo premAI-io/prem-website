@@ -1,0 +1,27 @@
+.status {
+	@apply w-[95%] max-w-[1200px] mx-auto rounded-2xl relative overflow-hidden border border-white border-opacity-30 py-36 pl-16 flex items-center mb-44;
+	background: var(--secondary-gradient);
+
+	/* &::before {
+		content: "";
+		@apply absolute inset-0 rounded-2xl pointer-events-none;
+
+		background: radial-gradient(
+			404.28% 106.25% at 98.38% 100%,
+			rgba(245, 142, 142, 0.45) 0%,
+			rgba(127, 150, 255, 0) 88.5%
+		);
+	} */
+}
+
+.status__content {
+	@apply max-w-[415px];
+}
+
+.status__title {
+	@apply text-[48px] font-medium leading-[1.125] mb-5;
+}
+
+.status__text {
+	@apply text-gray-200 mb-10;
+}

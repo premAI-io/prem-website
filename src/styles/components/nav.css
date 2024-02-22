@@ -24,8 +24,7 @@
 }
 
 .nav__items {
-	@apply flex justify-center items-center py-2 px-4 gap-x-3 rounded-3xl;
-	border: 1px solid rgba(255, 255, 255, 0.3);
+	@apply flex justify-center items-center py-2 px-4 gap-x-3 rounded-3xl border border-white border-opacity-30 bg-gray-800;
 }
 
 .nav__link {

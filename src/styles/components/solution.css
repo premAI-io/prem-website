@@ -1,0 +1,63 @@
+.solution {
+	@apply mb-44;
+}
+
+.solution__label {
+	@apply mb-8;
+}
+
+.solution__title {
+	@apply text-center mb-16;
+}
+
+.solution__stats {
+	@apply flex items-center justify-center gap-x-12 mb-12;
+}
+
+.solution__stat {
+	@apply flex flex-col items-center justify-center relative text-center w-[18.7%] rounded-2xl border border-white border-opacity-30 py-7 px-8;
+	background: var(--secondary-gradient);
+}
+
+.solution__stat-title {
+	@apply font-normal;
+	background: linear-gradient(
+		58deg,
+		#fffffc 0.26%,
+		rgba(255, 255, 255, 0) 95.97%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.solution__stat-text {
+	@apply text-gray-200;
+}
+
+.solution__divider {
+	@apply mb-12;
+}
+
+.solution__features {
+	@apply flex items-stretch justify-center gap-x-10 mb-20;
+}
+
+.solution__feature {
+	@apply w-[315px];
+}
+
+.solution__feature-icon {
+	@apply mb-3;
+	svg {
+		@apply w-6 h-6;
+	}
+}
+
+.solution__feature-text {
+	@apply text-gray-200;
+}
+
+.solution__cta {
+	@apply flex justify-center;
+}

@@ -43,9 +43,28 @@ h2,
 	line-height: 1.25;
 }
 
+h3,
+.h3 {
+	@apply text-[28px] font-medium leading-[1.1428];
+}
+
 h4,
 .h4 {
 	@apply text-[24px] font-normal leading-[1.333];
+}
+
+h5,
+.h5 {
+	@apply text-[20px] font-normal leading-[1.2];
+}
+
+p,
+.p {
+	@apply text-[16px] leading-[1.25];
+}
+
+.p-sm {
+	@apply text-[12px] leading-[1.5];
 }
 
 /* Utilities */

@@ -1,0 +1,20 @@
+.collaborate {
+	@apply mb-36;
+}
+
+.collaborate__label {
+	@apply mb-8;
+}
+
+.collaborate__title {
+	@apply text-center max-w-[798px] mx-auto mb-11;
+}
+
+.collaborate__items {
+	@apply flex items-center justify-center mb-20 gap-x-10;
+}
+
+.collaborate__item {
+	@apply flex items-center justify-center w-[15%] h-20 relative rounded-2xl border border-white border-opacity-30;
+	background: var(--secondary-gradient);
+}

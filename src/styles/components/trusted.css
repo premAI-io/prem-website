@@ -1,3 +1,7 @@
+.trusted {
+	@apply mb-36;
+}
+
 .trusted__title {
 	@apply text-center mb-11;
 }
@@ -6,9 +10,14 @@
 	@apply w-full relative overflow-hidden mb-20;
 }
 
-.trusted__divider {
-	@apply w-full;
-	svg {
-		@apply w-[960px] h-auto block mx-auto;
+.trusted__row {
+	@apply w-full relative flex items-center overflow-hidden;
+	&:not(:last-child) {
+		@apply mb-8;
 	}
+}
+
+.trusted__row-item {
+	@apply flex items-center justify-center w-[16.6667%] h-24 relative shrink-0 overflow-hidden rounded-2xl border border-white border-opacity-30 mr-10;
+	background: var(--secondary-gradient);
 }

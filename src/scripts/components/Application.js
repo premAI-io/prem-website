@@ -1,5 +1,6 @@
 import iman from "./InstanceManager";
 import layout from "./Layout";
+import MarqueeManager from "./MarqueeManager";
 import ViewportFixer from "./ViewportFixer";
 
 // helpers
@@ -17,6 +18,7 @@ class Application {
 			layout.init();
 
 			iman.add("viewportFixer", new ViewportFixer());
+			iman.add("marqueeManager", new MarqueeManager());
 		});
 
 		window.addEventListener("resize", debounce(this.onResize, 150));

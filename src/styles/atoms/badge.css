@@ -10,10 +10,8 @@
 	}
 }
 
-/* Temp - font size utilities management todo */
 .badge__text {
-	@apply flex items-center text-[12px] font-medium;
-	line-height: 1.666667;
+	@apply flex items-center font-medium;
 }
 
 .badge__arrow {

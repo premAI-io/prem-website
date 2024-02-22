@@ -1,0 +1,14 @@
+.divider-label {
+	@apply flex items-center justify-center;
+}
+
+.divider-label__ill {
+	@apply w-20;
+	svg {
+		@apply w-full h-auto;
+	}
+}
+
+.divider-label__text {
+	@apply text-center mx-8;
+}

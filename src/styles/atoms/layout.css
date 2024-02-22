@@ -14,6 +14,13 @@
 	@apply px-[3.7%];
 }
 
+.l-divider {
+	@apply w-full;
+	svg {
+		@apply w-full max-w-[960px] h-auto block mx-auto;
+	}
+}
+
 .page__wrap {
 	@apply flex flex-col h-full;
 }

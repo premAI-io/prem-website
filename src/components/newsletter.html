@@ -1,0 +1,37 @@
+<section class="newsletter__section">
+	<div class="newsletter__content">
+		<div class="divider-label newsletter__label">
+			<div class="divider-label__ill" aria-hidden="true">
+				{{> illustrations/divider-sm-left}}
+			</div>
+			<p class="divider-label__text h5">Newsletter</p>
+			<div class="divider-label__ill" aria-hidden="true">
+				{{> illustrations/divider-sm-right}}
+			</div>
+		</div>
+
+		<p class="h2 newsletter__title">Stay Tuned</p>
+		<p class="newsletter__text">
+			Receive early access to Prem's new Features & Releases.
+		</p>
+
+		<div class="newsletter__input-group">
+			<div class="newsletter__input-wrap">
+				<input
+					type="text"
+					class="newsletter__input"
+					placeholder="E-mail address..."
+				/>
+			</div>
+
+			{{#>button type="submit" }} Subscribe {{/button}}
+		</div>
+	</div>
+
+	<div class="newsletter__ill newsletter__ill--first" aria-hidden="true">
+		{{> illustrations/planet-left}}
+	</div>
+	<div class="newsletter__ill newsletter__ill--last" aria-hidden="true">
+		{{> illustrations/planet-right}}
+	</div>
+</section>

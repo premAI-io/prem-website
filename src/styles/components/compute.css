@@ -1,0 +1,24 @@
+.compute {
+	@apply w-[95%] max-w-[1200px] mx-auto rounded-2xl relative overflow-hidden border border-white border-opacity-30 py-24 px-6 mb-44;
+}
+
+.compute__content {
+	@apply relative flex flex-col items-center justify-center text-center z-[2];
+}
+
+.compute__label {
+	@apply mb-9;
+}
+
+.compute__title {
+	@apply mb-10;
+}
+
+.compute__bg {
+	@apply absolute inset-0 pointer-events-none opacity-65 z-[0];
+	background: radial-gradient(
+		249.84% 249.84% at 50% 100%,
+		rgba(245, 142, 142, 0.65) 0%,
+		rgba(127, 150, 255, 0) 88.5%
+	);
+}
