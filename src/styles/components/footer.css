@@ -1,3 +1,80 @@
 .footer {
-	@apply w-full relative;
+	@apply w-full relative border-t border-t-white border-opacity-35 py-12;
+	border-top-left-radius: 32px;
+	border-top-right-radius: 32px;
+}
+
+.footer__container {
+	@apply flex-col;
+}
+
+.footer__body {
+	@apply w-full flex items-start justify-between mb-32;
+}
+
+.footer__main {
+	@apply flex flex-row;
+}
+
+.footer__head {
+	@apply mr-12;
+}
+
+.footer__logo {
+	@apply mb-9;
+	svg {
+		@apply h-16 w-auto;
+	}
+}
+
+.footer__claim {
+	@apply mb-5;
+}
+
+.footer__data {
+	@apply max-w-[310px];
+}
+
+.footer__links {
+	@apply flex flex-col;
+}
+
+.footer__item {
+	&:not(:last-child) {
+		@apply mb-5;
+	}
+}
+
+.footer__social-label {
+	@apply mb-5 font-semibold;
+}
+
+.footer__social-links {
+	@apply flex items-center justify-end gap-x-5;
+}
+
+.footer__social-link {
+	svg {
+		@apply h-5 w-auto;
+	}
+}
+
+.footer__end {
+	@apply flex items-end justify-between;
+}
+
+.footer__end-side {
+	@apply flex items-end justify-end;
+}
+
+.footer__end-links {
+	@apply flex items-center gap-x-8 mr-14;
+}
+
+.footer__scrolltop {
+	@apply w-11 h-11 flex items-center justify-center rounded-[50%] border border-white border-opacity-35;
+	background: var(--secondary-gradient);
+	svg {
+		@apply w-5 h-auto opacity-60;
+	}
 }

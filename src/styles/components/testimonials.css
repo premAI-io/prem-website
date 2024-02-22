@@ -1,5 +1,5 @@
 .testimonials {
-	@apply w-full relative py-[calc(var(--v-height)*0.3)] mb-28;
+	@apply w-full relative py-[calc(var(--v-width)*0.25)] mb-28;
 }
 
 .testimonials__ill {

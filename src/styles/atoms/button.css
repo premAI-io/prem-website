@@ -1,5 +1,5 @@
 .button {
-	@apply inline-flex items-center justify-center py-3 px-8 relative overflow-hidden;
+	@apply inline-flex items-center justify-center py-3 px-8 relative font-medium overflow-hidden;
 	border-radius: 8px;
 	backface-visibility: hidden;
 	transform: translateZ(0);

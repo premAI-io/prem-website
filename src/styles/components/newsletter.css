@@ -1,5 +1,5 @@
 .newsletter__section {
-	@apply relative w-full mb-48;
+	@apply relative w-full mb-56;
 }
 
 .newsletter__content {
@@ -18,7 +18,7 @@
 	@apply text-gray-200 text-center mb-14;
 }
 
-.newsletter__input-group {
+.newsletter__form {
 	@apply flex justify-center items-stretch;
 }
 
