@@ -15,7 +15,7 @@
 	</head>
 
 	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
-		<div class="page__wrap" data-router-view="homepage">
+		<div class="page__wrap" data-router-view="homepage" id="top">
 			<nav class="nav">
 				<div class="l-container nav__container">
 					<a href="./" class="nav__logo"
@@ -1134,14 +1134,34 @@
 					</div>
 
 					<div class="hero__recap">
-						<div class="features-carousel">
+						<div class="features-carousel js-features-carousel">
+							<div
+								class="features-carousel__timer js-time-carousel"
+								aria-hidden="true"
+							>
+								<div class="js-time-carousel-viewport">
+									<div class="js-time-carousel-container">
+										<div class="js-time-carousel-item"></div>
+										<div class="js-time-carousel-item"></div>
+										<div class="js-time-carousel-item"></div>
+										<div class="js-time-carousel-item"></div>
+									</div>
+								</div>
+							</div>
+
 							<div class="features-carousel__container">
-								<div class="features-carousel__item">
+								<div class="features-carousel__item js-features-carousel-item">
 									<div class="features-carousel__item-content">
 										<div class="features-carousel__item-title">
 											Prem Platform
 										</div>
-										<div class="features-carousel__item-text"></div>
+										<div
+											class="features-carousel__item-text js-features-carousel-item-text"
+										>
+											Developer Platform for your Generative AI use cases.
+											Everything you need to get AI into Production from
+											Evaluation, Monitoring, Fine-tuning, and Deployment.
+										</div>
 									</div>
 									<div class="features-carousel__item-cta">
 										<a class="button button--icon button--sm" href="">
@@ -1217,12 +1237,17 @@
 										</a>
 									</div>
 								</div>
-								<div class="features-carousel__item">
+								<div class="features-carousel__item js-features-carousel-item">
 									<div class="features-carousel__item-content">
 										<div class="features-carousel__item-title">
 											Prem Solution
 										</div>
-										<div class="features-carousel__item-text"></div>
+										<div
+											class="features-carousel__item-text js-features-carousel-item-text"
+										>
+											Elevate your AI strategy. Tailored model fine-tuning and
+											training designed to meet unique business requirements.
+										</div>
 									</div>
 									<div class="features-carousel__item-cta">
 										<a class="button button--icon button--sm" href="">
@@ -1298,10 +1323,15 @@
 										</a>
 									</div>
 								</div>
-								<div class="features-carousel__item">
+								<div class="features-carousel__item js-features-carousel-item">
 									<div class="features-carousel__item-content">
 										<div class="features-carousel__item-title">Prem Models</div>
-										<div class="features-carousel__item-text"></div>
+										<div
+											class="features-carousel__item-text js-features-carousel-item-text"
+										>
+											Efficient and cost-effective Small Language Models (SMLs)
+											as base for fine-tuning on your specific use case.
+										</div>
 									</div>
 									<div class="features-carousel__item-cta">
 										<a class="button button--icon button--sm" href="">
@@ -1377,12 +1407,17 @@
 										</a>
 									</div>
 								</div>
-								<div class="features-carousel__item">
+								<div class="features-carousel__item js-features-carousel-item">
 									<div class="features-carousel__item-content">
 										<div class="features-carousel__item-title">
 											Prem Compute
 										</div>
-										<div class="features-carousel__item-text"></div>
+										<div
+											class="features-carousel__item-text js-features-carousel-item-text"
+										>
+											Get Access to a Cluster of GPUs for autonomously build
+											your AI strategy.
+										</div>
 									</div>
 									<div class="features-carousel__item-cta">
 										<a class="button button--icon button--sm" href="">
@@ -4670,7 +4705,7 @@
 								</li>
 							</ul>
 
-							<a href="" class="footer__scrolltop"
+							<a href="#top" class="footer__scrolltop js-hash-scroll"
 								><svg
 									width="20"
 									height="20"

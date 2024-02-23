@@ -1,5 +1,7 @@
 import iman from "./InstanceManager";
 import layout from "./Layout";
+import FeaturesCarousel from "./FeaturesCarousel";
+import HashScroll from "./HashScroll";
 import MarqueeManager from "./MarqueeManager";
 import ViewportFixer from "./ViewportFixer";
 
@@ -18,6 +20,8 @@ class Application {
 			layout.init();
 
 			iman.add("viewportFixer", new ViewportFixer());
+			iman.add("hashScroll", new HashScroll());
+			iman.add("featuresCarousel", new FeaturesCarousel());
 			iman.add("marqueeManager", new MarqueeManager());
 		});
 

@@ -23,7 +23,7 @@
 }
 
 .hero--home {
-	@apply pt-[calc(var(--v-height)*0.3506)];
+	@apply pt-[calc(var(--v-height)*0.3006)];
 	margin-bottom: calc(var(--v-width) * 0.2);
 
 	.hero__ill {
