@@ -4,11 +4,31 @@
 
 	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
 		<div class="page__wrap" data-router-view="contact">
-			{{> nav}}
+			{{> nav}} {{#>hero variant="contact" }}
 
-			<header>Hero</header>
+			<div class="l-container hero__container">
+				<div class="hero__content">
+					<h1 class="hero__title">Contact us</h1>
+					<p class="h5 hero__subtitle">
+						Get in touch with our team for product questions, demos, sales
+						support, collaborate with us or just having a chat, we're happy to
+						help!
+					</p>
+				</div>
 
-			<main>Hello world</main>
+				<div class="hero__form">
+					<div data-tf-live="01HQASB418MS7WJV8F69QV589M"></div>
+					<script src="//embed.typeform.com/next/embed.js"></script>
+				</div>
+			</div>
+
+			<div class="hero__ill" aria-hidden="true">
+				<div class="hero__bg"></div>
+				<div class="hero__bg"></div>
+			</div>
+			{{/hero}}
+
+			<main>{{> newsletter}}</main>
 
 			{{> footer}}
 		</div>

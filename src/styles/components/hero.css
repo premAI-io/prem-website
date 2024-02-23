@@ -3,7 +3,7 @@
 }
 
 .hero__container {
-	@apply relative items-center justify-between z-[2];
+	@apply relative max-w-[1192px] items-center justify-between z-[2];
 }
 
 .hero__post-preview {
@@ -25,9 +25,6 @@
 .hero--home {
 	@apply pt-[calc(var(--v-height)*0.3506)];
 	margin-bottom: calc(var(--v-width) * 0.2);
-	.hero__container {
-		@apply max-w-[1192px] items-center;
-	}
 
 	.hero__ill {
 		@apply absolute top-0 left-0 w-full pointer-events-none overflow-hidden opacity-70;
@@ -41,10 +38,6 @@
 
 .hero--company {
 	@apply pt-64 mb-[calc(var(--v-width)*0.417724)];
-
-	.hero__container {
-		@apply max-w-[1192px];
-	}
 
 	.hero__subtitle {
 		@apply max-w-[666px] mb-0;
@@ -63,6 +56,38 @@
 			@apply relative block w-[105.77%] h-auto;
 			margin-left: -48px;
 			/* 1512x934 => aspect ratio 1/0.617724 */
+		}
+	}
+}
+
+.hero--contact {
+	@apply pt-72 mb-64;
+	.hero__subtitle {
+		@apply max-w-[482px] mb-0;
+	}
+
+	.hero__form {
+		@apply w-[558px];
+	}
+
+	.hero__ill {
+		@apply absolute top-0 left-0 w-full h-[var(--v-height)] pointer-events-none overflow-hidden z-[1];
+	}
+
+	.hero__bg {
+		@apply absolute w-[54.3%];
+		aspect-ratio: 1 / 0.741;
+		background: radial-gradient(
+			48.73% 48.73% at 50% 58.81%,
+			rgba(245, 142, 142, 0.25) 0%,
+			rgba(127, 150, 255, 0) 88.5%
+		);
+		&:first-child {
+			@apply top-[14%] -left-[28%];
+		}
+
+		&:last-child {
+			@apply top-[14%] left-[82%];
 		}
 	}
 }
