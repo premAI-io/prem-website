@@ -6,15 +6,6 @@
 	@apply relative items-center justify-between z-[2];
 }
 
-.hero__ill {
-	@apply absolute top-0 left-0 w-full pointer-events-none overflow-hidden opacity-70;
-	svg {
-		@apply relative w-[96%] mx-auto h-auto;
-		/* Svg width == Svg height == 96% of viewport width, minus 0.35 * viewport width */
-		top: calc((var(--v-width) * 0.61) - (var(--v-width) * 0.96));
-	}
-}
-
 .hero__post-preview {
 	@apply mb-8;
 }
@@ -36,5 +27,42 @@
 	margin-bottom: calc(var(--v-width) * 0.2);
 	.hero__container {
 		@apply max-w-[1192px] items-center;
+	}
+
+	.hero__ill {
+		@apply absolute top-0 left-0 w-full pointer-events-none overflow-hidden opacity-70;
+		svg {
+			@apply relative w-[96%] mx-auto h-auto;
+			/* Svg width == Svg height == 96% of viewport width, minus 0.35 * viewport width */
+			top: calc((var(--v-width) * 0.61) - (var(--v-width) * 0.96));
+		}
+	}
+}
+
+.hero--company {
+	@apply pt-64 mb-[calc(var(--v-width)*0.417724)];
+
+	.hero__container {
+		@apply max-w-[1192px];
+	}
+
+	.hero__subtitle {
+		@apply max-w-[666px] mb-0;
+	}
+
+	.hero__bg {
+		@apply absolute top-[60%] left-0 w-full pointer-events-none;
+		img {
+			@apply relative block w-full h-auto;
+		}
+	}
+
+	.hero__ill {
+		@apply absolute top-14 left-0 w-full pointer-events-none overflow-hidden;
+		svg {
+			@apply relative block w-[105.77%] h-auto;
+			margin-left: -48px;
+			/* 1512x934 => aspect ratio 1/0.617724 */
+		}
 	}
 }

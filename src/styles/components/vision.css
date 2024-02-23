@@ -1,0 +1,27 @@
+.vision {
+	@apply mb-44 text-center;
+}
+
+.vision__title {
+	@apply mb-6;
+}
+
+.vision__text {
+	@apply max-w-[666px] mx-auto mb-16;
+}
+
+.vision__ill {
+	@apply relative;
+	img {
+		@apply w-full max-w-[988px] mx-auto h-auto block relative z-[2];
+	}
+}
+
+.vision__bg {
+	@apply absolute top-0 left-0 w-full h-full pointer-events-none z-[1];
+	background: radial-gradient(
+		45.89% 45.89% at 50.03% 54.89%,
+		rgba(245, 142, 142, 0.13) 0%,
+		rgba(127, 150, 255, 0) 88.5%
+	);
+}
