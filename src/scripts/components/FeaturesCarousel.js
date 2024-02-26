@@ -2,10 +2,12 @@ import { gsap } from "gsap";
 import EmblaCarousel from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 
+import layout from "./Layout";
+
 import scrollTo from "../helpers/scrollTo";
 import { ease, tlProp } from "../helpers/animation";
 
-const H_RATIO = 0.72331;
+const NOT_ACTIVE_SLIDE_H = 66;
 const SLIDER_TIMEOUT = 5000;
 
 class FeaturesCarousel {
@@ -14,14 +16,35 @@ class FeaturesCarousel {
 	}
 
 	setup() {
+		// Keeps track of the current layout mode - changes on resize
+		this.layoutMode = layout.device < 1 ? "mobile" : "desktop";
+
+		// Multiplier to calculate the height of the active slide (desktop)
+		this.hRatio = layout.device < 1 ? 1 : 0.72331;
+
 		this.instance = EmblaCarousel(this.DOM.fakeCarousel, { loop: true }, [
 			Autoplay({ delay: SLIDER_TIMEOUT, playOnInit: false }),
 		]);
 
+		// Mobile slides setup
+		if (layout.device < 1) {
+			gsap.set(this.DOM.slides, {
+				opacity: 0,
+				xPercent: 0,
+				rotate: 5,
+			});
+			gsap.set(this.DOM.slidesTexts, {
+				height: "auto",
+				opacity: 1,
+			});
+		}
+
+		// Let's show the first slide
 		this.inSlide(this.DOM.slides[this.activeIndex], true);
 		this.DOM.slides[this.activeIndex].classList.add("is-active");
-		this.instance.on("select", this.onSlideChange);
 
+		// Events
+		this.instance.on("select", this.onSlideChange);
 		for (let i = 0; i < this.DOM.ctas.length; i++) {
 			this.DOM.ctas[i].addEventListener("click", this.onSlideCtaClick);
 		}
@@ -36,6 +59,7 @@ class FeaturesCarousel {
 		e.preventDefault();
 
 		if (parentSlide.classList.contains("is-active")) {
+			// scrollTo could be temporary
 			const targetId = target.getAttribute("href");
 			const scrollTarget = document.querySelector(`${targetId}`);
 
@@ -81,20 +105,33 @@ class FeaturesCarousel {
 			},
 		});
 
-		tl.to(slide, {
-			height: 66,
-			duration: 0.8,
-			ease,
-		}).to(
-			slideText,
-			{
+		if (layout.device < 1) {
+			tl.to(slide, {
 				opacity: 0,
-				height: 0,
+				xPercent: -200,
+				rotate: -5,
 				duration: 0.8,
 				ease,
-			},
-			"-=0.8",
-		);
+				onComplete: () => {
+					gsap.set(slide, { xPercent: 0, rotate: 5 });
+				},
+			});
+		} else {
+			tl.to(slide, {
+				height: NOT_ACTIVE_SLIDE_H,
+				duration: 0.8,
+				ease,
+			}).to(
+				slideText,
+				{
+					opacity: 0,
+					height: 0,
+					duration: 0.8,
+					ease,
+				},
+				"-=0.8",
+			);
+		}
 
 		return tl;
 	};
@@ -108,26 +145,35 @@ class FeaturesCarousel {
 			},
 		});
 
-		tl.to(slide, {
-			height: slide.offsetWidth * H_RATIO,
-			duration: tlProp(0.8, immediate),
-			ease,
-		}).to(
-			slideText,
-			{
+		if (layout.device < 1) {
+			tl.to(slide, {
 				opacity: 1,
-				height: "auto",
+				xPercent: -100,
+				rotate: 0,
 				duration: tlProp(0.8, immediate),
 				ease,
-			},
-			tlProp("-=0.67", immediate),
-		);
+			});
+		} else {
+			tl.to(slide, {
+				height: () => slide.offsetWidth * this.hRatio,
+				duration: tlProp(0.8, immediate),
+				ease,
+			}).to(
+				slideText,
+				{
+					opacity: 1,
+					height: "auto",
+					duration: tlProp(0.8, immediate),
+					ease,
+				},
+				tlProp("-=0.67", immediate),
+			);
+		}
 
 		return tl;
 	};
 
 	start = () => {
-		this.instance?.plugins()?.autoplay?.play();
 		this.progressTl = gsap
 			.timeline({
 				paused: true,
@@ -139,6 +185,7 @@ class FeaturesCarousel {
 			});
 
 		this.progressTl.play();
+		this.instance?.plugins()?.autoplay?.play();
 	};
 
 	destroy() {
@@ -158,6 +205,75 @@ class FeaturesCarousel {
 		}
 	}
 
+	resize() {
+		if (this.DOM) {
+			this.hRatio = layout.device < 1 ? 1 : 0.72331;
+
+			if (layout.device < 1 && this.layoutMode !== "mobile") {
+				// From desktop to mobile
+				gsap.set(this.DOM.slides, {
+					opacity: 0,
+					xPercent: 0,
+					rotate: 5,
+					height: "auto",
+				});
+				gsap.set(this.DOM.slides[this.activeIndex], {
+					opacity: 1,
+					xPercent: -100,
+					rotate: 0,
+				});
+				gsap.set(this.DOM.slidesTexts, {
+					height: "auto",
+					opacity: 1,
+				});
+			} else if (layout.device >= 1 && this.layoutMode !== "desktop") {
+				// From mobile to desktop
+				gsap.set(this.DOM.slides, {
+					opacity: 1,
+					xPercent: "none",
+					rotate: 0,
+					height: NOT_ACTIVE_SLIDE_H,
+				});
+				gsap.set(this.DOM.slidesTexts, {
+					height: 0,
+					opacity: 0,
+				});
+				gsap.set(this.DOM.slides[this.activeIndex], {
+					height: (i, target) => target.offsetWidth * this.hRatio,
+				});
+				gsap.set(this.DOM.slidesTexts[this.activeIndex], {
+					height: "auto",
+				});
+			} else if (layout.device >= 1 && this.layoutMode === "desktop") {
+				// Desktop only resize
+				gsap.set(this.DOM.slides, {
+					height: (i) => {
+						if (i === this.activeIndex) {
+							return this.DOM.slides[i].offsetWidth * this.hRatio;
+						}
+						return NOT_ACTIVE_SLIDE_H;
+					},
+				});
+			}
+
+			// Restart autoplay only if we're not on mobile or if we're on mobile and the layout has changed
+			// This is to avoid restarting the autoplay on mobile - resize events could fire multiple times
+			if (
+				layout.device >= 1 ||
+				(layout.device < 1 && this.layoutMode !== "mobile")
+			) {
+				const autoplay = this.instance?.plugins()?.autoplay;
+				this.progressTl.pause();
+				autoplay.reset();
+				autoplay.play();
+				this.progressTl.restart();
+				this.progressTl.play();
+			}
+
+			this.layoutMode = layout.device < 1 ? "mobile" : "desktop";
+		}
+	}
+
 	reinit(container) {
 		this.init(container);
 	}
@@ -173,6 +289,9 @@ class FeaturesCarousel {
 			);
 			this.DOM.slides = this.DOM.wrap.querySelectorAll(
 				".js-features-carousel-item",
+			);
+			this.DOM.slidesTexts = this.DOM.wrap.querySelectorAll(
+				".js-features-carousel-item-text",
 			);
 			this.DOM.ctas = this.DOM.wrap.querySelectorAll(
 				".js-features-carousel-cta",

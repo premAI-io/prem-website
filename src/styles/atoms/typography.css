@@ -32,35 +32,33 @@
 /* Typographic scale */
 h1,
 .h1 {
-	@apply text-[76px] font-medium;
-	line-height: 1.05263;
-	letter-spacing: 0.5px;
+	@apply text-[32px] lg:text-[64px] xl:text-[76px] font-medium leading-[1.05263] tracking-[0.5px];
 }
 
 h2,
 .h2 {
-	@apply text-[64px] font-medium;
+	@apply text-[48px] xl:text-[64px] font-medium;
 	line-height: 1.25;
 }
 
 h3,
 .h3 {
-	@apply text-[28px] font-medium leading-[1.1428];
+	@apply text-[22px] xl:text-[28px] font-medium leading-[1.1428];
 }
 
 h4,
 .h4 {
-	@apply text-[24px] font-normal leading-[1.333];
+	@apply text-[16px] lg:text-[18px] xl:text-[24px] font-normal leading-[1.333];
 }
 
 h5,
 .h5 {
-	@apply text-[20px] font-normal leading-[1.2];
+	@apply text-[16px] xl:text-[20px] font-normal leading-[1.2];
 }
 
 p,
 .p {
-	@apply text-[16px] leading-[1.25];
+	@apply text-[14px] lg:text-[16px] leading-[1.25];
 }
 
 .p-sm {
