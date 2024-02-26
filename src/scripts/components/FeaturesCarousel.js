@@ -2,6 +2,7 @@ import { gsap } from "gsap";
 import EmblaCarousel from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 
+import scrollTo from "../helpers/scrollTo";
 import { ease, tlProp } from "../helpers/animation";
 
 const H_RATIO = 0.72331;
@@ -14,13 +15,37 @@ class FeaturesCarousel {
 
 	setup() {
 		this.instance = EmblaCarousel(this.DOM.fakeCarousel, { loop: true }, [
-			Autoplay({ delay: SLIDER_TIMEOUT }),
+			Autoplay({ delay: SLIDER_TIMEOUT, playOnInit: false }),
 		]);
 
 		this.inSlide(this.DOM.slides[this.activeIndex], true);
 		this.DOM.slides[this.activeIndex].classList.add("is-active");
 		this.instance.on("select", this.onSlideChange);
+
+		for (let i = 0; i < this.DOM.ctas.length; i++) {
+			this.DOM.ctas[i].addEventListener("click", this.onSlideCtaClick);
+		}
+
+		this.start();
 	}
+
+	onSlideCtaClick = (e) => {
+		const target = e.currentTarget;
+		const parentSlide = target.closest(".js-features-carousel-item");
+
+		e.preventDefault();
+
+		if (parentSlide.classList.contains("is-active")) {
+			const targetId = target.getAttribute("href");
+			const scrollTarget = document.querySelector(`${targetId}`);
+
+			if (scrollTarget) {
+				scrollTo(scrollTarget, 150);
+			}
+		} else {
+			this.instance.scrollTo(parseInt(parentSlide.dataset.index, 10));
+		}
+	};
 
 	onSlideChange = () => {
 		const autoplay = this.instance?.plugins()?.autoplay;
@@ -34,9 +59,11 @@ class FeaturesCarousel {
 		const slideChangeTl = gsap.timeline({
 			onStart: () => {
 				autoplay.stop();
+				this.progressTl.pause();
 			},
 			onComplete: () => {
 				autoplay.play();
+				this.progressTl.restart();
 			},
 		});
 
@@ -99,8 +126,34 @@ class FeaturesCarousel {
 		return tl;
 	};
 
+	start = () => {
+		this.instance?.plugins()?.autoplay?.play();
+		this.progressTl = gsap
+			.timeline({
+				paused: true,
+			})
+			.to(this.DOM.progress, {
+				scaleX: 1,
+				duration: SLIDER_TIMEOUT / 1000,
+				ease: "linear",
+			});
+
+		this.progressTl.play();
+	};
+
 	destroy() {
 		if (this.DOM) {
+			const autoplay = this.instance?.plugins()?.autoplay;
+			autoplay.stop();
+
+			this.instance.off("select", this.onSlideChange);
+			this.instance.destroy();
+
+			for (let i = 0; i < this.DOM.ctas.length; i++) {
+				this.DOM.ctas[i].removeEventListener("click", this.onSlideCtaClick);
+			}
+
+			this.instance = undefined;
 			this.DOM = undefined;
 		}
 	}
@@ -120,6 +173,12 @@ class FeaturesCarousel {
 			);
 			this.DOM.slides = this.DOM.wrap.querySelectorAll(
 				".js-features-carousel-item",
+			);
+			this.DOM.ctas = this.DOM.wrap.querySelectorAll(
+				".js-features-carousel-cta",
+			);
+			this.DOM.progress = this.DOM.wrap.querySelector(
+				".js-features-carousel-progress",
 			);
 
 			this.instance = undefined;

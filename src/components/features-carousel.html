@@ -11,7 +11,10 @@
 	</div>
 
 	<div class="features-carousel__container">
-		<div class="features-carousel__item js-features-carousel-item">
+		<div
+			class="features-carousel__item js-features-carousel-item"
+			data-index="0"
+		>
 			<div class="features-carousel__item-content">
 				<div class="features-carousel__item-title">Prem Platform</div>
 				<div
@@ -23,7 +26,8 @@
 				</div>
 			</div>
 			<div class="features-carousel__item-cta">
-				{{#>button tag="a" href="" theme="icon" }}
+				{{#>button tag="a" href="#platform" theme="icon"
+				class="js-features-carousel-cta" }}
 				<div class="button__icon">
 					<div class="button__icon-bg" aria-hidden="true">
 						{{> icons/circle-button-bg}}
@@ -33,7 +37,10 @@
 				{{/button}}
 			</div>
 		</div>
-		<div class="features-carousel__item js-features-carousel-item">
+		<div
+			class="features-carousel__item js-features-carousel-item"
+			data-index="1"
+		>
 			<div class="features-carousel__item-content">
 				<div class="features-carousel__item-title">Prem Solution</div>
 				<div
@@ -44,7 +51,8 @@
 				</div>
 			</div>
 			<div class="features-carousel__item-cta">
-				{{#>button tag="a" href="" theme="icon" }}
+				{{#>button tag="a" href="#solution" theme="icon"
+				class="js-features-carousel-cta" }}
 				<div class="button__icon">
 					<div class="button__icon-bg" aria-hidden="true">
 						{{> icons/circle-button-bg}}
@@ -54,7 +62,10 @@
 				{{/button}}
 			</div>
 		</div>
-		<div class="features-carousel__item js-features-carousel-item">
+		<div
+			class="features-carousel__item js-features-carousel-item"
+			data-index="2"
+		>
 			<div class="features-carousel__item-content">
 				<div class="features-carousel__item-title">Prem Models</div>
 				<div
@@ -65,7 +76,8 @@
 				</div>
 			</div>
 			<div class="features-carousel__item-cta">
-				{{#>button tag="a" href="" theme="icon" }}
+				{{#>button tag="a" href="#models" theme="icon"
+				class="js-features-carousel-cta" }}
 				<div class="button__icon">
 					<div class="button__icon-bg" aria-hidden="true">
 						{{> icons/circle-button-bg}}
@@ -75,7 +87,10 @@
 				{{/button}}
 			</div>
 		</div>
-		<div class="features-carousel__item js-features-carousel-item">
+		<div
+			class="features-carousel__item js-features-carousel-item"
+			data-index="3"
+		>
 			<div class="features-carousel__item-content">
 				<div class="features-carousel__item-title">Prem Compute</div>
 				<div
@@ -86,7 +101,8 @@
 				</div>
 			</div>
 			<div class="features-carousel__item-cta">
-				{{#>button tag="a" href="" theme="icon" }}
+				{{#>button tag="a" href="#compute" theme="icon"
+				class="js-features-carousel-cta" }}
 				<div class="button__icon">
 					<div class="button__icon-bg" aria-hidden="true">
 						{{> icons/circle-button-bg}}
@@ -98,5 +114,9 @@
 		</div>
 	</div>
 
-	<div class="features-carousel__progress"></div>
+	<div class="features-carousel__progress">
+		<div
+			class="features-carousel__progress-bar js-features-carousel-progress"
+		></div>
+	</div>
 </div>

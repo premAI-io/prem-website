@@ -65,3 +65,13 @@
 .features-carousel__timer {
 	@apply invisible opacity-0;
 }
+
+.features-carousel__progress {
+	@apply w-[64%] mx-auto relative h-1 rounded-lg border border-white border-opacity-30;
+}
+
+.features-carousel__progress-bar {
+	@apply absolute top-0 left-0 w-full h-full rounded-lg scale-x-0;
+	background: var(--primary-gradient);
+	transform-origin: left center;
+}

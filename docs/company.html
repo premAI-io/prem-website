@@ -16,7 +16,7 @@
 
 	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
 		<div class="page__wrap" data-router-view="company" id="top">
-			<nav class="nav">
+			<nav class="nav js-nav">
 				<div class="l-container nav__container">
 					<a href="./" class="nav__logo"
 						><svg
@@ -956,8 +956,56 @@
 						</a>
 					</div>
 
-					<div class="nav__toggle js-nav-toggle"></div>
+					<div class="nav__toggle js-nav-toggle">
+						<span></span>
+						<span></span>
+					</div>
 				</div>
+			</nav>
+
+			<nav class="nav-mobile js-nav-mobile">
+				<div class="nav-mobile__container">
+					<div aria-hidden="true"></div>
+
+					<ul class="nav-mobile__links">
+						<li class="nav-mobile__item">
+							<a
+								href="./company.html"
+								class="nav-mobile__link js-nav-mobile-link"
+								>Company</a
+							>
+						</li>
+						<li class="nav-mobile__item">
+							<a
+								href="https://blog.premai.io/"
+								target="_blank"
+								rel="noopener"
+								class="nav-mobile__link js-nav-mobile-link"
+								>Blog</a
+							>
+						</li>
+						<li class="nav-mobile__item">
+							<a
+								href="./contact.html"
+								class="nav-mobile__link js-nav-mobile-link"
+								>Contact</a
+							>
+						</li>
+					</ul>
+
+					<div class="nav-mobile__end">
+						<a
+							class="button button--secondary button--sm js-nav-mobile-cta"
+							rel="noopener"
+							target="_blank"
+							href="https://app.premai.io/accounts/signup/"
+						>
+							Signup
+						</a>
+					</div>
+				</div>
+
+				<div class="nav-mobile__bg js-nav-mobile-bg"></div>
 			</nav>
 			<header class="hero hero--company">
 				<div class="l-container hero__container">

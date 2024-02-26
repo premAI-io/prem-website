@@ -1,4 +1,4 @@
-<nav class="nav">
+<nav class="nav js-nav">
 	<div class="l-container nav__container">
 		<a href="./" class="nav__logo">{{> icons/logo}}</a>
 
@@ -25,6 +25,45 @@
 			target="_blank" rel="noopener" theme="secondary" }} Signup {{/button}}
 		</div>
 
-		<div class="nav__toggle js-nav-toggle"></div>
+		<div class="nav__toggle js-nav-toggle">
+			<span></span>
+			<span></span>
+		</div>
 	</div>
+</nav>
+
+<nav class="nav-mobile js-nav-mobile">
+	<div class="nav-mobile__container">
+		<div aria-hidden="true"></div>
+
+		<ul class="nav-mobile__links">
+			<li class="nav-mobile__item">
+				<a href="./company.html" class="nav-mobile__link js-nav-mobile-link"
+					>Company</a
+				>
+			</li>
+			<li class="nav-mobile__item">
+				<a
+					href="https://blog.premai.io/"
+					target="_blank"
+					rel="noopener"
+					class="nav-mobile__link js-nav-mobile-link"
+					>Blog</a
+				>
+			</li>
+			<li class="nav-mobile__item">
+				<a href="./contact.html" class="nav-mobile__link js-nav-mobile-link"
+					>Contact</a
+				>
+			</li>
+		</ul>
+
+		<div class="nav-mobile__end">
+			{{#>button tag="a" href="https://app.premai.io/accounts/signup/"
+			target="_blank" rel="noopener" theme="secondary" class="js-nav-mobile-cta"
+			}} Signup {{/button}}
+		</div>
+	</div>
+
+	<div class="nav-mobile__bg js-nav-mobile-bg"></div>
 </nav>

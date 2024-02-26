@@ -1,8 +1,11 @@
-import iman from "./InstanceManager";
-import layout from "./Layout";
+import ComputeBlock from "./ComputeBlock";
 import FeaturesCarousel from "./FeaturesCarousel";
+import iman from "./InstanceManager";
 import HashScroll from "./HashScroll";
+import layout from "./Layout";
 import MarqueeManager from "./MarqueeManager";
+import Nav from "./Nav";
+import Testimonials from "./Testimonials";
 import ViewportFixer from "./ViewportFixer";
 
 // helpers
@@ -20,9 +23,12 @@ class Application {
 			layout.init();
 
 			iman.add("viewportFixer", new ViewportFixer());
+			iman.add("nav", new Nav());
 			iman.add("hashScroll", new HashScroll());
 			iman.add("featuresCarousel", new FeaturesCarousel());
 			iman.add("marqueeManager", new MarqueeManager());
+			iman.add("computeBlock", new ComputeBlock());
+			iman.add("testimonials", new Testimonials());
 		});
 
 		window.addEventListener("resize", debounce(this.onResize, 150));

@@ -22,3 +22,60 @@
 		rgba(127, 150, 255, 0) 88.5%
 	);
 }
+
+.compute__scene {
+	@apply absolute inset-0 pointer-events-none overflow-hidden z-[1];
+}
+
+.compute__scene-line {
+	@apply absolute bg-white w-20 h-[2px] -left-full opacity-30;
+	filter: drop-shadow(white 0 0 1px);
+	animation: woosh 2s infinite var(--ease-power4);
+	animation-play-state: paused;
+
+	.is-active & {
+		animation-play-state: running;
+	}
+
+	&:first-child {
+		@apply top-[10%] w-[20%];
+	}
+	&:nth-child(2) {
+		@apply top-[14%];
+		animation-delay: 0.12s;
+	}
+	&:nth-child(3) {
+		@apply top-[19%];
+		animation-delay: 0.18s;
+	}
+	&:nth-child(4) {
+		@apply top-[24%];
+		animation-delay: 0.5s;
+	}
+	&:nth-child(5) {
+		@apply top-[32%];
+		animation-delay: 0.32s;
+	}
+	&:nth-child(6) {
+		@apply top-[40%];
+		animation-delay: 1.4s;
+	}
+	&:nth-child(7) {
+		@apply top-[64%];
+		animation-delay: 1.2s;
+	}
+	&:nth-child(8) {
+		@apply top-[78%];
+		animation-delay: 0.8s;
+	}
+	&:last-child {
+		@apply top-[88%];
+		animation-delay: 1s;
+	}
+}
+
+@keyframes woosh {
+	100% {
+		left: 150%;
+	}
+}
