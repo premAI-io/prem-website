@@ -17,7 +17,7 @@
 .l-divider {
 	@apply w-full;
 	svg {
-		@apply w-full max-w-[960px] h-auto block mx-auto;
+		@apply w-[92.5%] lg:w-full max-w-[960px] h-auto block mx-auto;
 	}
 }
 

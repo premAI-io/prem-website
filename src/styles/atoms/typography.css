@@ -37,8 +37,7 @@ h1,
 
 h2,
 .h2 {
-	@apply text-[48px] xl:text-[64px] font-medium;
-	line-height: 1.25;
+	@apply text-[28px] md:text-[48px] xl:text-[64px] font-medium leading-[1.25];
 }
 
 h3,

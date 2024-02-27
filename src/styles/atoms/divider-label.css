@@ -3,12 +3,12 @@
 }
 
 .divider-label__ill {
-	@apply w-20;
+	@apply hidden md:block w-20;
 	svg {
 		@apply w-full h-auto;
 	}
 }
 
 .divider-label__text {
-	@apply text-center mx-8;
+	@apply text-center md:mx-8;
 }

@@ -1,23 +1,23 @@
 .trusted {
-	@apply mb-36;
+	@apply mb-24 md:mb-36;
 }
 
 .trusted__title {
-	@apply text-center mb-11;
+	@apply text-center mb-8 md:mb-11;
 }
 
 .trusted__rows {
-	@apply w-full relative overflow-hidden mb-20;
+	@apply w-full relative overflow-hidden mb-9 md:mb-20;
 }
 
 .trusted__row {
 	@apply w-full relative flex items-center overflow-hidden;
 	&:not(:last-child) {
-		@apply mb-8;
+		@apply mb-6 md:mb-8;
 	}
 }
 
 .trusted__row-item {
-	@apply flex items-center justify-center w-[16.6667%] h-24 relative shrink-0 overflow-hidden rounded-2xl border border-white border-opacity-30 mr-10;
+	@apply flex items-center justify-center w-[42%] min-w-[164px] md:w-[33%] lg:w-[23%] xl:w-[16.6667%] h-24 relative shrink-0 overflow-hidden rounded-2xl border border-white border-opacity-30 mr-10;
 	background: var(--secondary-gradient);
 }

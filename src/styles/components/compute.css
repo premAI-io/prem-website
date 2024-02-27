@@ -1,5 +1,5 @@
 .compute {
-	@apply w-[95%] max-w-[1200px] mx-auto rounded-2xl relative overflow-hidden border border-white border-opacity-30 py-24 px-6 mb-44;
+	@apply w-[95%] max-w-[1200px] mx-auto rounded-2xl relative overflow-hidden border border-white border-opacity-30 py-24 px-6 mb-24 lg:mb-44;
 }
 
 .compute__content {

@@ -23,8 +23,7 @@
 }
 
 .hero--home {
-	@apply pt-[calc(var(--v-height)*0.21)] 2xl:pt-[calc(var(--v-height)*0.3006)];
-	margin-bottom: calc(var(--v-width) * 0.2);
+	@apply pt-[calc(var(--v-height)*0.21)] 2xl:pt-[calc(var(--v-height)*0.3006)] mb-24 md:mb-[calc(var(--v-width)*0.2)];
 
 	.hero__container {
 		@apply flex-col items-start lg:flex-row lg:items-center;
@@ -39,7 +38,7 @@
 	}
 
 	.hero__recap {
-		@apply w-full lg:w-auto;
+		@apply w-full relative overflow-hidden lg:w-auto;
 	}
 
 	.hero__ill {

@@ -3,11 +3,11 @@
 }
 
 .platform__label {
-	@apply mb-7;
+	@apply mb-5 md:mb-7;
 }
 
 .platform__title {
-	@apply text-center mb-16;
+	@apply text-center mb-11 md:mb-16;
 }
 
 .platform__container {
@@ -19,7 +19,7 @@
 }
 
 .platform__ill {
-	@apply w-full absolute top-[90%] overflow-hidden pointer-events-none z-[1];
+	@apply w-full absolute top-[97%] lg:top-[90%] overflow-hidden pointer-events-none z-[1];
 	svg {
 		@apply w-full h-auto;
 	}
@@ -98,4 +98,29 @@
 
 .platform__card__description {
 	@apply text-gray-200;
+}
+
+@media screen and (max-width: 960px) {
+	.platform__card {
+		@apply !w-full !aspect-[1/1.157];
+
+		&:not(:last-child) {
+			@apply !mb-4;
+		}
+
+		&:nth-child(2),
+		&:nth-child(5) {
+			@apply mr-0;
+		}
+
+		.platform__card-content {
+			@apply !bottom-6 !left-6 w-[90%];
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.platform__card {
+		@apply !aspect-[1/1.35];
+	}
 }
