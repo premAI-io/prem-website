@@ -1,5 +1,8 @@
 .book__section {
-	@apply mb-56;
+	@apply mb-28 lg:mb-56;
+	.l-divider {
+		@apply hidden lg:flex;
+	}
 }
 
 .book__ill {
@@ -23,15 +26,20 @@
 }
 
 .book__label {
-	@apply mb-6;
+	@apply mb-5;
+}
+
+.book__title,
+.book__text {
+	@apply w-[92.6%];
 }
 
 .book__title {
-	@apply text-center mb-7;
+	@apply mx-auto text-center mb-7;
 }
 
 .book__text {
-	@apply text-center mx-auto max-w-[600px] mb-10;
+	@apply text-center mx-auto max-w-[600px] mb-7 lg:mb-10;
 }
 
 .book__img {
@@ -39,5 +47,5 @@
 }
 
 .book__cta {
-	@apply w-full flex justify-center mb-20;
+	@apply w-full flex justify-center mb-0 lg:mb-20;
 }

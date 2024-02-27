@@ -5,7 +5,7 @@
 .testimonials__ill {
 	@apply absolute top-1/2 left-0 w-full -translate-y-1/2 overflow-hidden opacity-45;
 	svg {
-		@apply w-full h-auto;
+		@apply w-[160%] -ml-[30%] h-auto lg:ml-auto lg:w-full;
 	}
 }
 
@@ -14,7 +14,7 @@
 }
 
 .testimonials__head {
-	@apply mb-20 text-center;
+	@apply mb-10 lg:mb-20 text-center;
 }
 
 .testimonials__label {
@@ -26,29 +26,28 @@
 }
 
 .testimonials__text {
-	@apply max-w-[594px] mx-auto text-gray-200;
+	@apply w-[92.6%] max-w-[594px] mx-auto text-gray-200;
 }
 
 .testimonials__stack {
-	@apply w-full relative;
-	height: calc(var(--v-height) * 0.38);
+	@apply w-full relative h-[calc(var(--v-height)*0.38)] overflow-hidden lg:p-0 lg:overflow-visible;
 }
 
 .testimonial__card {
-	@apply absolute top-0 left-0 w-full h-full rounded-2xl flex flex-col justify-between py-10 px-8 border border-white border-opacity-30;
+	@apply absolute top-0 left-0 w-full h-[95%] lg:h-full rounded-2xl flex flex-col justify-between py-6 px-5 sm:py-10 sm:px-8 border border-white border-opacity-30;
 	background: var(--secondary-gradient);
 
 	&:nth-child(2) {
-		@apply top-2;
+		@apply top-0 lg:top-2;
 	}
 	&:nth-child(3) {
-		@apply top-4;
+		@apply top-0 lg:top-4;
 	}
 	&:nth-child(4) {
-		@apply top-6;
+		@apply top-0 lg:top-6;
 	}
 	&:nth-child(5) {
-		@apply top-8;
+		@apply top-0 lg:top-8;
 	}
 }
 
@@ -57,7 +56,7 @@
 }
 
 .testimonial__card__text {
-	@apply font-normal;
+	@apply font-normal text-[16px] lg:text-[28px];
 }
 
 .testimonial__card__end__inner {
@@ -69,12 +68,12 @@
 }
 
 .testimonial__card__author__avatar {
-	@apply w-14 h-14 rounded-[50%] border border-white border-opacity-30 flex items-center justify-center;
+	@apply w-11 h-11 rounded-[50%] border border-white border-opacity-30 flex items-center justify-center sm:w-14 sm:h-14;
 	background: var(--secondary-gradient);
 }
 
 .testimonial__card__author__letter {
-	@apply text-gray-200 text-[22px] font-normal leading-[1.09];
+	@apply text-gray-200 text-[16px] font-normal leading-[1.09] sm:text-[22px];
 }
 
 .testimonial__card__author__content {
@@ -82,9 +81,24 @@
 }
 
 .testimonial__card__author__title {
-	@apply text-white font-medium text-[22px] leading-[1.27] tracking-[0.2px] mb-1;
+	@apply text-white text-[20px] font-medium leading-[1.27] tracking-[0.2px] mb-1 sm:text-[22px];
 }
 
 .testimonial__card__author__subtitle {
 	@apply text-gray-200 font-medium text-[14px] leading-[1.285];
+}
+
+.testimonial__card__author__logo {
+	svg {
+		@apply max-w-[60px] h-auto sm:max-w-[100px];
+	}
+}
+
+.testimonials__carousel-nav {
+	@apply flex items-center justify-center mt-8 gap-x-4 lg:hidden;
+}
+
+.testimonials__carousel-nav-item {
+	@apply w-11 h-11 rounded-[50%] border border-white border-opacity-30 flex items-center justify-center cursor-pointer;
+	background: var(--secondary-gradient);
 }

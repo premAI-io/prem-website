@@ -7,7 +7,7 @@
 }
 
 .hero__post-preview {
-	@apply mb-8;
+	@apply hidden mb-4 md:flex lg:mb-8;
 }
 
 .hero__title {
@@ -31,10 +31,6 @@
 
 	.hero__content {
 		@apply w-full md:w-auto mb-8 lg:mb-0;
-	}
-
-	.hero__post-preview {
-		@apply hidden md:flex;
 	}
 
 	.hero__recap {
@@ -66,7 +62,7 @@
 	}
 
 	.hero__ill {
-		@apply absolute top-14 left-0 w-full pointer-events-none overflow-hidden;
+		@apply absolute top-[calc(var(--v-width)*0.24)] xl:top-[calc(var(--v-width)*0.12)] left-0 w-full pointer-events-none overflow-hidden;
 		svg {
 			@apply relative block w-[105.77%] h-auto;
 			margin-left: -48px;
@@ -76,13 +72,13 @@
 }
 
 .hero--contact {
-	@apply pt-72 mb-64;
+	@apply pt-52 mb-44 lg:pt-72 lg:mb-64;
 	.hero__subtitle {
 		@apply max-w-[482px] mb-0;
 	}
 
 	.hero__form {
-		@apply w-[558px];
+		@apply w-[50%] xl:w-[558px];
 	}
 
 	.hero__ill {
@@ -103,6 +99,61 @@
 
 		&:last-child {
 			@apply top-[14%] left-[82%];
+		}
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.hero--company {
+		.hero__ill {
+			@apply top-0;
+		}
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.hero--home {
+		.hero__ill {
+			svg {
+				@apply w-[150%] -ml-[25%];
+			}
+		}
+	}
+
+	.hero--company {
+		@apply mb-20 pt-44;
+
+		.hero__container {
+			@apply w-full;
+		}
+
+		.hero__content {
+			@apply w-[92.6%] mx-auto;
+		}
+
+		.hero__subtitle {
+			@apply max-w-[85%];
+		}
+
+		.hero__ill {
+			@apply relative -top-[96px] left-auto;
+			svg {
+				@apply w-full ml-0;
+			}
+		}
+	}
+
+	.hero--contact {
+		.hero__container {
+			@apply flex-col justify-start items-start;
+		}
+
+		.hero__content {
+			@apply mb-14;
+		}
+
+		.hero__form {
+			@apply w-full;
 		}
 	}
 }

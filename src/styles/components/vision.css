@@ -1,19 +1,19 @@
 .vision {
-	@apply mb-44 text-center;
+	@apply mb-24 lg:mb-44 text-center;
 }
 
 .vision__title {
-	@apply mb-6;
+	@apply w-[92.6%] mb-6 mx-auto;
 }
 
 .vision__text {
-	@apply max-w-[666px] mx-auto mb-16;
+	@apply w-[92.6%] max-w-[80%] lg:max-w-[666px] mx-auto mb-16;
 }
 
 .vision__ill {
 	@apply relative;
 	img {
-		@apply w-full max-w-[988px] mx-auto h-auto block relative z-[2];
+		@apply w-[92.6%] lg:w-full max-w-[988px] mx-auto h-auto block relative z-[2];
 	}
 }
 

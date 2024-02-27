@@ -5,6 +5,7 @@ import HashScroll from "./HashScroll";
 import layout from "./Layout";
 import MarqueeManager from "./MarqueeManager";
 import Nav from "./Nav";
+import Team from "./Team";
 import Testimonials from "./Testimonials";
 import ViewportFixer from "./ViewportFixer";
 
@@ -29,6 +30,7 @@ class Application {
 			iman.add("marqueeManager", new MarqueeManager());
 			iman.add("computeBlock", new ComputeBlock());
 			iman.add("testimonials", new Testimonials());
+			iman.add("team", new Team());
 		});
 
 		window.addEventListener("resize", debounce(this.onResize, 150));

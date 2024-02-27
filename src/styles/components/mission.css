@@ -1,5 +1,5 @@
 .mission {
-	@apply w-[95%] max-w-[1200px] mx-auto rounded-2xl relative overflow-hidden border border-white border-opacity-30 pt-24 pb-48 px-6 mb-48;
+	@apply w-[95%] max-w-[1200px] mx-auto rounded-2xl relative overflow-hidden border border-white border-opacity-30 pt-24 pb-48 px-6 mb-24 lg:mb-48;
 	&::before {
 		content: "";
 		@apply absolute inset-0 rounded-2xl pointer-events-none;
