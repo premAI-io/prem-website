@@ -169,6 +169,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 						opacity: 1,
 						y: 0,
 						stagger: 0.1,
+						clearProps: "opacity,y",
 						ease,
 					},
 					0.75,

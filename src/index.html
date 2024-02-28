@@ -3,18 +3,7 @@
 	{{> head}}
 
 	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
-		<div
-			class="page-loader js-page-loader"
-			style="
-				position: fixed;
-				top: 0px;
-				left: 0px;
-				z-index: 421;
-				height: 100%;
-				width: 100%;
-				background-color: #28292d;
-			"
-		></div>
+		{{> page-loader}}
 
 		<div class="page__wrap" data-router-view="homepage" id="top">
 			{{> nav}} {{#>hero variant="home" }}

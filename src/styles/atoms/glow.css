@@ -1,0 +1,21 @@
+.glow {
+	@apply relative;
+	&::after {
+		content: "";
+		@apply absolute top-0 left-0 w-full h-full pointer-events-none rounded-2xl opacity-0 z-[1];
+		box-shadow: var(--primary-shadow);
+		transition: opacity 0.4s var(--ease-power4);
+	}
+}
+
+.glow--lg {
+	&::after {
+		@apply rounded-lg;
+	}
+}
+
+@media (hover: hover) {
+	.glow:hover::after {
+		@apply opacity-100;
+	}
+}

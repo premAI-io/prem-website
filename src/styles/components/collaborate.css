@@ -28,6 +28,7 @@
 }
 
 .collaborate__item-icon {
+	@apply relative z-[2];
 	svg {
 		@apply max-w-[70px] max-h-[60px] h-auto;
 	}

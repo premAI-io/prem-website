@@ -1,6 +1,12 @@
 .badge {
-	@apply inline-flex items-center px-3 py-2 rounded-lg border border-white border-opacity-30;
+	@apply inline-flex items-center px-3 py-2 rounded-lg relative border border-white border-opacity-30;
 	background: var(--secondary-gradient);
+}
+
+.badge__icon,
+.badge__text,
+.badge__arrow {
+	@apply relative z-[2];
 }
 
 .badge__icon {

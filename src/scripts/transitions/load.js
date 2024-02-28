@@ -13,7 +13,6 @@ export const loadTransition = () => {
 	hidePage({ pageName: router.activeView });
 
 	const loadTl = gsap.timeline({
-		delay: 0.3,
 		onComplete: () => {
 			console.log("load transition complete");
 			// const scrollAnimatorInstance = iman.get("scrollAnimator");

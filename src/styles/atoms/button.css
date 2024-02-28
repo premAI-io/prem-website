@@ -1,11 +1,33 @@
 .button {
-	@apply inline-flex items-center justify-center py-3 px-8 relative font-medium overflow-hidden;
-	border-radius: 8px;
+	@apply inline-flex items-center justify-center py-3 px-8 relative font-medium rounded-lg;
 	backface-visibility: hidden;
 	transform: translateZ(0);
+	transition: transform 0.3s var(--ease-power4);
 	&.is-disabled {
 		@apply pointer-events-none opacity-30;
 	}
+
+	&:active {
+		transform: translateZ(0) scale(0.97);
+	}
+}
+
+.button__bg {
+	@apply absolute top-0 left-0 w-full h-full rounded-lg pointer-events-none overflow-hidden z-[1];
+	&::after {
+		content: "";
+		@apply block absolute -top-9 -left-[100px] bg-white w-[50px] h-[125px] opacity-20 rotate-[-45deg];
+	}
+}
+
+.button__ill {
+	@apply absolute top-0 left-0 w-full h-full rounded-lg pointer-events-none opacity-0 z-[1];
+	box-shadow: var(--primary-shadow);
+	transition: opacity 0.4s var(--ease-power4);
+}
+
+.button__content {
+	@apply relative z-[2];
 }
 
 .button--primary {
@@ -20,10 +42,21 @@
 .button--icon {
 	@apply w-[42px] h-[42px] rounded-[50%] p-0;
 	background: none;
+	.button__ill {
+		@apply rounded-[50%];
+	}
+
+	.button__content {
+		@apply w-full h-full absolute top-0 left-0;
+	}
+
+	.button__bg {
+		@apply hidden;
+	}
 }
 
 .button__icon {
-	@apply pointer-events-none;
+	@apply pointer-events-none z-[3];
 }
 
 .button__icon,
@@ -39,5 +72,19 @@
 .button__icon-bg {
 	svg {
 		@apply w-full h-full;
+	}
+}
+
+@media (hover: hover) {
+	.button:hover {
+		.button__ill {
+			@apply opacity-100;
+		}
+		.button__bg {
+			&::after {
+				left: 130%;
+				transition: all 0.7s cubic-bezier(0.3, 1, 0.2, 1);
+			}
+		}
 	}
 }

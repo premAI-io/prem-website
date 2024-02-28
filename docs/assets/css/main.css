@@ -683,21 +683,93 @@ p,
 	z-index: 2;
 	flex: 1 0 auto;
 }
+.glow {
+	position: relative;
+}
+.glow:after {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	border-radius: 1rem;
+	opacity: 0;
+	box-shadow: var(--primary-shadow);
+	transition: opacity 0.4s var(--ease-power4);
+}
+.glow--lg:after {
+	border-radius: 0.5rem;
+}
+@media (hover: hover) {
+	.glow:hover:after {
+		opacity: 1;
+	}
+}
 .button {
 	position: relative;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	overflow: hidden;
+	border-radius: 0.5rem;
 	padding: 0.75rem 2rem;
 	font-weight: 500;
-	border-radius: 8px;
 	backface-visibility: hidden;
 	transform: translateZ(0);
+	transition: transform 0.3s var(--ease-power4);
 }
 .button.is-disabled {
 	pointer-events: none;
 	opacity: 0.3;
+}
+.button:active {
+	transform: translateZ(0) scale(0.97);
+}
+.button__bg {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 0.5rem;
+}
+.button__bg:after {
+	content: "";
+	position: absolute;
+	top: -2.25rem;
+	left: -100px;
+	display: block;
+	height: 125px;
+	width: 50px;
+	--tw-rotate: -45deg;
+	transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+		rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+		scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+	--tw-bg-opacity: 1;
+	background-color: rgb(255 255 252 / var(--tw-bg-opacity));
+	opacity: 0.2;
+}
+.button__ill {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	border-radius: 0.5rem;
+	opacity: 0;
+	box-shadow: var(--primary-shadow);
+	transition: opacity 0.4s var(--ease-power4);
+}
+.button__content {
+	position: relative;
+	z-index: 2;
 }
 .button--primary {
 	background: var(--primary-gradient);
@@ -715,8 +787,22 @@ p,
 	padding: 0;
 	background: none;
 }
+.button--icon .button__ill {
+	border-radius: 50%;
+}
+.button--icon .button__content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+.button--icon .button__bg {
+	display: none;
+}
 .button__icon {
 	pointer-events: none;
+	z-index: 3;
 }
 .button__icon,
 .button__icon-inner,
@@ -736,7 +822,17 @@ p,
 	height: 100%;
 	width: 100%;
 }
+@media (hover: hover) {
+	.button:hover .button__ill {
+		opacity: 1;
+	}
+	.button:hover .button__bg:after {
+		left: 130%;
+		transition: all 0.7s cubic-bezier(0.3, 1, 0.2, 1);
+	}
+}
 .badge {
+	position: relative;
 	display: inline-flex;
 	align-items: center;
 	border-radius: 0.5rem;
@@ -745,6 +841,12 @@ p,
 	--tw-border-opacity: 0.3;
 	padding: 0.5rem 0.75rem;
 	background: var(--secondary-gradient);
+}
+.badge__icon,
+.badge__text,
+.badge__arrow {
+	position: relative;
+	z-index: 2;
 }
 .badge__icon {
 	margin-right: 0.25rem;
@@ -1583,6 +1685,10 @@ p,
 }
 .collaborate__item {
 	background: var(--secondary-gradient);
+}
+.collaborate__item-icon {
+	position: relative;
+	z-index: 2;
 }
 .collaborate__item-icon svg {
 	height: auto;
@@ -2940,6 +3046,8 @@ p,
 	margin-bottom: 4rem;
 	width: 92.6%;
 	max-width: 80%;
+	--tw-text-opacity: 1;
+	color: rgb(234 234 234 / var(--tw-text-opacity));
 }
 @media (min-width: 1024px) {
 	.vision__text {
@@ -2957,7 +3065,7 @@ p,
 	display: block;
 	height: auto;
 	width: 92.6%;
-	max-width: 988px;
+	max-width: 540px;
 }
 @media (min-width: 1024px) {
 	.vision__ill img {
@@ -3005,12 +3113,29 @@ p,
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: 0;
 	border-radius: 1rem;
 	background: var(--secondary-gradient);
 }
+.mission:after {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	border-radius: 1rem;
+	background: radial-gradient(
+		66.8% 61.31% at 50% 100%,
+		#f58e8e73,
+		#7f96ff00 88.5%
+	);
+}
 .mission__content {
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -3027,6 +3152,29 @@ p,
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 500px;
+}
+.mission__ill {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	overflow: hidden;
+	border-radius: 1rem;
+}
+.mission__ill img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 .team__section {
 	margin-bottom: 6rem;
@@ -4849,6 +4997,7 @@ p,
 			rgba(226, 232, 255, 0.12) 100%
 		),
 		#28292d;
+	--primary-shadow: -1px 2px 20px 0px rgba(245, 142, 142, 0.5);
 	--z-god: 420;
 	--z-nav: 90;
 	--z-default: 1;

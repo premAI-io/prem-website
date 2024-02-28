@@ -10,5 +10,8 @@
   {{{attributes "button" this @root}}}
 	{{{attributes "link" this @root}}}
 >
-  {{> @partial-block}}
+
+	<div class="button__ill" aria-hidden="true"></div>
+	<div class="button__bg" aria-hidden="true"></div>
+  <div class="button__content">{{> @partial-block}}</div>
 </{{op tag "||" "button"}}>
