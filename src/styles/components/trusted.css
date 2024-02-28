@@ -20,4 +20,9 @@
 .trusted__row-item {
 	@apply flex items-center justify-center w-[42%] min-w-[164px] md:w-[33%] lg:w-[23%] xl:w-[16.6667%] h-24 relative shrink-0 overflow-hidden rounded-2xl border border-white border-opacity-30 mr-10;
 	background: var(--secondary-gradient);
+
+	img,
+	svg {
+		@apply max-w-[120px] max-h-[52px];
+	}
 }

@@ -7,7 +7,7 @@
 }
 
 .hero__post-preview {
-	@apply hidden mb-4 md:flex lg:mb-8;
+	@apply relative overflow-hidden hidden mb-4 md:flex lg:mb-8;
 }
 
 .hero__title {

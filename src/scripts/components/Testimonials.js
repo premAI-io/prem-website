@@ -96,27 +96,6 @@ class Testimonials {
 		}
 	};
 
-	setTrigger() {
-		gsap.set(this.DOM.cards, {
-			opacity: 1,
-			xPercent: 0,
-			rotate: 0,
-		});
-
-		const stackTl = gsap.timeline({
-			scrollTrigger: {
-				trigger: this.DOM.section,
-				start: `top -=20%`,
-				end: `+=${layout.window.height * 5}`,
-				pin: true,
-				scrub: true,
-			},
-		});
-
-		const cardsTl = this.buildCardsTl();
-		stackTl.add(cardsTl, 0);
-	}
-
 	exitSlide = (slide) => {
 		const tl = gsap.timeline();
 
@@ -161,7 +140,7 @@ class Testimonials {
 			const cardTl = gsap.timeline();
 			cardTl
 				.from(card, {
-					y: layout.window.height * 0.5,
+					y: layout.window.height * 0.7,
 					duration: 1.4,
 				})
 				.to(
@@ -182,6 +161,27 @@ class Testimonials {
 
 		return cardsTl;
 	};
+
+	setTrigger() {
+		gsap.set(this.DOM.cards, {
+			opacity: 1,
+			xPercent: 0,
+			rotate: 0,
+		});
+
+		const stackTl = gsap.timeline({
+			scrollTrigger: {
+				trigger: this.DOM.section,
+				start: `top -=30%`,
+				end: `+=${layout.window.height * 5}`,
+				pin: true,
+				scrub: true,
+			},
+		});
+
+		const cardsTl = this.buildCardsTl();
+		stackTl.add(cardsTl, 0);
+	}
 
 	destroy() {
 		if (this.DOM) {

@@ -35,23 +35,115 @@
 }
 
 .platform__card {
-	@apply relative border border-white border-opacity-40 rounded-3xl bg-gray-800;
+	@apply relative border border-white border-opacity-40 rounded-3xl bg-gray-800 overflow-hidden;
 
 	&::before {
 		content: "";
-		@apply absolute inset-0 rounded-3xl pointer-events-none;
+		@apply absolute inset-0 rounded-3xl pointer-events-none z-[0];
 		background: var(--secondary-gradient);
 	}
 
+	&::after {
+		content: "";
+		@apply absolute inset-0 rounded-3xl pointer-events-none z-[1];
+	}
+
 	&:first-child {
+		&::after {
+			background: radial-gradient(
+				108.94% 125.47% at 120% 80%,
+				rgba(245, 142, 142, 0.35) 0%,
+				rgba(127, 150, 255, 0.02) 88.5%
+			);
+		}
+
+		.platform-card__ill {
+			@apply right-0 top-5 w-[75%] h-[calc(100%-1.5rem)];
+		}
+
 		.platform__card-content {
 			@apply left-[52px] max-w-[320px];
 		}
 	}
 
+	&:nth-child(2) {
+		&::after {
+			background: radial-gradient(
+				196.55% 81.09% at 1.91% 0%,
+				rgba(245, 142, 142, 0.3) 10%,
+				rgba(127, 150, 255, 0) 78.5%
+			);
+		}
+
+		.platform-card__ill {
+			@apply left-5 top-10 w-[calc(100%-2.5rem)] h-auto aspect-[1/0.54389];
+		}
+	}
+
+	&:nth-child(3) {
+		&::after {
+			background: radial-gradient(
+				194.23% 87.65% at 118.19% 0%,
+				rgba(245, 142, 142, 0.4) 0%,
+				rgba(127, 150, 255, 0) 88.5%
+			);
+		}
+
+		.platform-card__ill {
+			@apply left-[7%] top-10 w-[105%] h-auto aspect-[1/0.5435];
+			img {
+				@apply object-contain;
+			}
+		}
+	}
+
 	&:nth-child(4) {
+		&::after {
+			background: radial-gradient(
+				157.69% 90.06% at -20% 20%,
+				rgba(245, 142, 142, 0.4) 10%,
+				rgba(127, 150, 255, 0) 79.5%
+			);
+		}
+		.platform-card__ill {
+			@apply left-[6%] top-5 w-[79.7%] h-auto aspect-[1/0.6];
+			img {
+				@apply object-contain;
+			}
+		}
 		.platform__card-content {
 			@apply right-[52px] max-w-[400px];
+		}
+	}
+
+	&:nth-child(5) {
+		&::after {
+			background: radial-gradient(
+				155.16% 64.07% at 9.91% 0%,
+				rgba(245, 142, 142, 0.35) 20%,
+				rgba(127, 150, 255, 0) 95.5%
+			);
+		}
+
+		.platform-card__ill {
+			@apply left-[20%] top-10 w-[60%] h-auto aspect-[1/0.97];
+		}
+	}
+
+	&:last-child {
+		&::after {
+			background: radial-gradient(
+				264.23% 97.65% at 158.19% -10%,
+				rgba(245, 142, 142, 0.45) 0%,
+				rgba(127, 150, 255, 0) 88.5%
+			);
+		}
+
+		.platform-card__ill {
+			@apply left-[16%] top-12 w-[60%] h-auto aspect-[1/0.9];
+			img {
+				@apply object-contain;
+			}
 		}
 	}
 
@@ -88,8 +180,15 @@
 	}
 }
 
-.platform__card-content {
+.platform-card__ill {
 	@apply absolute z-[2];
+	img {
+		@apply absolute inset-0 w-full h-full object-cover;
+	}
+}
+
+.platform__card-content {
+	@apply absolute z-[3];
 }
 
 .platform__card-title {
@@ -104,6 +203,53 @@
 	.platform__card {
 		@apply !w-full !aspect-[1/1.157];
 
+		.platform-card__ill {
+			@apply right-auto left-[10%] top-5 w-[130%] h-[70%];
+			img {
+				@apply !object-contain;
+			}
+		}
+
+		.platform__card-content {
+			@apply !bottom-6 !left-6 w-[90%];
+		}
+
+		&:first-child {
+			.platform-card__ill {
+				@apply w-[130%] right-auto h-[70%];
+			}
+		}
+
+		&:nth-child(2) {
+			.platform-card__ill {
+				@apply w-[120%] right-auto h-[60%];
+			}
+		}
+
+		&:nth-child(3) {
+			.platform-card__ill {
+				@apply w-[105%] right-auto h-[55%];
+			}
+		}
+
+		&:nth-child(4) {
+			.platform-card__ill {
+				@apply w-[125%] h-[65%];
+			}
+		}
+
+		&:nth-child(5) {
+			.platform-card__ill {
+				@apply w-[95%] h-[60%] left-[2.5%];
+			}
+		}
+
+		&:last-child {
+			.platform-card__ill {
+				@apply w-[80%] h-[55%] left-[5%];
+			}
+		}
+
 		&:not(:last-child) {
 			@apply !mb-4;
 		}
@@ -112,15 +258,47 @@
 		&:nth-child(5) {
 			@apply mr-0;
 		}
-
-		.platform__card-content {
-			@apply !bottom-6 !left-6 w-[90%];
-		}
 	}
 }
 
 @media screen and (max-width: 450px) {
 	.platform__card {
-		@apply !aspect-[1/1.35];
+		@apply !aspect-[1/1.38];
+	}
+}
+
+@media screen and (max-width: 340px) {
+	.platform__card {
+		.platform__card-content {
+			@apply !w-[85%];
+		}
+
+		.platform__card-title {
+			@apply mb-2;
+		}
+
+		&:first-child {
+			.platform-card__ill {
+				@apply w-[120%] left-[5%];
+			}
+		}
+
+		&:nth-child(2) {
+			.platform-card__ill {
+				@apply w-[105%] top-0;
+			}
+		}
+
+		&:nth-child(3) {
+			.platform-card__ill {
+				@apply w-[100%] h-[50%];
+			}
+		}
+
+		&:nth-child(5) {
+			.platform-card__ill {
+				@apply w-[80%] h-[50%] left-[10%];
+			}
+		}
 	}
 }

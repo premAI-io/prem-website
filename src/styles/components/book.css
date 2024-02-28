@@ -43,7 +43,7 @@
 }
 
 .book__img {
-	@apply block w-[290px] h-auto mx-auto mb-12;
+	@apply block w-[80%] h-auto mx-auto mb-12 md:w-[290px];
 }
 
 .book__cta {

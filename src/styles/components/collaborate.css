@@ -23,7 +23,7 @@
 }
 
 .collaborate__item {
-	@apply flex items-center justify-center sm:w-[21%] xl:w-[15%] h-24 relative rounded-2xl border border-white border-opacity-30;
+	@apply flex items-center justify-center max-w-[300px] sm:w-[21%] xl:w-[15%] h-24 relative rounded-2xl border border-white border-opacity-30;
 	background: var(--secondary-gradient);
 }
 

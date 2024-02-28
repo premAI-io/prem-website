@@ -49,7 +49,7 @@ class FeaturesCarousel {
 			this.DOM.ctas[i].addEventListener("click", this.onSlideCtaClick);
 		}
 
-		this.start();
+		// this.start();
 	}
 
 	onSlideCtaClick = (e) => {
@@ -178,7 +178,7 @@ class FeaturesCarousel {
 			.timeline({
 				paused: true,
 			})
-			.to(this.DOM.progress, {
+			.to(this.DOM.progressbar, {
 				scaleX: 1,
 				duration: SLIDER_TIMEOUT / 1000,
 				ease: "linear",
@@ -186,6 +186,133 @@ class FeaturesCarousel {
 
 		this.progressTl.play();
 		this.instance?.plugins()?.autoplay?.play();
+	};
+
+	hide = () => {
+		const hideTl = gsap.timeline();
+
+		if (layout.device < 1) {
+			const activeSlide = this.DOM.slides[this.activeIndex];
+			const activeSlideContents = activeSlide.querySelectorAll(
+				".js-features-carousel-content",
+			);
+
+			hideTl
+				.set(activeSlide, {
+					transformOrigin: "50% 100%",
+					scale: 0,
+					y: 30,
+				})
+				.set(activeSlideContents, {
+					opacity: 0,
+				})
+				.set(this.DOM.progress, {
+					opacity: 0,
+					y: 20,
+				});
+		} else {
+			for (let i = 0; i < this.DOM.slides.length; i++) {
+				const slide = this.DOM.slides[i];
+				const slideContents = slide.querySelectorAll(
+					".js-features-carousel-content",
+				);
+				hideTl
+					.set(slide, {
+						transformOrigin: "50% 100%",
+						// scale: 0,
+						opacity: 0,
+						y: 30,
+					})
+					.set(slideContents, {
+						opacity: 0,
+					})
+					.set(this.DOM.progress, {
+						opacity: 0,
+						y: 20,
+					});
+			}
+		}
+
+		return hideTl;
+	};
+
+	reveal = () => {
+		const revealTl = gsap.timeline();
+
+		if (layout.device < 1) {
+			const activeSlide = this.DOM.slides[this.activeIndex];
+			const activeSlideContents = activeSlide.querySelectorAll(
+				".js-features-carousel-content",
+			);
+
+			revealTl
+				.to(activeSlide, {
+					scale: 1,
+					y: 0,
+					duration: 0.8,
+					ease,
+				})
+				.to(
+					activeSlideContents,
+					{
+						opacity: 1,
+						duration: 0.8,
+						ease,
+					},
+					"-=0.3",
+				)
+				.to(
+					this.DOM.progress,
+					{
+						opacity: 1,
+						y: 0,
+						duration: 0.8,
+						ease,
+					},
+					"-=0.8",
+				);
+		} else {
+			const slidesArray = gsap.utils.toArray(this.DOM.slides).reverse();
+
+			for (let i = 0; i < slidesArray.length; i++) {
+				const tl = gsap.timeline();
+				const slide = slidesArray[i];
+				const slideContents = slide.querySelectorAll(
+					".js-features-carousel-content",
+				);
+
+				tl.to(slide, {
+					// scale: 1,
+					y: 0,
+					opacity: 1,
+					duration: 0.8,
+					ease,
+				})
+					.set(
+						slideContents,
+						{
+							opacity: 1,
+							duration: 0.8,
+							ease,
+						},
+						"-=0.3",
+					)
+					.to(
+						this.DOM.progress,
+						{
+							opacity: 1,
+							y: 0,
+							duration: 0.8,
+							ease,
+						},
+						"-=0.8",
+					);
+
+				revealTl.add(tl, i * 0.07);
+			}
+		}
+
+		return revealTl;
 	};
 
 	destroy() {
@@ -298,6 +425,9 @@ class FeaturesCarousel {
 			);
 			this.DOM.progress = this.DOM.wrap.querySelector(
 				".js-features-carousel-progress",
+			);
+			this.DOM.progressbar = this.DOM.wrap.querySelector(
+				".js-features-carousel-progressbar",
 			);
 
 			this.instance = undefined;

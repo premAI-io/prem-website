@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import router from "./Router";
 import { ease, tlProp } from "../helpers/animation";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -13,7 +14,22 @@ class Nav {
 	setup() {
 		this.addEvents();
 		this.hideNav(true);
+		this.setActiveItem();
 		this.addHeadTrigger();
+	}
+
+	setActiveItem(viewName = router.activeView) {
+		const activeLink = this.DOM.nav.querySelector(".js-nav-link.is-active");
+		if (activeLink) {
+			activeLink.classList.remove("is-active");
+		}
+
+		const newActiveLink = this.DOM.nav.querySelector(
+			`.js-nav-link[data-route="${viewName}"]`,
+		);
+		if (newActiveLink) {
+			newActiveLink.classList.add("is-active");
+		}
 	}
 
 	addEvents() {
@@ -166,6 +182,19 @@ class Nav {
 
 			return revealTl;
 		}
+	};
+
+	hide = () => {
+		return gsap.set(this.DOM.nav, { opacity: 0 });
+	};
+
+	reveal = () => {
+		return gsap.timeline().to(this.DOM.nav, {
+			opacity: 1,
+			duration: 0.8,
+			ease,
+			clearProps: "opacity",
+		});
 	};
 
 	reinit(container) {

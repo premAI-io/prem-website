@@ -67,3 +67,10 @@
 		scroll-snap-align: center;
 	}
 }
+
+@media screen and (max-width: 540px) {
+	.blog__card {
+		width: 97%;
+		min-width: 97%;
+	}
+}

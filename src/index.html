@@ -3,19 +3,32 @@
 	{{> head}}
 
 	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+		<div
+			class="page-loader js-page-loader"
+			style="
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				z-index: 421;
+				height: 100%;
+				width: 100%;
+				background-color: #28292d;
+			"
+		></div>
+
 		<div class="page__wrap" data-router-view="homepage" id="top">
 			{{> nav}} {{#>hero variant="home" }}
 
-			<div class="hero__ill" aria-hidden="true">
+			<div class="hero__ill js-hero-ill" aria-hidden="true">
 				{{> illustrations/space-ill}}
 			</div>
 
 			<div class="l-container hero__container">
-				<div class="hero__content">
+				<div class="hero__content js-hero-content">
 					<div class="hero__post-preview">
 						{{#>badge
 						href="https://blog.premai.io/announcing-our-startup-grants-program/"
-						target="_blank" rel="noopener" }}
+						target="_blank" rel="noopener" class="js-badge" }}
 						<div class="badge__icon">{{> icons/sparkles}}</div>
 						<div class="p-sm badge__text">
 							We launched a Generative AI Startup Program! Apply now
@@ -24,18 +37,19 @@
 						{{/badge}}
 					</div>
 
-					<h1 class="hero__title">
+					<h1 class="hero__title js-title" data-split="words">
 						AI that you own. <br />
 						<span class="t-grad">Always.</span>
 					</h1>
-					<p class="h4 hero__subtitle">
+					<p class="h4 hero__subtitle js-subtitle" data-split="words">
 						Accelerating the advent of personalized LLMS.
 					</p>
 
 					<div class="hero__ctas">
-						{{#>button tag="a" href="" }} Start building now {{/button}}
-						{{#>button tag="a" href="./contact.html" theme="secondary" }}
-						Contact sales {{/button}}
+						{{#>button tag="a" href="#platform" class="js-cta js-hash-scroll" }}
+						Start building now {{/button}} {{#>button tag="a"
+						href="./contact.html" theme="secondary" class="js-cta" }} Contact
+						sales {{/button}}
 					</div>
 				</div>
 

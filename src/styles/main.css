@@ -1,8 +1,12 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
+/* Vendors */
+@import "splitting/dist/splitting.css";
+
 /* Atoms */
 @import "./atoms/typography.css";
+@import "./atoms/page-loader.css";
 @import "./atoms/layout.css";
 @import "./atoms/button.css";
 @import "./atoms/badge.css";

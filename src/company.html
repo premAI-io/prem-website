@@ -3,15 +3,28 @@
 	{{> head}}
 
 	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+		<div
+			class="page-loader js-page-loader"
+			style="
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				z-index: 421;
+				height: 100%;
+				width: 100%;
+				background-color: #28292d;
+			"
+		></div>
+
 		<div class="page__wrap" data-router-view="company" id="top">
 			{{> nav}} {{#>hero variant="company" }}
 
 			<div class="l-container hero__container">
-				<div class="hero__content">
+				<div class="hero__content js-hero-content">
 					<div class="hero__post-preview">
 						{{#>badge
 						href="https://blog.premai.io/announcing-our-startup-grants-program/"
-						target="_blank" rel="noopener" }}
+						target="_blank" rel="noopener" class="js-badge" }}
 						<div class="badge__icon">{{> icons/sparkles}}</div>
 						<div class="p-sm badge__text">
 							We launched a Generative AI Startup Program! Apply now
@@ -20,11 +33,11 @@
 						{{/badge}}
 					</div>
 
-					<h1 class="hero__title">
+					<h1 class="hero__title js-title" data-split="words">
 						Prem is constantly <br />
 						<span class="t-grad">evolving.</span>
 					</h1>
-					<p class="h4 hero__subtitle">
+					<p class="h4 hero__subtitle js-subtitle" data-split="words">
 						Prem is an applied research lab dedicated to expanding the
 						capabilities of open and decentralized AI technologies with
 						ownership.
@@ -32,10 +45,10 @@
 				</div>
 			</div>
 
-			<div class="hero__ill" aria-hidden="true">
+			<div class="hero__ill js-hero-ill" aria-hidden="true">
 				{{> illustrations/evolve-chart}}
 			</div>
-			<div class="hero__bg" aria-hidden="true">
+			<div class="hero__bg js-hero-bg" aria-hidden="true">
 				<img
 					src="./images/stars.png"
 					alt="Stars illustration"
