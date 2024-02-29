@@ -33,3 +33,12 @@
 	@apply relative z-[2];
 	flex: 1 0 auto;
 }
+
+.js-lazy-el {
+	opacity: 0 !important;
+	transition: opacity 0.42s ease-in-out;
+
+	&[data-loaded="true"] {
+		opacity: 1 !important;
+	}
+}

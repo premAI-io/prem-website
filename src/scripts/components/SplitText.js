@@ -64,6 +64,19 @@ class SplitText {
 		if (selectedInstance !== undefined) return selectedInstance[0];
 	}
 
+	getSubInstanceFrom = (element, subInstanceName) => {
+		const subInstances = this[subInstanceName];
+		let relativeSub = undefined;
+
+		for (let i = 0; i < subInstances.length; i++) {
+			if (subInstances[i].el === element) {
+				relativeSub = subInstances[i];
+			}
+		}
+
+		return relativeSub;
+	};
+
 	addInstance(instanceName, options, save = true) {
 		this[instanceName] = Splitting(options);
 		if (save)

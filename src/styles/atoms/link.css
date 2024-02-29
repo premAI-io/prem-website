@@ -1,0 +1,9 @@
+.link {
+	transition: opacity 0.32s var(--ease-power4);
+}
+
+@media (hover: hover) {
+	.link:hover {
+		opacity: 0.72;
+	}
+}

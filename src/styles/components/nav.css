@@ -28,11 +28,30 @@
 }
 
 .nav__items {
-	@apply hidden lg:flex justify-center items-center py-2 px-4 gap-x-3 rounded-3xl border border-white border-opacity-30 bg-gray-800;
+	@apply hidden lg:flex justify-center items-center py-2 px-4 gap-x-3 rounded-3xl border border-white border-opacity-20 bg-gray-800;
 }
 
 .nav__link {
-	@apply flex py-3 px-4 rounded-3xl;
+	@apply relative flex py-3 px-4 rounded-3xl border-b border-b-gray-800;
+	transition: border-color 0.4s var(--ease-power4);
+
+	&::after {
+		content: "";
+		@apply absolute left-0 top-0 w-full h-full opacity-0 rounded-3xl;
+		background: var(--secondary-gradient);
+		transition: opacity 0.4s var(--ease-power4);
+	}
+
+	&.is-active {
+		@apply border-b-pink;
+		&::after {
+			@apply opacity-100;
+		}
+	}
+}
+
+.nav__link-inner {
+	@apply relative z-[2];
 }
 
 .nav__cta {
@@ -121,5 +140,14 @@
 	@apply relative overflow-hidden;
 	.button {
 		@apply w-full;
+	}
+}
+
+@media (hover: hover) {
+	.nav__link:hover {
+		@apply border-b-pink;
+		&::after {
+			@apply opacity-100;
+		}
 	}
 }

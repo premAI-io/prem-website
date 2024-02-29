@@ -1,5 +1,9 @@
 .features-carousel {
 	@apply w-full lg:w-[463px];
+
+	&.is-animate {
+		@apply pointer-events-none;
+	}
 }
 
 .features-carousel__container {
@@ -36,6 +40,10 @@
 			}
 		}
 	}
+}
+
+.features-carousel__ill {
+	@apply absolute top-[12%] left-1/2 transform -translate-x-1/2 w-auto max-h-[60%] max-w-[95%] opacity-0;
 }
 
 .features-carousel__item-content {

@@ -1,35 +1,40 @@
-<section class="models__section" id="models">
-	<article class="models">
-		<div class="models__bg" aria-hidden="true"></div>
-		<div class="models__ill" aria-hidden="true">
-			<img
-				src="./images/stars.png"
-				alt="Models stars illustration"
-				draggable="false"
-			/>
-		</div>
+<div class="glow-rad__section js-glow-cards">
+	<section class="models__section" id="models" data-scroll-trigger="anim-group">
+		<article class="models js-anim-group glow-rad__item js-glow-card">
+			<div class="models__bg js-anim-item" aria-hidden="true"></div>
+			<div class="models__ill js-anim-item" aria-hidden="true">
+				<img
+					src="./images/stars.png"
+					alt="Models stars illustration"
+					draggable="false"
+				/>
+			</div>
 
-		<div class="models__content">
-			<div class="divider-label models__label">
-				<div class="divider-label__ill" aria-hidden="true">
-					{{> illustrations/divider-sm-left}}
+			<div class="models__content">
+				<div class="divider-label models__label js-anim-item">
+					<div class="divider-label__ill" aria-hidden="true">
+						{{> illustrations/divider-sm-left}}
+					</div>
+					<p class="divider-label__text h5">Lorem ipsum dolor sit</p>
+					<div class="divider-label__ill" aria-hidden="true">
+						{{> illustrations/divider-sm-right}}
+					</div>
 				</div>
-				<p class="divider-label__text h5">Lorem ipsum dolor sit</p>
-				<div class="divider-label__ill" aria-hidden="true">
-					{{> illustrations/divider-sm-right}}
+
+				<p class="h2 models__title js-anim-item">Prem Models</p>
+				<p class="models__text js-anim-item">
+					Small Language Models suitable for fine-tuning and custom use cases.
+					<br />
+					State of the art efficiency without compromising quality.
+				</p>
+
+				<div class="models__cta js-anim-item">
+					{{#>button tag="a" href="https://app.premai.io/accounts/signup/"
+					target="_blank" rel="noopener" }} Try them on Prem {{/button}}
 				</div>
 			</div>
 
-			<p class="h2 models__title">Prem Models</p>
-			<p class="models__text">
-				Small Language Models suitable for fine-tuning and custom use cases.
-				<br />
-				State of the art efficiency without compromising quality.
-			</p>
-
-			<div class="models__cta">
-				{{#>button tag="a" href="" }} Try them on Prem {{/button}}
-			</div>
-		</div>
-	</article>
-</section>
+			<div class="glow-rad" aria-hidden="true"></div>
+		</article>
+	</section>
+</div>

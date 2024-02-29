@@ -14,8 +14,64 @@
 	}
 }
 
+.glow--rounded {
+	&::after {
+		@apply rounded-[50%];
+	}
+}
+
+.glow-rad {
+	@apply absolute top-0 left-0 w-full h-full pointer-events-none rounded-[inherit] z-[1];
+	&::before,
+	&::after {
+		border-radius: inherit;
+		content: "";
+		@apply absolute top-0 left-0 h-full w-full opacity-0 pointer-events-none;
+		transition: opacity 0.5s ease;
+	}
+
+	&::before {
+		background: radial-gradient(
+			800px circle at var(--mouse-x) var(--mouse-y),
+			rgba(255, 255, 255, 0.06),
+			transparent 40%
+		);
+		z-index: 3;
+	}
+
+	&::after {
+		background: radial-gradient(
+			600px circle at var(--mouse-x) var(--mouse-y),
+			rgba(255, 255, 255, 0.4),
+			transparent 40%
+		);
+		z-index: 1;
+	}
+}
+
+@media (hover: hover) {
+}
+
 @media (hover: hover) {
 	.glow:hover::after {
 		@apply opacity-100;
+	}
+
+	.glow-rad__item:hover {
+		.glow-rad {
+			&::before {
+				@apply opacity-100;
+			}
+		}
+	}
+
+	.glow-rad__section:hover {
+		.glow-rad__item {
+			.glow-rad {
+				&::after {
+					@apply opacity-10;
+				}
+			}
+		}
 	}
 }

@@ -176,6 +176,8 @@ class Testimonials {
 				end: `+=${layout.window.height * 5}`,
 				pin: true,
 				scrub: true,
+				preventOverlaps: true,
+				fastScrollEnd: 3000,
 			},
 		});
 

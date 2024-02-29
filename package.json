@@ -54,6 +54,7 @@
 		"embla-carousel": "^8.0.0",
 		"embla-carousel-autoplay": "^8.0.0",
 		"gsap": "^3.12.5",
+		"lozad": "^1.16.0",
 		"splitting": "^1.0.6"
 	}
 }

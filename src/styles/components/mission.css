@@ -22,15 +22,15 @@
 }
 
 .mission__label {
-	@apply mb-10;
+	@apply mb-5 md:mb-10;
 }
 
 .mission__title {
-	@apply mb-6;
+	@apply mb-5;
 }
 
 .mission__text {
-	@apply max-w-[500px] mx-auto;
+	@apply max-w-[90%] md:max-w-[500px] mx-auto;
 }
 
 .mission__ill {
@@ -39,4 +39,12 @@
 	img {
 		@apply absolute inset-0 w-full h-full object-cover;
 	}
+}
+
+.mission__img-desk {
+	@apply hidden md:block;
+}
+
+.mission__img-mobile {
+	@apply block md:hidden;
 }

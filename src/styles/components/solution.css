@@ -15,7 +15,7 @@
 }
 
 .solution__stats {
-	@apply flex items-stretch lg:items-center justify-center gap-x-7 md:gap-x-12 mb-10 md:mb-12;
+	@apply flex items-stretch justify-center gap-x-7 md:gap-x-12 mb-10 md:mb-12;
 }
 
 .solution__stat {

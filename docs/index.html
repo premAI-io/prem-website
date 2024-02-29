@@ -2,11 +2,17 @@
 <html lang="en-US">
 	<head itemscope itemtype="http://schema.org/WebSite">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Home</title>
-		<meta name="description" content="Home" />
+		<title>Prem - AI that you Own. Always - Home</title>
+		<meta
+			name="description"
+			content="Accelerating the advent of personalized LLMs."
+		/>
 
 		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-title" content="Home" />
+		<meta
+			name="apple-mobile-web-app-title"
+			content="Prem - AI that you Own. Always - Home"
+		/>
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 		<meta name="msapplication-tap-highlight" content="no" />
@@ -946,7 +952,7 @@
 								href="./company.html"
 								class="nav__link js-nav-link"
 								data-route="company"
-								>Company</a
+								><div class="nav__link-inner">Company</div></a
 							>
 						</li>
 						<li class="nav__item">
@@ -955,7 +961,7 @@
 								target="_blank"
 								rel="noopener"
 								class="nav__link js-nav-link"
-								>Blog</a
+								><div class="nav__link-inner">Blog</div></a
 							>
 						</li>
 						<li class="nav__item">
@@ -963,7 +969,7 @@
 								href="./contact.html"
 								class="nav__link js-nav-link"
 								data-route="contact"
-								>Contact</a
+								><div class="nav__link-inner">Contact</div></a
 							>
 						</li>
 					</ul>
@@ -1240,6 +1246,12 @@
 									class="features-carousel__item js-features-carousel-item"
 									data-index="0"
 								>
+									<img
+										src="./assets/images/platform-ill.svg"
+										alt=""
+										class="features-carousel__ill js-features-carousel-ill"
+										draggable="false"
+									/>
 									<div
 										class="features-carousel__item-content js-features-carousel-content"
 									>
@@ -1342,6 +1354,12 @@
 									class="features-carousel__item js-features-carousel-item"
 									data-index="1"
 								>
+									<img
+										src="./assets/images/solution-ill.svg"
+										alt=""
+										class="features-carousel__ill js-features-carousel-ill"
+										draggable="false"
+									/>
 									<div
 										class="features-carousel__item-content js-features-carousel-content"
 									>
@@ -1443,6 +1461,12 @@
 									class="features-carousel__item js-features-carousel-item"
 									data-index="2"
 								>
+									<img
+										src="./assets/images/models-ill.svg"
+										alt=""
+										class="features-carousel__ill js-features-carousel-ill"
+										draggable="false"
+									/>
 									<div
 										class="features-carousel__item-content js-features-carousel-content"
 									>
@@ -1542,6 +1566,12 @@
 									class="features-carousel__item js-features-carousel-item"
 									data-index="3"
 								>
+									<img
+										src="./assets/images/compute-ill.svg"
+										alt=""
+										class="features-carousel__ill js-features-carousel-ill"
+										draggable="false"
+									/>
 									<div
 										class="features-carousel__item-content js-features-carousel-content"
 									>
@@ -1653,13 +1683,13 @@
 			</header>
 
 			<main>
-				<section class="trusted">
-					<p class="trusted__title h4">
+				<section class="trusted" data-scroll-trigger="trusted">
+					<p class="trusted__title h4 js-anim-title" data-split="lines">
 						Trusted by global companies and partners
 					</p>
 
 					<div class="trusted__rows">
-						<div class="trusted__row js-marquee-row" data-reversed>
+						<div class="trusted__row js-marquee-row js-anim-row" data-reversed>
 							<div class="trusted__row-item js-marquee-item">
 								<svg
 									width="102"
@@ -1921,7 +1951,7 @@
 							</div>
 						</div>
 
-						<div class="trusted__row js-marquee-row">
+						<div class="trusted__row js-marquee-row js-anim-row">
 							<div class="trusted__row-item js-marquee-item">
 								<svg
 									width="164"
@@ -2364,7 +2394,7 @@
 						</div>
 					</div>
 
-					<div class="l-divider" aria-hidden="true">
+					<div class="l-divider js-anim-divider" aria-hidden="true">
 						<svg
 							width="974"
 							height="2"
@@ -2398,9 +2428,15 @@
 						</svg>
 					</div>
 				</section>
-				<section class="collaborate js-collaborate-section">
-					<div class="divider-label collaborate__label">
-						<div class="divider-label__ill" aria-hidden="true">
+				<section
+					class="collaborate js-collaborate-section"
+					data-scroll-trigger="collaborate"
+				>
+					<div class="divider-label collaborate__label js-divider-label">
+						<div
+							class="divider-label__ill js-divider-label-ill"
+							aria-hidden="true"
+						>
 							<svg
 								width="100"
 								height="2"
@@ -2431,8 +2467,13 @@
 								</defs>
 							</svg>
 						</div>
-						<p class="divider-label__text h5">Academic Partnerships</p>
-						<div class="divider-label__ill" aria-hidden="true">
+						<p class="divider-label__text h5 js-divider-label-text">
+							Academic Partnerships
+						</p>
+						<div
+							class="divider-label__ill js-divider-label-ill"
+							aria-hidden="true"
+						>
 							<svg
 								width="100"
 								height="2"
@@ -2465,7 +2506,7 @@
 						</div>
 					</div>
 
-					<h2 class="collaborate__title">
+					<h2 class="collaborate__title js-anim-title">
 						Collaborating with top notch
 						<span class="t-grad">universities.</span>
 					</h2>
@@ -2476,7 +2517,7 @@
 								href="https://www.media.mit.edu/"
 								target="_blank"
 								rel="noopener"
-								class="collaborate__item glow"
+								class="collaborate__item glow js-anim-item"
 							>
 								<div class="collaborate__item-icon">
 									<svg
@@ -2497,7 +2538,7 @@
 								href="https://www.supsi.ch/"
 								target="_blank"
 								rel="noopener"
-								class="collaborate__item glow"
+								class="collaborate__item glow js-anim-item"
 							>
 								<div class="collaborate__item-icon">
 									<svg
@@ -2540,7 +2581,7 @@
 								href="https://www.usi.ch/it"
 								target="_blank"
 								rel="noopener"
-								class="collaborate__item glow"
+								class="collaborate__item glow js-anim-item"
 							>
 								<div class="collaborate__item-icon">
 									<svg
@@ -2569,15 +2610,15 @@
 								</div>
 							</a>
 							<a
-								href="/contact.html"
-								class="collaborate__item collaborate__item--cta"
+								href="./contact.html"
+								class="collaborate__item collaborate__item--cta glow js-anim-item"
 							>
 								<p class="collaborate__item-text">Collaborate with us</p>
 							</a>
 						</div>
 					</div>
 
-					<div class="l-divider" aria-hidden="true">
+					<div class="l-divider js-anim-divider" aria-hidden="true">
 						<svg
 							width="974"
 							height="2"
@@ -2612,7 +2653,7 @@
 					</div>
 				</section>
 				<section class="platform" id="platform">
-					<div class="divider-label platform__label">
+					<div class="divider-label platform__label" data-scroll-trigger="item">
 						<div class="divider-label__ill" aria-hidden="true">
 							<svg
 								width="100"
@@ -2680,11 +2721,16 @@
 						</div>
 					</div>
 
-					<p class="h2 platform__title">Prem Platform</p>
+					<p class="h2 platform__title" data-scroll-trigger="item">
+						Prem Platform
+					</p>
 
-					<div class="platform__items">
-						<div class="l-container platform__container">
-							<div class="article platform__card">
+					<div class="platform__items glow-rad__section js-glow-cards">
+						<div class="l-container platform__container js-glow-cards">
+							<div
+								class="article platform__card glow-rad__item js-glow-card"
+								data-scroll-trigger="item"
+							>
 								<div class="platform-card__ill">
 									<img
 										src="./assets/images/experiment-and-test.png"
@@ -2699,9 +2745,14 @@
 										your use case.
 									</p>
 								</div>
+
+								<div class="glow-rad" aria-hidden="true"></div>
 							</div>
 
-							<div class="article platform__card">
+							<div
+								class="article platform__card glow-rad__item js-glow-card"
+								data-scroll-trigger="item"
+							>
 								<div class="platform-card__ill">
 									<img
 										src="./assets/images/best-model.png"
@@ -2717,9 +2768,13 @@
 										change any line of code.
 									</p>
 								</div>
+								<div class="glow-rad" aria-hidden="true"></div>
 							</div>
 
-							<div class="article platform__card">
+							<div
+								class="article platform__card glow-rad__item js-glow-card"
+								data-scroll-trigger="item"
+							>
 								<div class="platform-card__ill">
 									<img
 										src="./assets/images/integrate-ease.png"
@@ -2735,9 +2790,13 @@
 										by UI.
 									</p>
 								</div>
+								<div class="glow-rad" aria-hidden="true"></div>
 							</div>
 
-							<div class="article platform__card">
+							<div
+								class="article platform__card glow-rad__item js-glow-card"
+								data-scroll-trigger="item"
+							>
 								<div class="platform-card__ill">
 									<img
 										src="./assets/images/monitor-ai-case.png"
@@ -2754,9 +2813,13 @@
 										prompt accordingly.
 									</p>
 								</div>
+								<div class="glow-rad" aria-hidden="true"></div>
 							</div>
 
-							<div class="article platform__card">
+							<div
+								class="article platform__card glow-rad__item js-glow-card"
+								data-scroll-trigger="item"
+							>
 								<div class="platform-card__ill">
 									<img
 										src="./assets/images/connect-documents.png"
@@ -2771,9 +2834,13 @@
 										multiple data sources in a click.
 									</p>
 								</div>
+								<div class="glow-rad" aria-hidden="true"></div>
 							</div>
 
-							<div class="article platform__card">
+							<div
+								class="article platform__card glow-rad__item js-glow-card"
+								data-scroll-trigger="item"
+							>
 								<div class="platform-card__ill">
 									<img
 										src="./assets/images/models-training.png"
@@ -2788,7 +2855,21 @@
 										and continuous quality improvements.
 									</p>
 								</div>
+								<div class="glow-rad" aria-hidden="true"></div>
 							</div>
+						</div>
+
+						<div class="platform__cta" data-scroll-trigger="item">
+							<a
+								class="button button--primary button--sm"
+								rel="noopener"
+								target="_blank"
+								href="https://app.premai.io"
+							>
+								<div class="button__ill" aria-hidden="true"></div>
+								<div class="button__bg" aria-hidden="true"></div>
+								<div class="button__content">Discover more</div>
+							</a>
 						</div>
 
 						<div class="platform__bg" aria-hidden="true" />
@@ -2944,108 +3025,125 @@
 						</div>
 					</div>
 				</section>
-				<section class="models__section" id="models">
-					<article class="models">
-						<div class="models__bg" aria-hidden="true"></div>
-						<div class="models__ill" aria-hidden="true">
-							<img
-								src="./assets/images/stars.png"
-								alt="Models stars illustration"
-								draggable="false"
-							/>
-						</div>
+				<div class="glow-rad__section js-glow-cards">
+					<section
+						class="models__section"
+						id="models"
+						data-scroll-trigger="anim-group"
+					>
+						<article class="models js-anim-group glow-rad__item js-glow-card">
+							<div class="models__bg js-anim-item" aria-hidden="true"></div>
+							<div class="models__ill js-anim-item" aria-hidden="true">
+								<img
+									src="./assets/images/stars.png"
+									alt="Models stars illustration"
+									draggable="false"
+								/>
+							</div>
 
-						<div class="models__content">
-							<div class="divider-label models__label">
-								<div class="divider-label__ill" aria-hidden="true">
-									<svg
-										width="100"
-										height="2"
-										viewBox="0 0 100 2"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<mask id="divider_sm_mask" fill="white">
-											<path d="M0 0H100V2H0V0Z" />
-										</mask>
-										<path
-											d="M100 1H0V3H100V1Z"
-											fill="url(#divider_sm_fill)"
-											mask="url(#divider_sm_mask)"
-										/>
-										<defs>
-											<linearGradient
-												id="divider_sm_fill"
-												x1="0"
-												y1="1"
-												x2="100"
-												y2="1"
-												gradientUnits="userSpaceOnUse"
-											>
-												<stop stop-color="white" stop-opacity="0.05" />
-												<stop
-													offset="1"
-													stop-color="white"
-													stop-opacity="0.4"
-												/>
-											</linearGradient>
-										</defs>
-									</svg>
+							<div class="models__content">
+								<div class="divider-label models__label js-anim-item">
+									<div class="divider-label__ill" aria-hidden="true">
+										<svg
+											width="100"
+											height="2"
+											viewBox="0 0 100 2"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<mask id="divider_sm_mask" fill="white">
+												<path d="M0 0H100V2H0V0Z" />
+											</mask>
+											<path
+												d="M100 1H0V3H100V1Z"
+												fill="url(#divider_sm_fill)"
+												mask="url(#divider_sm_mask)"
+											/>
+											<defs>
+												<linearGradient
+													id="divider_sm_fill"
+													x1="0"
+													y1="1"
+													x2="100"
+													y2="1"
+													gradientUnits="userSpaceOnUse"
+												>
+													<stop stop-color="white" stop-opacity="0.05" />
+													<stop
+														offset="1"
+														stop-color="white"
+														stop-opacity="0.4"
+													/>
+												</linearGradient>
+											</defs>
+										</svg>
+									</div>
+									<p class="divider-label__text h5">Lorem ipsum dolor sit</p>
+									<div class="divider-label__ill" aria-hidden="true">
+										<svg
+											width="100"
+											height="2"
+											viewBox="0 0 100 2"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<mask id="divider_sm_right_mask" fill="#fff">
+												<path d="M0 0H100V2H0V0Z" />
+											</mask>
+											<path
+												d="M100 1H0V3H100V1Z"
+												fill="url(#divider_sm_right_fill)"
+												mask="url(#divider_sm_right_mask)"
+											/>
+											<defs>
+												<linearGradient
+													id="divider_sm_right_fill"
+													x1="0"
+													y1="1"
+													x2="100"
+													y2="1"
+													gradientUnits="userSpaceOnUse"
+												>
+													<stop stop-color="#fff" stop-opacity=".05" />
+													<stop
+														offset="1"
+														stop-color="#fff"
+														stop-opacity=".4"
+													/>
+												</linearGradient>
+											</defs>
+										</svg>
+									</div>
 								</div>
-								<p class="divider-label__text h5">Lorem ipsum dolor sit</p>
-								<div class="divider-label__ill" aria-hidden="true">
-									<svg
-										width="100"
-										height="2"
-										viewBox="0 0 100 2"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
+
+								<p class="h2 models__title js-anim-item">Prem Models</p>
+								<p class="models__text js-anim-item">
+									Small Language Models suitable for fine-tuning and custom use
+									cases.
+									<br />
+									State of the art efficiency without compromising quality.
+								</p>
+
+								<div class="models__cta js-anim-item">
+									<a
+										class="button button--primary button--sm"
+										rel="noopener"
+										target="_blank"
+										href="https://app.premai.io/accounts/signup/"
 									>
-										<mask id="divider_sm_right_mask" fill="#fff">
-											<path d="M0 0H100V2H0V0Z" />
-										</mask>
-										<path
-											d="M100 1H0V3H100V1Z"
-											fill="url(#divider_sm_right_fill)"
-											mask="url(#divider_sm_right_mask)"
-										/>
-										<defs>
-											<linearGradient
-												id="divider_sm_right_fill"
-												x1="0"
-												y1="1"
-												x2="100"
-												y2="1"
-												gradientUnits="userSpaceOnUse"
-											>
-												<stop stop-color="#fff" stop-opacity=".05" />
-												<stop offset="1" stop-color="#fff" stop-opacity=".4" />
-											</linearGradient>
-										</defs>
-									</svg>
+										<div class="button__ill" aria-hidden="true"></div>
+										<div class="button__bg" aria-hidden="true"></div>
+										<div class="button__content">Try them on Prem</div>
+									</a>
 								</div>
 							</div>
 
-							<p class="h2 models__title">Prem Models</p>
-							<p class="models__text">
-								Small Language Models suitable for fine-tuning and custom use
-								cases.
-								<br />
-								State of the art efficiency without compromising quality.
-							</p>
-
-							<div class="models__cta">
-								<a class="button button--primary button--sm" href="">
-									<div class="button__ill" aria-hidden="true"></div>
-									<div class="button__bg" aria-hidden="true"></div>
-									<div class="button__content">Try them on Prem</div>
-								</a>
-							</div>
-						</div>
-					</article>
-				</section>
+							<div class="glow-rad" aria-hidden="true"></div>
+						</article>
+					</section>
+				</div>
 				<section class="solution" id="solution">
-					<div class="divider-label solution__label">
+					<div class="divider-label solution__label" data-scroll-trigger="item">
 						<div class="divider-label__ill" aria-hidden="true">
 							<svg
 								width="100"
@@ -3111,34 +3209,55 @@
 						</div>
 					</div>
 
-					<p class="h2 solution__title">Prem Solution</p>
+					<p class="h2 solution__title" data-scroll-trigger="item">
+						Prem Solution
+					</p>
 
-					<div class="solution__stats-container">
-						<div class="solution__stats">
-							<article class="solution__stat">
+					<div
+						class="solution__stats-container glow-rad__section js-glow-cards"
+						data-scroll-trigger="anim-group"
+					>
+						<div class="solution__stats js-anim-group">
+							<article
+								class="solution__stat glow-rad__item js-glow-card js-anim-item"
+							>
 								<p class="solution__stat-title h2">15+</p>
 								<div class="solution__stat-text h5">
 									Enterprise Clients served successfully
 								</div>
+
+								<div class="glow-rad" aria-hidden="true"></div>
 							</article>
 
-							<article class="solution__stat">
+							<article
+								class="solution__stat glow-rad__item js-glow-card js-anim-item"
+							>
 								<p class="solution__stat-title h2">20k</p>
 								<div class="solution__stat-text h5">
 									Users served with our Platform
 								</div>
+
+								<div class="glow-rad" aria-hidden="true"></div>
 							</article>
 
-							<article class="solution__stat">
+							<article
+								class="solution__stat glow-rad__item js-glow-card js-anim-item"
+							>
 								<p class="solution__stat-title h2">30+</p>
 								<div class="solution__stat-text h5">
 									Trained / Fine- tuned models.
 								</div>
+
+								<div class="glow-rad" aria-hidden="true"></div>
 							</article>
 						</div>
 					</div>
 
-					<div class="l-divider solution__divider" aria-hidden="true">
+					<div
+						class="l-divider solution__divider"
+						data-scroll-trigger="item"
+						aria-hidden="true"
+					>
 						<svg
 							width="974"
 							height="2"
@@ -3172,116 +3291,122 @@
 						</svg>
 					</div>
 
-					<div class="solution__features">
-						<article class="solution__feature">
-							<div class="solution__feature-icon">
-								<svg
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<g clip-path="url(#clip0_397_6437)">
-										<path
-											d="M11.998 2L12.116 2.007L12.175 2.015L12.236 2.028L12.347 2.062C12.4237 2.09026 12.4966 2.12788 12.564 2.174L12.668 2.256L12.923 2.474C14.9403 4.14956 17.4899 5.0493 20.112 5.011L20.454 5.001C20.6776 4.9908 20.8982 5.05591 21.0804 5.1859C21.2626 5.31589 21.3959 5.50326 21.459 5.718C21.9504 7.38958 22.1008 9.14288 21.9012 10.8737C21.7016 12.6046 21.1561 14.2776 20.2972 15.7935C19.4382 17.3093 18.2833 18.6371 16.9011 19.6978C15.5188 20.7585 13.9375 21.5305 12.251 21.968C12.0864 22.0107 11.9136 22.0107 11.749 21.968C10.0624 21.5306 8.48099 20.7587 7.09865 19.698C5.71631 18.6374 4.5613 17.3096 3.70224 15.7938C2.84318 14.2779 2.29762 12.6048 2.09796 10.8739C1.8983 9.14301 2.04863 7.38964 2.54002 5.718C2.60313 5.50326 2.73646 5.31589 2.91866 5.1859C3.10087 5.05591 3.32142 4.9908 3.54502 5.001C6.28248 5.12613 8.96808 4.22499 11.076 2.474L11.339 2.249L11.435 2.174C11.5025 2.12788 11.5754 2.09026 11.652 2.062L11.764 2.028C11.8032 2.01853 11.843 2.01152 11.883 2.007L11.998 2ZM12 9C11.4954 8.99984 11.0094 9.19041 10.6395 9.5335C10.2695 9.87659 10.0429 10.3468 10.005 10.85L10 11L10.005 11.15C10.0297 11.4746 10.1332 11.7883 10.3066 12.0638C10.48 12.3393 10.718 12.5684 11 12.731V14.5L11.007 14.617C11.0371 14.8701 11.1627 15.1021 11.3582 15.2657C11.5536 15.4293 11.8042 15.5121 12.0586 15.4972C12.3131 15.4822 12.5522 15.3707 12.7272 15.1854C12.9021 15 12.9997 14.7549 13 14.5L13.001 12.732C13.3823 12.5118 13.6804 12.1719 13.8488 11.7651C14.0173 11.3582 14.0467 10.9072 13.9326 10.4819C13.8186 10.0566 13.5673 9.6808 13.2179 9.41286C12.8685 9.14492 12.4404 8.9998 12 9Z"
+					<div data-scroll-trigger="anim-group">
+						<div class="solution__features js-anim-group">
+							<article class="solution__feature js-anim-item">
+								<div class="solution__feature-icon">
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<g clip-path="url(#clip0_397_6437)">
+											<path
+												d="M11.998 2L12.116 2.007L12.175 2.015L12.236 2.028L12.347 2.062C12.4237 2.09026 12.4966 2.12788 12.564 2.174L12.668 2.256L12.923 2.474C14.9403 4.14956 17.4899 5.0493 20.112 5.011L20.454 5.001C20.6776 4.9908 20.8982 5.05591 21.0804 5.1859C21.2626 5.31589 21.3959 5.50326 21.459 5.718C21.9504 7.38958 22.1008 9.14288 21.9012 10.8737C21.7016 12.6046 21.1561 14.2776 20.2972 15.7935C19.4382 17.3093 18.2833 18.6371 16.9011 19.6978C15.5188 20.7585 13.9375 21.5305 12.251 21.968C12.0864 22.0107 11.9136 22.0107 11.749 21.968C10.0624 21.5306 8.48099 20.7587 7.09865 19.698C5.71631 18.6374 4.5613 17.3096 3.70224 15.7938C2.84318 14.2779 2.29762 12.6048 2.09796 10.8739C1.8983 9.14301 2.04863 7.38964 2.54002 5.718C2.60313 5.50326 2.73646 5.31589 2.91866 5.1859C3.10087 5.05591 3.32142 4.9908 3.54502 5.001C6.28248 5.12613 8.96808 4.22499 11.076 2.474L11.339 2.249L11.435 2.174C11.5025 2.12788 11.5754 2.09026 11.652 2.062L11.764 2.028C11.8032 2.01853 11.843 2.01152 11.883 2.007L11.998 2ZM12 9C11.4954 8.99984 11.0094 9.19041 10.6395 9.5335C10.2695 9.87659 10.0429 10.3468 10.005 10.85L10 11L10.005 11.15C10.0297 11.4746 10.1332 11.7883 10.3066 12.0638C10.48 12.3393 10.718 12.5684 11 12.731V14.5L11.007 14.617C11.0371 14.8701 11.1627 15.1021 11.3582 15.2657C11.5536 15.4293 11.8042 15.5121 12.0586 15.4972C12.3131 15.4822 12.5522 15.3707 12.7272 15.1854C12.9021 15 12.9997 14.7549 13 14.5L13.001 12.732C13.3823 12.5118 13.6804 12.1719 13.8488 11.7651C14.0173 11.3582 14.0467 10.9072 13.9326 10.4819C13.8186 10.0566 13.5673 9.6808 13.2179 9.41286C12.8685 9.14492 12.4404 8.9998 12 9Z"
+												stroke="#fff"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</g>
+										<defs>
+											<clipPath id="clip0_397_6437">
+												<path fill="#fff" d="M0 0H24V24H0z" />
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+								<p class="solution__feature-text">
+									Elevate your AI strategy without compromising privacy and
+									control.
+								</p>
+							</article>
+							<article class="solution__feature js-anim-item">
+								<div class="solution__feature-icon">
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<g
+											clip-path="url(#clip0_397_6446)"
 											stroke="#fff"
+											stroke-width="1.5"
 											stroke-linecap="round"
 											stroke-linejoin="round"
-										/>
-									</g>
-									<defs>
-										<clipPath id="clip0_397_6437">
-											<path fill="#fff" d="M0 0H24V24H0z" />
-										</clipPath>
-									</defs>
-								</svg>
-							</div>
-							<p class="solution__feature-text">
-								Elevate your AI strategy without compromising privacy and
-								control.
-							</p>
-						</article>
-						<article class="solution__feature">
-							<div class="solution__feature-icon">
-								<svg
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<g
-										clip-path="url(#clip0_397_6446)"
-										stroke="#fff"
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
+										>
+											<path d="M16 12V4" />
+											<path d="M8 20V12" />
+											<path d="M13 7L16 4L19 7" />
+											<path d="M5 17L8 20L11 17" />
+										</g>
+										<defs>
+											<clipPath id="clip0_397_6446">
+												<path fill="#fff" d="M0 0H24V24H0z" />
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+								<p class="solution__feature-text">
+									Everything you need to train and fine-tune your own
+									state-of-the-art generative AI models on your data.
+								</p>
+							</article>
+							<article class="solution__feature js-anim-item">
+								<div class="solution__feature-icon">
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
 									>
-										<path d="M16 12V4" />
-										<path d="M8 20V12" />
-										<path d="M13 7L16 4L19 7" />
-										<path d="M5 17L8 20L11 17" />
-									</g>
-									<defs>
-										<clipPath id="clip0_397_6446">
-											<path fill="#fff" d="M0 0H24V24H0z" />
-										</clipPath>
-									</defs>
-								</svg>
-							</div>
-							<p class="solution__feature-text">
-								Everything you need to train and fine-tune your own
-								state-of-the-art generative AI models on your data.
-							</p>
-						</article>
-						<article class="solution__feature">
-							<div class="solution__feature-icon">
-								<svg
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<g
-										clip-path="url(#clip0_397_6441)"
-										stroke="#fff"
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									>
-										<path
-											d="M5 3H6C6.26522 3 6.51957 3.10536 6.70711 3.29289C6.89464 3.48043 7 3.73478 7 4V6H10V4C10 3.73478 10.1054 3.48043 10.2929 3.29289C10.4804 3.10536 10.7348 3 11 3H13C13.2652 3 13.5196 3.10536 13.7071 3.29289C13.8946 3.48043 14 3.73478 14 4V6H17V4C17 3.73478 17.1054 3.48043 17.2929 3.29289C17.4804 3.10536 17.7348 3 18 3H19C19.2652 3 19.5196 3.10536 19.7071 3.29289C19.8946 3.48043 20 3.73478 20 4V8.394C20.0001 8.78906 19.8832 9.17531 19.664 9.504L18.336 11.496C18.1168 11.8247 17.9999 12.2109 18 12.606V20C18 20.2652 17.8946 20.5196 17.7071 20.7071C17.5196 20.8946 17.2652 21 17 21H7C6.73478 21 6.48043 20.8946 6.29289 20.7071C6.10536 20.5196 6 20.2652 6 20V12.606C6.00009 12.2109 5.88317 11.8247 5.664 11.496L4.336 9.504C4.11683 9.17531 3.99991 8.78906 4 8.394V4C4 3.73478 4.10536 3.48043 4.29289 3.29289C4.48043 3.10536 4.73478 3 5 3Z"
-										/>
-										<path
-											d="M10 21V16C10 15.4696 10.2107 14.9609 10.5858 14.5858C10.9609 14.2107 11.4696 14 12 14C12.5304 14 13.0391 14.2107 13.4142 14.5858C13.7893 14.9609 14 15.4696 14 16V21"
-										/>
-									</g>
-									<defs>
-										<clipPath id="clip0_397_6441">
-											<path fill="#fff" d="M0 0H24V24H0z" />
-										</clipPath>
-									</defs>
-								</svg>
-							</div>
-							<p class="solution__feature-text">
-								On Premise deployments for full ownership and control.
-							</p>
-						</article>
+										<g
+											clip-path="url(#clip0_397_6441)"
+											stroke="#fff"
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path
+												d="M5 3H6C6.26522 3 6.51957 3.10536 6.70711 3.29289C6.89464 3.48043 7 3.73478 7 4V6H10V4C10 3.73478 10.1054 3.48043 10.2929 3.29289C10.4804 3.10536 10.7348 3 11 3H13C13.2652 3 13.5196 3.10536 13.7071 3.29289C13.8946 3.48043 14 3.73478 14 4V6H17V4C17 3.73478 17.1054 3.48043 17.2929 3.29289C17.4804 3.10536 17.7348 3 18 3H19C19.2652 3 19.5196 3.10536 19.7071 3.29289C19.8946 3.48043 20 3.73478 20 4V8.394C20.0001 8.78906 19.8832 9.17531 19.664 9.504L18.336 11.496C18.1168 11.8247 17.9999 12.2109 18 12.606V20C18 20.2652 17.8946 20.5196 17.7071 20.7071C17.5196 20.8946 17.2652 21 17 21H7C6.73478 21 6.48043 20.8946 6.29289 20.7071C6.10536 20.5196 6 20.2652 6 20V12.606C6.00009 12.2109 5.88317 11.8247 5.664 11.496L4.336 9.504C4.11683 9.17531 3.99991 8.78906 4 8.394V4C4 3.73478 4.10536 3.48043 4.29289 3.29289C4.48043 3.10536 4.73478 3 5 3Z"
+											/>
+											<path
+												d="M10 21V16C10 15.4696 10.2107 14.9609 10.5858 14.5858C10.9609 14.2107 11.4696 14 12 14C12.5304 14 13.0391 14.2107 13.4142 14.5858C13.7893 14.9609 14 15.4696 14 16V21"
+											/>
+										</g>
+										<defs>
+											<clipPath id="clip0_397_6441">
+												<path fill="#fff" d="M0 0H24V24H0z" />
+											</clipPath>
+										</defs>
+									</svg>
+								</div>
+								<p class="solution__feature-text">
+									On Premise deployments for full ownership and control.
+								</p>
+							</article>
+						</div>
 					</div>
 
-					<div class="solution__cta">
-						<a class="button button--primary button--sm" href="">
+					<div class="solution__cta" data-scroll-trigger="item">
+						<a class="button button--primary button--sm" href="./contact.html">
 							<div class="button__ill" aria-hidden="true"></div>
 							<div class="button__bg" aria-hidden="true"></div>
 							<div class="button__content">Schedule a call</div>
 						</a>
 					</div>
 				</section>
-				<section class="compute js-compute-section" id="compute">
-					<div class="compute__content">
-						<div class="divider-label compute__label">
+				<section
+					class="compute js-compute-section"
+					id="compute"
+					data-scroll-trigger="anim-group"
+				>
+					<div class="compute__content js-anim-group">
+						<div class="divider-label compute__label js-anim-item">
 							<div class="divider-label__ill" aria-hidden="true">
 								<svg
 									width="100"
@@ -3347,13 +3472,18 @@
 							</div>
 						</div>
 
-						<p class="h2 compute__title">
+						<p class="h2 compute__title js-anim-item">
 							A GPU cluster for <br />
 							your AI needs.
 						</p>
 
-						<div class="compute__cta">
-							<a class="button button--secondary button--sm" href="">
+						<div class="compute__cta js-anim-item">
+							<a
+								class="button button--secondary button--sm"
+								rel="noopener"
+								target="_blank"
+								href="https://app.premai.io/accounts/signup/"
+							>
 								<div class="button__ill" aria-hidden="true"></div>
 								<div class="button__bg" aria-hidden="true"></div>
 								<div class="button__content">Get your cluster</div>
@@ -3374,7 +3504,10 @@
 						<div class="compute__scene-line js-compute-scene-line"></div>
 					</div>
 				</section>
-				<section class="testimonials js-testimonial-section">
+				<section
+					class="testimonials js-testimonial-section"
+					data-scroll-trigger="anim-group"
+				>
 					<div class="testimonials__ill" aria-hidden="true">
 						<svg
 							width="1512"
@@ -3772,9 +3905,9 @@
 						</svg>
 					</div>
 
-					<div class="l-container testimonials__container">
+					<div class="l-container testimonials__container js-anim-group">
 						<div class="testimonials__head">
-							<div class="divider-label testimonials__label">
+							<div class="divider-label testimonials__label js-anim-item">
 								<div class="divider-label__ill" aria-hidden="true">
 									<svg
 										width="100"
@@ -3844,8 +3977,10 @@
 								</div>
 							</div>
 
-							<p class="h2 testimonials__title t-grad">Testimonials</p>
-							<p class="h5 testimonials__text">
+							<p class="h2 testimonials__title t-grad js-anim-item">
+								Testimonials
+							</p>
+							<p class="h5 testimonials__text js-anim-item">
 								Quo accusamus commodi suscipit earum. Perspiciatis praesentium
 								incidunt sed nam nisi molestiae. Accusamus minima omnis et
 								molestiae ad occaecati.
@@ -4349,26 +4484,51 @@
 						</div>
 					</div>
 				</section>
-				<section class="status">
-					<div class="status__content">
-						<p class="status__title">Prem Status Page</p>
-						<p class="h5 status__text">
-							Don't get fooled by AI Providers. Monitor reliability and
-							inference metrics.
-						</p>
-						<div class="status__cta">
-							<a class="button button--primary button--sm" href="">
-								<div class="button__ill" aria-hidden="true"></div>
-								<div class="button__bg" aria-hidden="true"></div>
-								<div class="button__content">Visit Status Page</div>
-							</a>
+				<div class="glow-rad__section js-glow-cards">
+					<section
+						class="status glow-rad__item js-glow-card"
+						data-scroll-trigger="anim-group"
+					>
+						<div class="status__content js-anim-group">
+							<p class="status__title js-anim-item">Prem Status Page</p>
+							<p class="h5 status__text js-anim-item">
+								Don't get fooled by AI Providers. Monitor reliability and
+								inference metrics.
+							</p>
+							<div class="status__cta js-anim-item">
+								<a
+									class="button button--primary button--sm"
+									rel="noopener"
+									target="_blank"
+									href="https://providers.premai.io/"
+								>
+									<div class="button__ill" aria-hidden="true"></div>
+									<div class="button__bg" aria-hidden="true"></div>
+									<div class="button__content">Visit Status Page</div>
+								</a>
+							</div>
 						</div>
-					</div>
 
-					<div class="status__ill" aria-hidden="true"></div>
-				</section>
-				<section class="blog__section">
-					<div class="divider-label blog__label">
+						<div class="status__ill js-anim-group" aria-hidden="true">
+							<img
+								src="./assets/images/status-page.png"
+								alt=""
+								draggable="false"
+								class="status__ill-desk js-anim-item"
+							/>
+							<img
+								src="./assets/images/status-page-mobile.png"
+								alt=""
+								class="status__ill-mobile js-anim-item"
+								draggable="false"
+							/>
+						</div>
+
+						<div class="glow-rad" aria-hidden="true"></div>
+					</section>
+				</div>
+				<section class="blog__section" data-scroll-trigger="anim-group">
+					<div class="divider-label blog__label" data-scroll-trigger="item">
 						<div class="divider-label__ill" aria-hidden="true">
 							<svg
 								width="100"
@@ -4434,16 +4594,16 @@
 						</div>
 					</div>
 
-					<h2 class="blog__title">
+					<h2 class="blog__title" data-scroll-trigger="item">
 						Our latest <br />
 						communications
 					</h2>
 
-					<div class="blog__previews-container">
+					<div class="blog__previews-container js-anim-group">
 						<div class="blog__previews">
 							<a
 								href="https://blog.premai.io/model-merging/"
-								class="blog__card"
+								class="blog__card js-anim-item"
 								target="_blank"
 								rel="noopener"
 							>
@@ -4462,14 +4622,12 @@
 									specific skill. Iron Man's got the tech smarts, Black Widow's
 									got the fighting moves, and Captain America...
 								</p>
-								<div class="blog__card__end">
-									By Sayantan Das - Feb 27, 2024
-								</div>
+								<div class="blog__card__end">By Sayantan Das</div>
 							</a>
 
 							<a
 								href="https://blog.premai.io/emergence-capabilities-of-llms/"
-								class="blog__card"
+								class="blog__card js-anim-item"
 								target="_blank"
 								rel="noopener"
 							>
@@ -4488,14 +4646,12 @@
 									biology, and mathematics, describes how complex systems can
 									exhibit new, unforeseen properties as their...
 								</p>
-								<div class="blog__card__end">
-									By Sayantan Das - Feb 20, 2024
-								</div>
+								<div class="blog__card__end">By Sayantan Das</div>
 							</a>
 
 							<a
 								href="https://blog.premai.io/evaluation-of-llms-part-2/"
-								class="blog__card"
+								class="blog__card js-anim-item"
 								target="_blank"
 								rel="noopener"
 							>
@@ -4514,14 +4670,12 @@
 									serve as evaluators, a concept referred to as "LLM as judge."
 									Building on the previous blog, which introduced...
 								</p>
-								<div class="blog__card__end">
-									By Sayantan Das - Feb 11, 2024
-								</div>
+								<div class="blog__card__end">By Sayantan Das</div>
 							</a>
 						</div>
 					</div>
 
-					<div class="blog__cta">
+					<div class="blog__cta" data-scroll-trigger="item">
 						<a
 							class="button button--primary button--sm"
 							rel="noopener"
@@ -4534,9 +4688,9 @@
 						</a>
 					</div>
 				</section>
-				<section class="book__section">
-					<div class="book__content">
-						<div class="divider-label book__label">
+				<section class="book__section" data-scroll-trigger="anim-group">
+					<div class="book__content js-anim-group">
+						<div class="divider-label book__label js-anim-item">
 							<div class="divider-label__ill" aria-hidden="true">
 								<svg
 									width="100"
@@ -4602,11 +4756,11 @@
 							</div>
 						</div>
 
-						<p class="h2 book__title">
+						<p class="h2 book__title js-anim-item">
 							Want to know more about <br />
 							<span class="t-grad">Open Source AI Development?</span>
 						</p>
-						<p class="book__text">
+						<p class="book__text js-anim-item">
 							Our state of open source AI book is here to help you understand
 							the complete ecosystem and fast paced changes happening every day.
 						</p>
@@ -4614,11 +4768,11 @@
 						<img
 							src="./assets/images/book-mockup.png"
 							alt=""
-							class="book__img"
+							class="book__img js-anim-item"
 							draggable="false"
 						/>
 
-						<div class="book__cta">
+						<div class="book__cta js-anim-item">
 							<a
 								class="button button--primary button--sm"
 								rel="noopener"
@@ -4631,7 +4785,11 @@
 							</a>
 						</div>
 
-						<div class="l-divider" aria-hidden="true">
+						<div
+							class="l-divider js-anim-item"
+							aria-hidden="true"
+							style="display: none"
+						>
 							<svg
 								width="974"
 								height="2"
@@ -4666,15 +4824,20 @@
 						</div>
 					</div>
 
-					<div class="book__ill" aria-hidden="true">
+					<div class="book__ill js-anim-group" aria-hidden="true">
 						<img
 							src="./assets/images/stars.png"
 							alt="Models stars illustration"
+							class="js-anim-item"
 							draggable="false"
 						/>
 					</div>
 
-					<div class="book__bg" aria-hidden="true"></div>
+					<div
+						class="book__bg"
+						aria-hidden="true"
+						data-scroll-trigger="item"
+					></div>
 				</section>
 			</main>
 
@@ -5602,19 +5765,23 @@
 							<div class="footer__links-group">
 								<ul class="footer__links">
 									<li class="footer__item">
-										<a href="./company.html" class="p footer__link">Company</a>
+										<a href="./company.html" class="p footer__link link"
+											>Company</a
+										>
 									</li>
 									<li class="footer__item">
 										<a
 											href="https://blog.premai.io/"
 											target="_blank"
 											rel="noopener"
-											class="p footer__link"
+											class="p footer__link link"
 											>Blog</a
 										>
 									</li>
 									<li class="footer__item">
-										<a href="./contact.html" class="p footer__link">Contact</a>
+										<a href="./contact.html" class="p footer__link link"
+											>Contact</a
+										>
 									</li>
 								</ul>
 							</div>
@@ -5628,7 +5795,7 @@
 										href="https://twitter.com/premai_io"
 										target="_blank"
 										rel="noopener"
-										class="footer__social-link"
+										class="footer__social-link link"
 										><svg
 											width="20"
 											height="20"
@@ -5648,7 +5815,7 @@
 										href="https://github.com/premAI-io"
 										target="_blank"
 										rel="noopener"
-										class="footer__social-link"
+										class="footer__social-link link"
 										><svg
 											width="21"
 											height="20"
@@ -5675,7 +5842,7 @@
 										href="https://discord.com/invite/kpKk6vYVAn"
 										target="_blank"
 										rel="noopener"
-										class="footer__social-link"
+										class="footer__social-link link"
 										><svg
 											width="26"
 											height="20"
@@ -5702,7 +5869,7 @@
 										href="https://www.youtube.com/@premai_io"
 										target="_blank"
 										rel="noopener"
-										class="footer__social-link"
+										class="footer__social-link link"
 										><svg
 											width="24"
 											height="20"
@@ -5722,7 +5889,7 @@
 										href="https://www.linkedin.com/company/premai/"
 										target="_blank"
 										rel="noopener"
-										class="footer__social-link"
+										class="footer__social-link link"
 										><svg
 											width="20"
 											height="20"
@@ -5759,7 +5926,7 @@
 										href="https://www.iubenda.com/privacy-policy/23732899"
 										target="_blank"
 										rel="noopener"
-										class="footer__end-link"
+										class="footer__end-link link"
 										>Privacy Policy</a
 									>
 								</li>
@@ -5768,7 +5935,7 @@
 										href="https://www.iubenda.com/privacy-policy/23732899/cookie-policy"
 										target="_blank"
 										rel="noopener"
-										class="footer__end-link"
+										class="footer__end-link link"
 										>Cookie Policy</a
 									>
 								</li>
@@ -5777,13 +5944,15 @@
 										href="https://www.iubenda.com/terms-and-conditions/23732899"
 										target="_blank"
 										rel="noopener"
-										class="footer__end-link"
+										class="footer__end-link link"
 										>Terms</a
 									>
 								</li>
 							</ul>
 
-							<a href="#top" class="footer__scrolltop js-hash-scroll"
+							<a
+								href="#top"
+								class="footer__scrolltop glow glow--round js-hash-scroll"
 								><svg
 									width="20"
 									height="20"

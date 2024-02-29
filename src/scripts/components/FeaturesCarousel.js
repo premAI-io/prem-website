@@ -82,12 +82,16 @@ class FeaturesCarousel {
 
 		const slideChangeTl = gsap.timeline({
 			onStart: () => {
+				this.DOM.wrap.classList.add("is-animate");
+
 				autoplay.stop();
 				this.progressTl.pause();
 			},
 			onComplete: () => {
 				autoplay.play();
 				this.progressTl.restart();
+
+				this.DOM.wrap.classList.remove("is-animate");
 			},
 		});
 
@@ -98,6 +102,7 @@ class FeaturesCarousel {
 
 	outSlide = (slide) => {
 		const slideText = slide.querySelector(".js-features-carousel-item-text");
+		const slideIll = slide.querySelector(".js-features-carousel-ill");
 
 		const tl = gsap.timeline({
 			onStart: () => {
@@ -115,22 +120,40 @@ class FeaturesCarousel {
 				onComplete: () => {
 					gsap.set(slide, { xPercent: 0, rotate: 5 });
 				},
-			});
+			}).to(
+				slideIll,
+				{
+					opacity: 0,
+					duration: 0.8,
+					ease,
+				},
+				"-=0.67",
+			);
 		} else {
 			tl.to(slide, {
 				height: NOT_ACTIVE_SLIDE_H,
 				duration: 0.8,
 				ease,
-			}).to(
-				slideText,
-				{
-					opacity: 0,
-					height: 0,
-					duration: 0.8,
-					ease,
-				},
-				"-=0.8",
-			);
+			})
+				.to(
+					slideIll,
+					{
+						opacity: 0,
+						duration: 0.4,
+						ease,
+					},
+					"-=0.8",
+				)
+				.to(
+					slideText,
+					{
+						opacity: 0,
+						height: 0,
+						duration: 0.8,
+						ease,
+					},
+					"-=0.8",
+				);
 		}
 
 		return tl;
@@ -138,6 +161,7 @@ class FeaturesCarousel {
 
 	inSlide = (slide, immediate = false) => {
 		const slideText = slide.querySelector(".js-features-carousel-item-text");
+		const slideIll = slide.querySelector(".js-features-carousel-ill");
 
 		const tl = gsap.timeline({
 			onStart: () => {
@@ -152,22 +176,40 @@ class FeaturesCarousel {
 				rotate: 0,
 				duration: tlProp(0.8, immediate),
 				ease,
-			});
-		} else {
-			tl.to(slide, {
-				height: () => slide.offsetWidth * this.hRatio,
-				duration: tlProp(0.8, immediate),
-				ease,
 			}).to(
-				slideText,
+				slideIll,
 				{
 					opacity: 1,
-					height: "auto",
 					duration: tlProp(0.8, immediate),
 					ease,
 				},
 				tlProp("-=0.67", immediate),
 			);
+		} else {
+			tl.to(slide, {
+				height: () => slide.offsetWidth * this.hRatio,
+				duration: tlProp(0.8, immediate),
+				ease,
+			})
+				.to(
+					slideText,
+					{
+						opacity: 1,
+						height: "auto",
+						duration: tlProp(0.8, immediate),
+						ease,
+					},
+					tlProp("-=0.67", immediate),
+				)
+				.to(
+					slideIll,
+					{
+						opacity: 1,
+						duration: tlProp(0.8, immediate),
+						ease,
+					},
+					tlProp("-=0.67", immediate),
+				);
 		}
 
 		return tl;

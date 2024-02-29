@@ -1,17 +1,17 @@
 {
 	"/index.html": {
 		"pageName": "homepage",
-		"title": "Home",
-		"description": "Home"
+		"title": "Prem - AI that you Own. Always - Home",
+		"description": "Accelerating the advent of personalized LLMs."
 	},
 	"/company.html": {
 		"pageName": "company",
-		"title": "Company",
-		"description": "Company"
+		"title": "Prem - AI that you Own. Always - Company",
+		"description": "Accelerating the advent of personalized LLMs."
 	},
 	"/contact.html": {
 		"pageName": "contact",
-		"title": "Contact",
-		"description": "Contact"
+		"title": "Prem - AI that you Own. Always - Contact",
+		"description": "Accelerating the advent of personalized LLMs."
 	}
 }

@@ -1,5 +1,5 @@
 .status {
-	@apply w-[95%] max-w-[1200px] mx-auto rounded-2xl relative overflow-hidden border border-white border-opacity-30 flex items-center mb-24 py-14 pl-8 lg:mb-44 lg:py-36 lg:pl-16;
+	@apply w-[95%] max-w-[1200px] mx-auto rounded-2xl relative overflow-hidden border border-white border-opacity-30 flex flex-col items-center mb-24 py-12 md:py-14 md:pl-8 md:flex-row lg:mb-44 lg:py-36 lg:pl-16;
 	background: var(--secondary-gradient);
 
 	/* &::before {
@@ -15,7 +15,7 @@
 }
 
 .status__content {
-	@apply max-w-[415px];
+	@apply w-[90%] md:w-[40%] order-2 md:max-w-[416px] md:order-1 relative z-[2];
 }
 
 .status__title {
@@ -24,4 +24,16 @@
 
 .status__text {
 	@apply text-gray-200 mb-8 lg:mb-10;
+}
+
+.status__ill {
+	@apply relative order-1 md:order-2 w-[98%] pointer-events-none md:absolute md:left-auto md:top-auto md:w-[55%] md:-right-[5%] md:bottom-0 xl:-bottom-[12%] xl:-right-[12%];
+}
+
+.status__ill-desk {
+	@apply hidden md:block w-full h-auto;
+}
+
+.status__ill-mobile {
+	@apply w-full h-auto md:hidden block;
 }

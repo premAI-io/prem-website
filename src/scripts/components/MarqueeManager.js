@@ -14,7 +14,7 @@ class MarqueeManager {
 						container: row,
 						config: {
 							repeat: -1,
-							speed: 1.25,
+							speed: 1,
 							reversed: row.dataset.reversed !== undefined,
 						},
 					}),

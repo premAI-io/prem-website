@@ -15,7 +15,7 @@
 }
 
 .blog__previews {
-	@apply flex items-stretch justify-center md:px-[3.7%] lg:px-0 gap-x-2 mb-8 lg:gap-x-7 md:mb-16;
+	@apply flex items-stretch justify-center pt-0 lg:pt-5 md:px-[3.7%] lg:px-0 gap-x-2 mb-8 lg:gap-x-7 md:mb-16;
 }
 
 .blog__card {
@@ -42,6 +42,15 @@
 
 .blog__cta {
 	@apply w-full flex justify-center;
+}
+
+@media (hover: hover) {
+	.blog__card {
+		transition: transform 0.3s var(--ease-power4);
+		&:hover {
+			transform: scale(1.01);
+		}
+	}
 }
 
 @media screen and (max-width: 767px) {

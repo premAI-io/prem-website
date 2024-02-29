@@ -1,5 +1,5 @@
 .divider-label {
-	@apply flex items-center justify-center;
+	@apply flex items-center justify-center relative overflow-hidden;
 }
 
 .divider-label__ill {

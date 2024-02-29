@@ -1,15 +1,20 @@
-<section class="collaborate js-collaborate-section">
-	<div class="divider-label collaborate__label">
-		<div class="divider-label__ill" aria-hidden="true">
+<section
+	class="collaborate js-collaborate-section"
+	data-scroll-trigger="collaborate"
+>
+	<div class="divider-label collaborate__label js-divider-label">
+		<div class="divider-label__ill js-divider-label-ill" aria-hidden="true">
 			{{> illustrations/divider-sm-left}}
 		</div>
-		<p class="divider-label__text h5">Academic Partnerships</p>
-		<div class="divider-label__ill" aria-hidden="true">
+		<p class="divider-label__text h5 js-divider-label-text">
+			Academic Partnerships
+		</p>
+		<div class="divider-label__ill js-divider-label-ill" aria-hidden="true">
 			{{> illustrations/divider-sm-right}}
 		</div>
 	</div>
 
-	<h2 class="collaborate__title">
+	<h2 class="collaborate__title js-anim-title">
 		Collaborating with top notch
 		<span class="t-grad">universities.</span>
 	</h2>
@@ -20,7 +25,7 @@
 				href="https://www.media.mit.edu/"
 				target="_blank"
 				rel="noopener"
-				class="collaborate__item glow"
+				class="collaborate__item glow js-anim-item"
 			>
 				<div class="collaborate__item-icon">{{> icons/collaborations/mit}}</div>
 			</a>
@@ -28,7 +33,7 @@
 				href="https://www.supsi.ch/"
 				target="_blank"
 				rel="noopener"
-				class="collaborate__item glow"
+				class="collaborate__item glow js-anim-item"
 			>
 				<div class="collaborate__item-icon">
 					{{> icons/collaborations/supsi}}
@@ -38,15 +43,20 @@
 				href="https://www.usi.ch/it"
 				target="_blank"
 				rel="noopener"
-				class="collaborate__item glow"
+				class="collaborate__item glow js-anim-item"
 			>
 				<div class="collaborate__item-icon">{{> icons/collaborations/usi}}</div>
 			</a>
-			<a href="/contact.html" class="collaborate__item collaborate__item--cta">
+			<a
+				href="./contact.html"
+				class="collaborate__item collaborate__item--cta glow js-anim-item"
+			>
 				<p class="collaborate__item-text">Collaborate with us</p>
 			</a>
 		</div>
 	</div>
 
-	<div class="l-divider" aria-hidden="true">{{> illustrations/divider}}</div>
+	<div class="l-divider js-anim-divider" aria-hidden="true">
+		{{> illustrations/divider}}
+	</div>
 </section>

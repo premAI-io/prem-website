@@ -2,11 +2,17 @@
 <html lang="en-US">
 	<head itemscope itemtype="http://schema.org/WebSite">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Company</title>
-		<meta name="description" content="Company" />
+		<title>Prem - AI that you Own. Always - Company</title>
+		<meta
+			name="description"
+			content="Accelerating the advent of personalized LLMs."
+		/>
 
 		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-title" content="Company" />
+		<meta
+			name="apple-mobile-web-app-title"
+			content="Prem - AI that you Own. Always - Company"
+		/>
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 		<meta name="msapplication-tap-highlight" content="no" />
@@ -946,7 +952,7 @@
 								href="./company.html"
 								class="nav__link js-nav-link"
 								data-route="company"
-								>Company</a
+								><div class="nav__link-inner">Company</div></a
 							>
 						</li>
 						<li class="nav__item">
@@ -955,7 +961,7 @@
 								target="_blank"
 								rel="noopener"
 								class="nav__link js-nav-link"
-								>Blog</a
+								><div class="nav__link-inner">Blog</div></a
 							>
 						</li>
 						<li class="nav__item">
@@ -963,7 +969,7 @@
 								href="./contact.html"
 								class="nav__link js-nav-link"
 								data-route="contact"
-								>Contact</a
+								><div class="nav__link-inner">Contact</div></a
 							>
 						</li>
 					</ul>
@@ -1312,14 +1318,14 @@
 
 			<main>
 				<section class="vision">
-					<p class="h2 vision__title">Vision</p>
-					<p class="h4 vision__text">
+					<p class="h2 vision__title" data-scroll-trigger="item">Vision</p>
+					<p class="h4 vision__text" data-scroll-trigger="item">
 						We envision a future where everyone can access and own powerful,
 						private, and personalized AI models, unlocking AI's full potential
 						for the benefit of all.
 					</p>
 
-					<div class="vision__ill">
+					<div class="vision__ill" data-scroll-trigger="item">
 						<img
 							src="./assets/images/vision-ill.png"
 							alt="Stars illustration"
@@ -1328,89 +1334,112 @@
 						<div class="vision__bg" aria-hidden="true"></div>
 					</div>
 				</section>
-				<section class="mission">
-					<div class="mission__content">
-						<div class="divider-label mission__label">
-							<div class="divider-label__ill" aria-hidden="true">
-								<svg
-									width="100"
-									height="2"
-									viewBox="0 0 100 2"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<mask id="divider_sm_mask" fill="white">
-										<path d="M0 0H100V2H0V0Z" />
-									</mask>
-									<path
-										d="M100 1H0V3H100V1Z"
-										fill="url(#divider_sm_fill)"
-										mask="url(#divider_sm_mask)"
-									/>
-									<defs>
-										<linearGradient
-											id="divider_sm_fill"
-											x1="0"
-											y1="1"
-											x2="100"
-											y2="1"
-											gradientUnits="userSpaceOnUse"
-										>
-											<stop stop-color="white" stop-opacity="0.05" />
-											<stop offset="1" stop-color="white" stop-opacity="0.4" />
-										</linearGradient>
-									</defs>
-								</svg>
+				<div class="glow-rad__section js-glow-cards">
+					<section
+						class="mission glow-rad__item js-glow-card"
+						data-scroll-trigger="anim-group"
+					>
+						<div class="mission__content js-anim-group">
+							<div class="divider-label mission__label js-anim-item">
+								<div class="divider-label__ill" aria-hidden="true">
+									<svg
+										width="100"
+										height="2"
+										viewBox="0 0 100 2"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<mask id="divider_sm_mask" fill="white">
+											<path d="M0 0H100V2H0V0Z" />
+										</mask>
+										<path
+											d="M100 1H0V3H100V1Z"
+											fill="url(#divider_sm_fill)"
+											mask="url(#divider_sm_mask)"
+										/>
+										<defs>
+											<linearGradient
+												id="divider_sm_fill"
+												x1="0"
+												y1="1"
+												x2="100"
+												y2="1"
+												gradientUnits="userSpaceOnUse"
+											>
+												<stop stop-color="white" stop-opacity="0.05" />
+												<stop
+													offset="1"
+													stop-color="white"
+													stop-opacity="0.4"
+												/>
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
+								<p class="divider-label__text h5">Lorem ipsum dolor sit</p>
+								<div class="divider-label__ill" aria-hidden="true">
+									<svg
+										width="100"
+										height="2"
+										viewBox="0 0 100 2"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<mask id="divider_sm_right_mask" fill="#fff">
+											<path d="M0 0H100V2H0V0Z" />
+										</mask>
+										<path
+											d="M100 1H0V3H100V1Z"
+											fill="url(#divider_sm_right_fill)"
+											mask="url(#divider_sm_right_mask)"
+										/>
+										<defs>
+											<linearGradient
+												id="divider_sm_right_fill"
+												x1="0"
+												y1="1"
+												x2="100"
+												y2="1"
+												gradientUnits="userSpaceOnUse"
+											>
+												<stop stop-color="#fff" stop-opacity=".05" />
+												<stop offset="1" stop-color="#fff" stop-opacity=".4" />
+											</linearGradient>
+										</defs>
+									</svg>
+								</div>
 							</div>
-							<p class="divider-label__text h5">Lorem ipsum dolor sit</p>
-							<div class="divider-label__ill" aria-hidden="true">
-								<svg
-									width="100"
-									height="2"
-									viewBox="0 0 100 2"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<mask id="divider_sm_right_mask" fill="#fff">
-										<path d="M0 0H100V2H0V0Z" />
-									</mask>
-									<path
-										d="M100 1H0V3H100V1Z"
-										fill="url(#divider_sm_right_fill)"
-										mask="url(#divider_sm_right_mask)"
-									/>
-									<defs>
-										<linearGradient
-											id="divider_sm_right_fill"
-											x1="0"
-											y1="1"
-											x2="100"
-											y2="1"
-											gradientUnits="userSpaceOnUse"
-										>
-											<stop stop-color="#fff" stop-opacity=".05" />
-											<stop offset="1" stop-color="#fff" stop-opacity=".4" />
-										</linearGradient>
-									</defs>
-								</svg>
-							</div>
+
+							<p class="h2 mission__title js-anim-item">Mission</p>
+							<p class="h5 mission__text js-anim-item">
+								Our mission is to accelerate the enterprise adoption of Open
+								Source AI models.
+							</p>
 						</div>
 
-						<p class="h2 mission__title">Mission</p>
-						<p class="h5 mission__text">
-							Our mission is to accelerate the enterprise adoption of Open
-							Source AI models.
-						</p>
-					</div>
+						<div class="mission__ill" aria-hidden="true">
+							<img
+								src="./assets/images/mission-bg.png"
+								alt=""
+								class="mission__img-desk"
+							/>
+							<img
+								src="./assets/images/mission-mobile.png"
+								alt=""
+								class="mission__img-mobile"
+							/>
+						</div>
 
-					<div class="mission__ill" aria-hidden="true">
-						<img src="./assets/images/mission-bg.png" alt="" />
-					</div>
-				</section>
-				<section class="team__section js-team-section">
-					<div class="l-container team__container">
-						<p class="h2 team__title t-grad">Team</p>
-						<p class="h5 team__text">
+						<div class="glow-rad" aria-hidden="true"></div>
+					</section>
+				</div>
+				<section
+					class="team__section js-team-section"
+					data-scroll-trigger="anim-group"
+				>
+					<div class="l-container team__container js-anim-group">
+						<p class="h2 team__title t-grad js-anim-item">Team</p>
+						<p class="h5 team__text js-anim-item">
 							Our team is a dynamic blend of diverse talents and deep
 							technological expertise, united by a shared passion to challenge
 							the status quo. We are dedicated to maximizing AI's variance and
@@ -1422,7 +1451,7 @@
 								<article class="team__card js-team-card" data-index="1">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/simone.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
@@ -1436,7 +1465,7 @@
 								<article class="team__card js-team-card" data-index="2">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/filippo.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
@@ -1450,7 +1479,7 @@
 								<article class="team__card js-team-card" data-index="3">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/marco.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
@@ -1464,13 +1493,12 @@
 								<article class="team__card js-team-card" data-index="4">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/david.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
 										/>
 									</div>
-
 									<p class="h5 team__card__title">David Maisel</p>
 									<p class="team__card__subtitle">Advisor</p>
 								</article>
@@ -1478,13 +1506,12 @@
 								<article class="team__card js-team-card" data-index="1">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/fan.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
 										/>
 									</div>
-
 									<p class="h5 team__card__title">Fan Zhang</p>
 									<p class="team__card__subtitle">Advisor</p>
 								</article>
@@ -1492,7 +1519,7 @@
 								<article class="team__card js-team-card" data-index="2">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/john.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
@@ -1506,7 +1533,7 @@
 								<article class="team__card js-team-card" data-index="3">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/rohit.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
@@ -1520,21 +1547,21 @@
 								<article class="team__card js-team-card" data-index="4">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/stephne.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
 										/>
 									</div>
 
-									<p class="h5 team__card__title">Stéphane</p>
+									<p class="h5 team__card__title">Stephane</p>
 									<p class="team__card__subtitle">SW Engineer</p>
 								</article>
 
 								<article class="team__card js-team-card" data-index="1">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/lorem-1.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
@@ -1548,7 +1575,7 @@
 								<article class="team__card js-team-card" data-index="2">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/lorem-2.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
@@ -1562,7 +1589,7 @@
 								<article class="team__card js-team-card" data-index="3">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/richard.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
@@ -1576,7 +1603,7 @@
 								<article class="team__card js-team-card" data-index="4">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/vittorio.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
@@ -1590,7 +1617,7 @@
 								<article class="team__card js-team-card" data-index="1">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/sayantan.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
@@ -1604,7 +1631,7 @@
 								<article class="team__card js-team-card" data-index="2">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/biswaroop.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
@@ -1618,7 +1645,7 @@
 								<article class="team__card js-team-card" data-index="3">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/ettore.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
@@ -1632,7 +1659,7 @@
 								<article class="team__card js-team-card" data-index="4">
 									<div class="team__card__image-wrap">
 										<img
-											src="https://via.placeholder.com/500x300"
+											src="./assets/images/nicola.png"
 											alt="Blog post title"
 											class="team__card__image"
 											draggable="false"
@@ -2572,19 +2599,23 @@
 							<div class="footer__links-group">
 								<ul class="footer__links">
 									<li class="footer__item">
-										<a href="./company.html" class="p footer__link">Company</a>
+										<a href="./company.html" class="p footer__link link"
+											>Company</a
+										>
 									</li>
 									<li class="footer__item">
 										<a
 											href="https://blog.premai.io/"
 											target="_blank"
 											rel="noopener"
-											class="p footer__link"
+											class="p footer__link link"
 											>Blog</a
 										>
 									</li>
 									<li class="footer__item">
-										<a href="./contact.html" class="p footer__link">Contact</a>
+										<a href="./contact.html" class="p footer__link link"
+											>Contact</a
+										>
 									</li>
 								</ul>
 							</div>
@@ -2598,7 +2629,7 @@
 										href="https://twitter.com/premai_io"
 										target="_blank"
 										rel="noopener"
-										class="footer__social-link"
+										class="footer__social-link link"
 										><svg
 											width="20"
 											height="20"
@@ -2618,7 +2649,7 @@
 										href="https://github.com/premAI-io"
 										target="_blank"
 										rel="noopener"
-										class="footer__social-link"
+										class="footer__social-link link"
 										><svg
 											width="21"
 											height="20"
@@ -2645,7 +2676,7 @@
 										href="https://discord.com/invite/kpKk6vYVAn"
 										target="_blank"
 										rel="noopener"
-										class="footer__social-link"
+										class="footer__social-link link"
 										><svg
 											width="26"
 											height="20"
@@ -2672,7 +2703,7 @@
 										href="https://www.youtube.com/@premai_io"
 										target="_blank"
 										rel="noopener"
-										class="footer__social-link"
+										class="footer__social-link link"
 										><svg
 											width="24"
 											height="20"
@@ -2692,7 +2723,7 @@
 										href="https://www.linkedin.com/company/premai/"
 										target="_blank"
 										rel="noopener"
-										class="footer__social-link"
+										class="footer__social-link link"
 										><svg
 											width="20"
 											height="20"
@@ -2729,7 +2760,7 @@
 										href="https://www.iubenda.com/privacy-policy/23732899"
 										target="_blank"
 										rel="noopener"
-										class="footer__end-link"
+										class="footer__end-link link"
 										>Privacy Policy</a
 									>
 								</li>
@@ -2738,7 +2769,7 @@
 										href="https://www.iubenda.com/privacy-policy/23732899/cookie-policy"
 										target="_blank"
 										rel="noopener"
-										class="footer__end-link"
+										class="footer__end-link link"
 										>Cookie Policy</a
 									>
 								</li>
@@ -2747,13 +2778,15 @@
 										href="https://www.iubenda.com/terms-and-conditions/23732899"
 										target="_blank"
 										rel="noopener"
-										class="footer__end-link"
+										class="footer__end-link link"
 										>Terms</a
 									>
 								</li>
 							</ul>
 
-							<a href="#top" class="footer__scrolltop js-hash-scroll"
+							<a
+								href="#top"
+								class="footer__scrolltop glow glow--round js-hash-scroll"
 								><svg
 									width="20"
 									height="20"

@@ -9,6 +9,7 @@
 @import "./atoms/page-loader.css";
 @import "./atoms/layout.css";
 @import "./atoms/glow.css";
+@import "./atoms/link.css";
 @import "./atoms/button.css";
 @import "./atoms/badge.css";
 @import "./atoms/divider-label.css";
@@ -61,7 +62,7 @@
 	--primary-shadow: -1px 2px 20px 0px rgba(245, 142, 142, 0.5);
 
 	--z-god: 420;
-	--z-nav: 90;
+	--z-nav: 400;
 	--z-default: 1;
 	--z-behind: -1;
 }

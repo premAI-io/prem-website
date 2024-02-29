@@ -1,5 +1,5 @@
-<section class="blog__section">
-	<div class="divider-label blog__label">
+<section class="blog__section" data-scroll-trigger="anim-group">
+	<div class="divider-label blog__label" data-scroll-trigger="item">
 		<div class="divider-label__ill" aria-hidden="true">
 			{{> illustrations/divider-sm-left}}
 		</div>
@@ -9,16 +9,16 @@
 		</div>
 	</div>
 
-	<h2 class="blog__title">
+	<h2 class="blog__title" data-scroll-trigger="item">
 		Our latest <br />
 		communications
 	</h2>
 
-	<div class="blog__previews-container">
+	<div class="blog__previews-container js-anim-group">
 		<div class="blog__previews">
 			<a
 				href="https://blog.premai.io/model-merging/"
-				class="blog__card"
+				class="blog__card js-anim-item"
 				target="_blank"
 				rel="noopener"
 			>
@@ -37,12 +37,12 @@
 					skill. Iron Man's got the tech smarts, Black Widow's got the fighting
 					moves, and Captain America...
 				</p>
-				<div class="blog__card__end">By Sayantan Das - Feb 27, 2024</div>
+				<div class="blog__card__end">By Sayantan Das</div>
 			</a>
 
 			<a
 				href="https://blog.premai.io/emergence-capabilities-of-llms/"
-				class="blog__card"
+				class="blog__card js-anim-item"
 				target="_blank"
 				rel="noopener"
 			>
@@ -61,12 +61,12 @@
 					mathematics, describes how complex systems can exhibit new, unforeseen
 					properties as their...
 				</p>
-				<div class="blog__card__end">By Sayantan Das - Feb 20, 2024</div>
+				<div class="blog__card__end">By Sayantan Das</div>
 			</a>
 
 			<a
 				href="https://blog.premai.io/evaluation-of-llms-part-2/"
-				class="blog__card"
+				class="blog__card js-anim-item"
 				target="_blank"
 				rel="noopener"
 			>
@@ -85,12 +85,12 @@
 					evaluators, a concept referred to as "LLM as judge." Building on the
 					previous blog, which introduced...
 				</p>
-				<div class="blog__card__end">By Sayantan Das - Feb 11, 2024</div>
+				<div class="blog__card__end">By Sayantan Das</div>
 			</a>
 		</div>
 	</div>
 
-	<div class="blog__cta">
+	<div class="blog__cta" data-scroll-trigger="item">
 		{{#>button tag="a" href="https://blog.premai.io/" target="_blank"
 		rel="noopener" }} Discover more {{/button}}
 	</div>

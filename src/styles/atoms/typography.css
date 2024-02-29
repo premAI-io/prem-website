@@ -66,6 +66,7 @@ p,
 
 /* Utilities */
 .t-grad {
+	@apply inline-block;
 	background: linear-gradient(
 		97deg,
 		#7f96ff -3.51%,
@@ -75,4 +76,14 @@ p,
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+
+	.word {
+		@apply ml-3;
+	}
+
+	br + & {
+		.word {
+			@apply ml-0;
+		}
+	}
 }

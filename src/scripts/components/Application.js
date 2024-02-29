@@ -1,11 +1,14 @@
 import ComputeBlock from "./ComputeBlock";
 import FeaturesCarousel from "./FeaturesCarousel";
 import iman from "./InstanceManager";
+import GlowCards from "./GlowCards";
 import HashScroll from "./HashScroll";
 import layout from "./Layout";
+// import LazyLoader from "./LazyLoader";
 import MarqueeManager from "./MarqueeManager";
 import Nav from "./Nav";
 import router from "./Router";
+import ScrollAnimator from "./ScrollAnimator";
 import splitText from "./SplitText";
 import Team from "./Team";
 import Testimonials from "./Testimonials";
@@ -34,12 +37,15 @@ class Application {
 			iman.add("splitText", splitText, true);
 
 			iman.add("viewportFixer", new ViewportFixer());
+			// iman.add("lazyLoader", new LazyLoader());
 			iman.add("hashScroll", new HashScroll());
 			iman.add("featuresCarousel", new FeaturesCarousel());
 			iman.add("marqueeManager", new MarqueeManager());
 			iman.add("computeBlock", new ComputeBlock());
 			iman.add("testimonials", new Testimonials());
+			iman.add("glowCards", new GlowCards());
 			iman.add("team", new Team());
+			iman.add("scrollAnimator", new ScrollAnimator());
 
 			loadTransition();
 		});

@@ -22,7 +22,7 @@ class Marquee {
 
 		this.config = {
 			repeat: options.config.repeat || -1,
-			speed: options.config.speed || 1.25,
+			speed: options.config.speed || 1.6,
 			reversed: options.config.reversed || false,
 		};
 

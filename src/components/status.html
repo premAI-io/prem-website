@@ -1,14 +1,35 @@
-<section class="status">
-	<div class="status__content">
-		<p class="status__title">Prem Status Page</p>
-		<p class="h5 status__text">
-			Don't get fooled by AI Providers. Monitor reliability and inference
-			metrics.
-		</p>
-		<div class="status__cta">
-			{{#>button tag="a" href="" }} Visit Status Page {{/button}}
+<div class="glow-rad__section js-glow-cards">
+	<section
+		class="status glow-rad__item js-glow-card"
+		data-scroll-trigger="anim-group"
+	>
+		<div class="status__content js-anim-group">
+			<p class="status__title js-anim-item">Prem Status Page</p>
+			<p class="h5 status__text js-anim-item">
+				Don't get fooled by AI Providers. Monitor reliability and inference
+				metrics.
+			</p>
+			<div class="status__cta js-anim-item">
+				{{#>button tag="a" href="https://providers.premai.io/" target="_blank"
+				rel="noopener" }} Visit Status Page {{/button}}
+			</div>
 		</div>
-	</div>
 
-	<div class="status__ill" aria-hidden="true"></div>
-</section>
+		<div class="status__ill js-anim-group" aria-hidden="true">
+			<img
+				src="./images/status-page.png"
+				alt=""
+				draggable="false"
+				class="status__ill-desk js-anim-item"
+			/>
+			<img
+				src="./images/status-page-mobile.png"
+				alt=""
+				class="status__ill-mobile js-anim-item"
+				draggable="false"
+			/>
+		</div>
+
+		<div class="glow-rad" aria-hidden="true"></div>
+	</section>
+</div>

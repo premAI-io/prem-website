@@ -1,5 +1,5 @@
 import { gsap } from "gsap";
-// import iman from "../components/InstanceManager";
+import iman from "../components/InstanceManager";
 import router from "../components/Router";
 import {
 	hidePage,
@@ -9,16 +9,20 @@ import {
 } from "./page";
 
 export const loadTransition = () => {
+	const scrollAnimatorInstance = iman.get("scrollAnimator");
+
+	if (scrollAnimatorInstance) {
+		scrollAnimatorInstance.hide();
+	}
+
 	pageTransitionIn(true);
 	hidePage({ pageName: router.activeView });
 
 	const loadTl = gsap.timeline({
-		onComplete: () => {
-			console.log("load transition complete");
-			// const scrollAnimatorInstance = iman.get("scrollAnimator");
-			// if (scrollAnimatorInstance) {
-			// 	scrollAnimatorInstance.activate();
-			// }
+		onStart: () => {
+			if (scrollAnimatorInstance) {
+				scrollAnimatorInstance.start();
+			}
 		},
 	});
 	loadTl

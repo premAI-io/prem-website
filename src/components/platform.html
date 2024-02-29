@@ -1,5 +1,5 @@
 <section class="platform" id="platform">
-	<div class="divider-label platform__label">
+	<div class="divider-label platform__label" data-scroll-trigger="item">
 		<div class="divider-label__ill" aria-hidden="true">
 			{{> illustrations/divider-sm-left}}
 		</div>
@@ -9,11 +9,14 @@
 		</div>
 	</div>
 
-	<p class="h2 platform__title">Prem Platform</p>
+	<p class="h2 platform__title" data-scroll-trigger="item">Prem Platform</p>
 
-	<div class="platform__items">
-		<div class="l-container platform__container">
-			<div class="article platform__card">
+	<div class="platform__items glow-rad__section js-glow-cards">
+		<div class="l-container platform__container js-glow-cards">
+			<div
+				class="article platform__card glow-rad__item js-glow-card"
+				data-scroll-trigger="item"
+			>
 				<div class="platform-card__ill">
 					<img
 						src="./images/experiment-and-test.png"
@@ -28,9 +31,14 @@
 						case.
 					</p>
 				</div>
+
+				<div class="glow-rad" aria-hidden="true"></div>
 			</div>
 
-			<div class="article platform__card">
+			<div
+				class="article platform__card glow-rad__item js-glow-card"
+				data-scroll-trigger="item"
+			>
 				<div class="platform-card__ill">
 					<img
 						src="./images/best-model.png"
@@ -46,9 +54,13 @@
 						code.
 					</p>
 				</div>
+				<div class="glow-rad" aria-hidden="true"></div>
 			</div>
 
-			<div class="article platform__card">
+			<div
+				class="article platform__card glow-rad__item js-glow-card"
+				data-scroll-trigger="item"
+			>
 				<div class="platform-card__ill">
 					<img
 						src="./images/integrate-ease.png"
@@ -63,9 +75,13 @@
 						No need to specify the model. Everything is handled by UI.
 					</p>
 				</div>
+				<div class="glow-rad" aria-hidden="true"></div>
 			</div>
 
-			<div class="article platform__card">
+			<div
+				class="article platform__card glow-rad__item js-glow-card"
+				data-scroll-trigger="item"
+			>
 				<div class="platform-card__ill">
 					<img
 						src="./images/monitor-ai-case.png"
@@ -80,9 +96,13 @@
 						accordingly.
 					</p>
 				</div>
+				<div class="glow-rad" aria-hidden="true"></div>
 			</div>
 
-			<div class="article platform__card">
+			<div
+				class="article platform__card glow-rad__item js-glow-card"
+				data-scroll-trigger="item"
+			>
 				<div class="platform-card__ill">
 					<img
 						src="./images/connect-documents.png"
@@ -97,9 +117,13 @@
 						multiple data sources in a click.
 					</p>
 				</div>
+				<div class="glow-rad" aria-hidden="true"></div>
 			</div>
 
-			<div class="article platform__card">
+			<div
+				class="article platform__card glow-rad__item js-glow-card"
+				data-scroll-trigger="item"
+			>
 				<div class="platform-card__ill">
 					<img
 						src="./images/models-training.png"
@@ -114,7 +138,13 @@
 						continuous quality improvements.
 					</p>
 				</div>
+				<div class="glow-rad" aria-hidden="true"></div>
 			</div>
+		</div>
+
+		<div class="platform__cta" data-scroll-trigger="item">
+			{{#>button tag="a" href="https://app.premai.io" target="_blank"
+			rel="noopener" }} Discover more {{/button}}
 		</div>
 
 		<div class="platform__bg" aria-hidden="true" />

@@ -44,7 +44,7 @@ class Team {
 			this.DOM.cards,
 			{
 				y: (i, target) => {
-					return parseInt(target.dataset.index, 10) * 25;
+					return parseInt(target.dataset.index, 10) * 35;
 				},
 			},
 			{

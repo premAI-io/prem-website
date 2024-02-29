@@ -148,7 +148,7 @@ class Nav {
 
 			revealTl
 				.set(this.DOM.navMobile, {
-					zIndex: 89,
+					zIndex: 399,
 					visibility: "visible",
 					pointerEvents: "all",
 				})
