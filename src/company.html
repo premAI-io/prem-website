@@ -1,56 +1,53 @@
 <!doctype html>
 <html lang="en-US">
-	{{> head}}
+{{> head}}
 
-	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
-		{{> page-loader}}
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	{{> page-loader}}
 
-		<div class="page__wrap" data-router-view="company" id="top">
-			{{> nav}} {{#>hero variant="company" }}
+	<div class="page__wrap" data-router-view="company" id="top">
+		{{> nav}} {{#>hero variant="company" }}
 
-			<div class="l-container hero__container">
-				<div class="hero__content js-hero-content">
-					<div class="hero__post-preview">
-						{{#>badge
-						href="https://blog.premai.io/announcing-our-startup-grants-program/"
-						target="_blank" rel="noopener" class="js-badge" }}
-						<div class="badge__icon">{{> icons/sparkles}}</div>
-						<div class="p-sm badge__text">
-							We launched a Generative AI Startup Program! Apply now
-							<span class="badge__arrow">{{> icons/chevron-right}}</span>
-						</div>
-						{{/badge}}
+		<div class="l-container hero__container">
+			<div class="hero__content js-hero-content">
+				<div class="hero__post-preview">
+					{{#>badge
+					href="https://blog.premai.io/announcing-our-startup-grants-program/"
+					target="_blank" rel="noopener" class="js-badge" }}
+					<div class="badge__icon">{{> icons/sparkles}}</div>
+					<div class="p-sm badge__text">
+						We launched a Generative AI Startup Program! Apply now
+						<span class="badge__arrow">{{> icons/chevron-right}}</span>
 					</div>
-
-					<h1 class="hero__title js-title" data-split="words">
-						Prem is constantly <br />
-						<span class="t-grad">evolving.</span>
-					</h1>
-					<p class="h4 hero__subtitle js-subtitle" data-split="words">
-						Prem is an applied research lab dedicated to expanding the
-						capabilities of open and decentralized AI technologies with
-						ownership.
-					</p>
+					{{/badge}}
 				</div>
-			</div>
 
-			<div class="hero__ill js-hero-ill" aria-hidden="true">
-				{{> illustrations/evolve-chart}}
+				<h1 class="hero__title js-title" data-split="words">
+					Prem is constantly <br />
+					<span class="t-grad">evolving.</span>
+				</h1>
+				<p class="h4 hero__subtitle js-subtitle" data-split="words">
+					Prem is a leading applied research lab focused on enhancing and advancing open-source AI
+					technologies. At Prem, we are committed to pushing the boundaries of what open-source AI can
+					achieve, driving progress and innovation in the field
+				</p>
 			</div>
-			<div class="hero__bg js-hero-bg" aria-hidden="true">
-				<img
-					src="./images/stars.png"
-					alt="Stars illustration"
-					draggable="false"
-				/>
-			</div>
-			{{/hero}}
-
-			<main>{{> vision}} {{> mission}} {{> team}}</main>
-
-			{{> footer}}
 		</div>
 
-		{{> tail}}
-	</body>
+		<div class="hero__ill js-hero-ill" aria-hidden="true">
+			{{> illustrations/evolve-chart}}
+		</div>
+		<div class="hero__bg js-hero-bg" aria-hidden="true">
+			<img src="./images/stars.png" alt="Stars illustration" draggable="false" />
+		</div>
+		{{/hero}}
+
+		<main>{{> vision}} {{> mission}} {{> team}}</main>
+
+		{{> footer}}
+	</div>
+
+	{{> tail}}
+</body>
+
 </html>
