@@ -15,7 +15,7 @@ class Nav {
 		this.addEvents();
 		this.hideNav(true);
 		this.setActiveItem();
-		this.addHeadTrigger();
+		this.setupScroll();
 	}
 
 	setActiveItem(viewName = router.activeView) {
@@ -38,25 +38,12 @@ class Nav {
 
 	removeEvents() {
 		this.DOM.navToggle.removeEventListener("click", this.toggleMenu);
+		window.removeEventListener("scroll", this.onScroll, false);
 	}
 
-	addHeadTrigger() {
-		this.headTrigger = ScrollTrigger.create({
-			trigger: document.window,
-			start: "top -20%",
-			onUpdate: (self) => {
-				if (self.direction === 1) {
-					document.body.classList.add("is-scrolling-down");
-					document.body.classList.remove("is-scrolling-up");
-				} else {
-					document.body.classList.add("is-scrolling-up");
-					document.body.classList.remove("is-scrolling-down");
-				}
-			},
-			onLeaveBack: () => {
-				document.body.classList.remove("is-scrolling-up");
-			},
-		});
+	setupScroll() {
+		this.lastScrollTop = window.scrollY || document.documentElement.scrollTop;
+		window.addEventListener("scroll", this.onScroll, false);
 	}
 
 	toggleMenu = () => {
@@ -65,6 +52,21 @@ class Nav {
 		} else {
 			this.revealNav();
 		}
+	};
+
+	onScroll = () => {
+		const scrollValue = window.scrollY || document.documentElement.scrollTop;
+
+		if (scrollValue > this.lastScrollTop) {
+			document.body.classList.add("is-scrolling-down");
+			document.body.classList.remove("is-scrolling-up");
+		} else {
+			document.body.classList.add("is-scrolling-up");
+			document.body.classList.remove("is-scrolling-down");
+		}
+
+		// For Mobile && negative scrolling
+		this.lastScrollTop = scrollValue <= 0 ? 0 : scrollValue;
 	};
 
 	hideNav = (immediate = false, cb = false) => {

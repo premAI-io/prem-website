@@ -19,12 +19,14 @@
 			complete ecosystem and fast paced changes happening every day.
 		</p>
 
-		<img
-			src="./images/book-mockup.png"
-			alt=""
-			class="book__img js-anim-item"
-			draggable="false"
-		/>
+		<div class="js-anim-item">
+			<img
+				data-lazy-src="./images/book-mockup.png"
+				alt=""
+				class="book__img lazy-el js-lazy-el"
+				draggable="false"
+			/>
+		</div>
 
 		<div class="book__cta js-anim-item">
 			{{#>button tag="a" href="https://book.premai.io/" target="_blank"
@@ -42,9 +44,9 @@
 
 	<div class="book__ill js-anim-group" aria-hidden="true">
 		<img
-			src="./images/stars.png"
+			data-lazy-src="./images/stars.png"
 			alt="Models stars illustration"
-			class="js-anim-item"
+			class="lazy-el js-lazy-el js-anim-item"
 			draggable="false"
 		/>
 	</div>

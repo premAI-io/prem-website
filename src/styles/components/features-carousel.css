@@ -1,5 +1,5 @@
 .features-carousel {
-	@apply w-full lg:w-[463px];
+	@apply w-full lg:w-[430px] xl:w-[463px];
 
 	&.is-animate {
 		@apply pointer-events-none;
@@ -55,7 +55,7 @@
 }
 
 .features-carousel__item-text {
-	@apply h-0 overflow-hidden opacity-0 text-gray-200 text-[12px] leading-[1.5];
+	@apply h-0 overflow-hidden opacity-0 text-gray-200 text-[12px] leading-[1.5] xl:text-[14px];
 }
 
 .features-carousel__item-cta {

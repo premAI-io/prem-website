@@ -32,7 +32,7 @@
 /* Typographic scale */
 h1,
 .h1 {
-	@apply text-[32px] lg:text-[64px] xl:text-[76px] font-medium leading-[1.05263] tracking-[0.5px];
+	@apply text-[32px] md:text-[48px] xl:text-[76px] font-medium leading-[1.05263] tracking-[0.5px];
 }
 
 h2,
@@ -61,7 +61,7 @@ p,
 }
 
 .p-sm {
-	@apply text-[12px] leading-[1.5];
+	@apply text-[12px] leading-[1.5] xl:text-[14px];
 }
 
 /* Utilities */

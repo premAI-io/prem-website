@@ -22,7 +22,7 @@
 }
 
 .page__wrap {
-	@apply flex flex-col h-full;
+	@apply flex flex-col min-h-full;
 }
 
 .page__container {
@@ -34,11 +34,15 @@
 	flex: 1 0 auto;
 }
 
-.js-lazy-el {
-	opacity: 0 !important;
-	transition: opacity 0.42s ease-in-out;
+.lazy-el {
+	opacity: 0;
+	&:not(.initial) {
+		transition: opacity 1s ease-in-out;
+	}
 
-	&[data-loaded="true"] {
-		opacity: 1 !important;
+	&.initial,
+	&.is-lazy-loaded,
+	&.is-lazy-error {
+		opacity: 1;
 	}
 }
