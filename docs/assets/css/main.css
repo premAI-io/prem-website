@@ -2764,7 +2764,7 @@ br + .t-grad .word {
 		font-size: 20px;
 	}
 }
-@media (min-width: 1280px) {
+@media (min-width: 1536px) {
 	.testimonial__card__text {
 		font-size: 28px;
 	}

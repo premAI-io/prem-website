@@ -39,11 +39,11 @@ export default defineConfig({
 		rollupOptions: {
 			output: {
 				assetFileNames: (assetInfo) => {
-					let extType = assetInfo.name.split(".")[1];
+					let extType = assetInfo.name.split(".").at(-1);
 					if (/ttf|otf|eot|woff|woff2/i.test(extType)) {
 						extType = "fonts";
 					}
-					if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+					if (/png|jpe?g|svg|gif|tiff|webp|bmp|ico/i.test(extType)) {
 						extType = "images";
 					}
 					return `assets/${extType}/[name][extname]`;

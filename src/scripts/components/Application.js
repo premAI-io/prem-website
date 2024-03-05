@@ -4,7 +4,7 @@ import iman from "./InstanceManager";
 import GlowCards from "./GlowCards";
 import HashScroll from "./HashScroll";
 import layout from "./Layout";
-import LazyLoader from "./LazyLoader";
+// import LazyLoader from "./LazyLoader";
 import MarqueeManager from "./MarqueeManager";
 import Nav from "./Nav";
 import router from "./Router";
@@ -37,7 +37,7 @@ class Application {
 			iman.add("splitText", splitText, true);
 
 			iman.add("viewportFixer", new ViewportFixer());
-			iman.add("lazyLoader", new LazyLoader());
+			// iman.add("lazyLoader", new LazyLoader());
 			iman.add("hashScroll", new HashScroll());
 			iman.add("featuresCarousel", new FeaturesCarousel());
 			iman.add("marqueeManager", new MarqueeManager());
