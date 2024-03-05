@@ -1,31 +1,34 @@
-import lozad from "lozad";
+import LazyLoad from "vanilla-lazyload";
 
 class LazyLoader {
 	constructor() {
 		this.init();
 	}
 
-	initObserver() {
-		this.lazyObserver = lozad(this.DOM.lazyEls, {
-			rootMargin: "30% 0px 30% 0px",
-			threshold: 0,
+	reinit() {
+		this.init();
+	}
+
+	init() {
+		this.instance = new LazyLoad({
+			class_loading: "is-lazy-loading",
+			class_loaded: "is-lazy-loaded",
+			class_error: "is-lazy-error",
+			elements_selector: ".js-lazy-el",
+			data_bg: "lazy-bg",
+			data_poster: "lazy-poster",
+			data_src: "lazy-src",
+			callback_error: (element) => {
+				console.log("element_error", element);
+				element.classList.add("is-lazy-error");
+			},
 		});
-
-		this.lazyObserver.observe();
 	}
 
-	reinit(container) {
-		this.init(container);
-	}
-
-	init(container = document) {
-		const lazyEls = container.querySelectorAll(".js-lazy-el");
-
-		if (lazyEls) {
-			this.DOM = {};
-			this.DOM.lazyEls = lazyEls;
-
-			this.initObserver();
+	destroy() {
+		if (this.instance) {
+			this.instance.destroy();
+			this.instance = null;
 		}
 	}
 }

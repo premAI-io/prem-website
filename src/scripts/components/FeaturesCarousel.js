@@ -49,7 +49,15 @@ class FeaturesCarousel {
 			this.DOM.ctas[i].addEventListener("click", this.onSlideCtaClick);
 		}
 
-		// this.start();
+		this.progressTl = gsap
+			.timeline({
+				paused: true,
+			})
+			.to(this.DOM.progressbar, {
+				scaleX: 1,
+				duration: SLIDER_TIMEOUT / 1000,
+				ease: "linear",
+			});
 	}
 
 	onSlideCtaClick = (e) => {
@@ -216,16 +224,6 @@ class FeaturesCarousel {
 	};
 
 	start = () => {
-		this.progressTl = gsap
-			.timeline({
-				paused: true,
-			})
-			.to(this.DOM.progressbar, {
-				scaleX: 1,
-				duration: SLIDER_TIMEOUT / 1000,
-				ease: "linear",
-			});
-
 		this.progressTl.play();
 		this.instance?.plugins()?.autoplay?.play();
 	};

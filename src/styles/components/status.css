@@ -30,6 +30,10 @@
 	@apply relative order-1 md:order-2 w-[98%] pointer-events-none md:absolute md:left-auto md:top-auto md:w-[55%] md:-right-[5%] md:bottom-0 xl:-bottom-[12%] xl:-right-[12%];
 }
 
+.status__ill-inner {
+	@apply relative;
+}
+
 .status__ill-desk {
 	@apply hidden md:block w-full h-auto;
 }
