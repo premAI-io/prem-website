@@ -3,7 +3,7 @@ var Au = (a, t, e) =>
 	t in a
 		? ku(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e })
 		: (a[t] = e);
-var Bt = (a, t, e) => (Au(a, typeof t != "symbol" ? t + "" : t, e), e);
+var Nt = (a, t, e) => (Au(a, typeof t != "symbol" ? t + "" : t, e), e);
 (function () {
 	const t = document.createElement("link").relList;
 	if (t && t.supports && t.supports("modulepreload")) return;
@@ -65,7 +65,7 @@ function $l(a, t) {
 	Oe,
 	qt,
 	di = 1e8,
-	Nt = 1 / di,
+	Bt = 1 / di,
 	Ao = Math.PI * 2,
 	Lu = Ao / 4,
 	Iu = 0,
@@ -317,7 +317,7 @@ function $l(a, t) {
 	},
 	io = function (t) {
 		return (t._end = he(
-			t._start + (t._tDur / Math.abs(t._ts || t._rts || Nt) || 0),
+			t._start + (t._tDur / Math.abs(t._ts || t._rts || Bt) || 0),
 		));
 	},
 	no = function (t, e) {
@@ -344,14 +344,14 @@ function $l(a, t) {
 				(!e._dur && e._initted) ||
 				(e._start < t._time && (e._dur || !e.add))) &&
 				((i = Xs(t.rawTime(), e)),
-				(!e._dur || as(0, e.totalDuration(), i) - e._tTime > Nt) &&
+				(!e._dur || as(0, e.totalDuration(), i) - e._tTime > Bt) &&
 					e.render(i, !0)),
 			Tn(t, e)._dp && t._initted && t._time >= t._dur && t._ts)
 		) {
 			if (t._dur < t.duration())
 				for (i = t; i._dp; )
 					i.rawTime() >= 0 && i.totalTime(i._tTime), (i = i._dp);
-			t._zTime = -Nt;
+			t._zTime = -Bt;
 		}
 	},
 	Ei = function (t, e, i, n) {
@@ -417,12 +417,12 @@ function $l(a, t) {
 				t._yoyo && f & 1 && (s = 1 - s),
 				f !== sr(t._tTime, o) &&
 					((r = 1 - s), t.vars.repeatRefresh && t._initted && t.invalidate())),
-			s !== r || Oe || n || t._zTime === Nt || (!e && t._zTime))
+			s !== r || Oe || n || t._zTime === Bt || (!e && t._zTime))
 		) {
 			if (!t._initted && ac(t, e, n, i, c)) return;
 			for (
 				d = t._zTime,
-					t._zTime = e || (i ? Nt : 0),
+					t._zTime = e || (i ? Bt : 0),
 					i || (i = e && !d),
 					t.ratio = s,
 					t._from && (s = 1 - s),
@@ -1370,7 +1370,7 @@ St.SteppedEase =
 				var i = 1 / t,
 					n = t + (e ? 0 : 1),
 					r = e ? 1 : 0,
-					s = 1 - Nt;
+					s = 1 - Bt;
 				return function (o) {
 					return (((n * as(0, s, o)) | 0) + r) * i;
 				};
@@ -1455,7 +1455,7 @@ var Tc = function (t, e) {
 				return (
 					(this._tTime !== i ||
 						(!this._dur && !n) ||
-						(this._initted && Math.abs(this._zTime) === Nt) ||
+						(this._initted && Math.abs(this._zTime) === Bt) ||
 						(!i && !this._initted && (this.add || this._ptLookup))) &&
 						(this._ts || (this._pTime = i), ec(this, i, n)),
 					this
@@ -1502,13 +1502,13 @@ var Tc = function (t, e) {
 						: 1;
 			}),
 			(t.timeScale = function (i, n) {
-				if (!arguments.length) return this._rts === -Nt ? 0 : this._rts;
+				if (!arguments.length) return this._rts === -Bt ? 0 : this._rts;
 				if (this._rts === i) return this;
 				var r =
 					this.parent && this._ts ? Xs(this.parent._time, this) : this._tTime;
 				return (
 					(this._rts = +i || 0),
-					(this._ts = this._ps || i === -Nt ? 0 : this._rts),
+					(this._ts = this._ps || i === -Bt ? 0 : this._rts),
 					this.totalTime(as(-Math.abs(this._delay), this._tDur, r), n !== !1),
 					io(this),
 					Hu(this)
@@ -1529,8 +1529,8 @@ var Tc = function (t, e) {
 											? this.rawTime()
 											: this._tTime || this._pTime,
 										this.progress() === 1 &&
-											Math.abs(this._zTime) !== Nt &&
-											(this._tTime -= Nt),
+											Math.abs(this._zTime) !== Bt &&
+											(this._tTime -= Bt),
 									))),
 						this)
 					: this._ps;
@@ -1623,12 +1623,12 @@ var Tc = function (t, e) {
 			(t.reversed = function (i) {
 				return arguments.length
 					? (!!i !== this.reversed() &&
-							this.timeScale(-this._rts || (i ? -Nt : 0)),
+							this.timeScale(-this._rts || (i ? -Bt : 0)),
 						this)
 					: this._rts < 0;
 			}),
 			(t.invalidate = function () {
-				return (this._initted = this._act = 0), (this._zTime = -Nt), this;
+				return (this._initted = this._act = 0), (this._zTime = -Bt), this;
 			}),
 			(t.isActive = function () {
 				var i = this.parent || this._dp,
@@ -1640,7 +1640,7 @@ var Tc = function (t, e) {
 						this._initted &&
 						i.isActive() &&
 						(r = i.rawTime(!0)) >= n &&
-						r < this.endTime(!0) - Nt)
+						r < this.endTime(!0) - Bt)
 				);
 			}),
 			(t.eventCallback = function (i, n, r) {
@@ -1692,7 +1692,7 @@ gi(Qr.prototype, {
 	_ts: 1,
 	_dp: 0,
 	ratio: 0,
-	_zTime: -Nt,
+	_zTime: -Bt,
 	_prom: 0,
 	_ps: !1,
 	_rts: 1,
@@ -1881,7 +1881,7 @@ var Re = (function (a) {
 								),
 								p !== this._time || (!this._ts && !_))
 							) {
-								(y = 0), g && (f += this._zTime = -Nt);
+								(y = 0), g && (f += this._zTime = -Bt);
 								break;
 							}
 						}
@@ -1903,7 +1903,7 @@ var Re = (function (a) {
 								),
 								p !== this._time || (!this._ts && !_))
 							) {
-								(y = 0), g && (f += this._zTime = L ? -Nt : Nt);
+								(y = 0), g && (f += this._zTime = L ? -Bt : Bt);
 								break;
 							}
 						}
@@ -1914,7 +1914,7 @@ var Re = (function (a) {
 					y &&
 					!r &&
 					(this.pause(),
-					(y.render(p >= o ? 0 : -Nt)._zTime = p >= o ? 1 : -1),
+					(y.render(p >= o ? 0 : -Bt)._zTime = p >= o ? 1 : -1),
 					this._ts)
 				)
 					return (this._start = x), io(this), this.render(n, r, s);
@@ -2057,7 +2057,7 @@ var Re = (function (a) {
 								Math.abs(
 									(o - (u && "time" in u ? u.time : s._time)) / s.timeScale(),
 								) ||
-								Nt,
+								Bt,
 							onStart: function () {
 								if ((s.pause(), !l)) {
 									var m =
@@ -2092,7 +2092,7 @@ var Re = (function (a) {
 		(e.currentLabel = function (n) {
 			return arguments.length
 				? this.seek(n, !0)
-				: this.previousLabel(this._time + Nt);
+				: this.previousLabel(this._time + Bt);
 		}),
 		(e.shiftChildren = function (n, r, s) {
 			s === void 0 && (s = 0);
@@ -2385,7 +2385,7 @@ var uf = function (t, e, i, n, r, s, o) {
 					(t._zTime = e),
 					!o)
 				)
-					a(t._startAt, Nt, Nt);
+					a(t._startAt, Bt, Bt);
 				else if (!e) return;
 			}
 			for (
@@ -2618,7 +2618,7 @@ var re = (function (a) {
 					He(d) &&
 					$u(Ni(o)) &&
 					y.data !== "nested")) &&
-				((o._tTime = -Nt), o.render(Math.max(0, -f) || 0)),
+				((o._tTime = -Bt), o.render(Math.max(0, -f) || 0)),
 			m && oc(Ni(o), m),
 			o
 		);
@@ -2630,7 +2630,7 @@ var re = (function (a) {
 				c = this._tDur,
 				u = this._dur,
 				f = n < 0,
-				d = n > c - Nt && !f ? c : n < Nt ? 0 : n,
+				d = n > c - Bt && !f ? c : n < Bt ? 0 : n,
 				p,
 				l,
 				g,
@@ -11456,7 +11456,20 @@ const ko = 66,
 	zl = 5e3;
 class ph {
 	constructor() {
-		Bt(this, "onSlideCtaClick", (t) => {
+		Nt(this, "onVisibilityChange", () => {
+			var e, i;
+			const t =
+				(i = (e = this.instance) == null ? void 0 : e.plugins()) == null
+					? void 0
+					: i.autoplay;
+			document.visibilityState === "visible"
+				? (this.progressTl.restart(),
+					this.progressTl.play(),
+					t.reset(),
+					t.play())
+				: (this.progressTl.pause(), t.stop());
+		});
+		Nt(this, "onSlideCtaClick", (t) => {
 			const e = t.currentTarget,
 				i = e.closest(".js-features-carousel-item");
 			if ((t.preventDefault(), i.classList.contains("is-active"))) {
@@ -11465,7 +11478,7 @@ class ph {
 				r && yu(r, 150);
 			} else this.instance.scrollTo(parseInt(i.dataset.index, 10));
 		});
-		Bt(this, "onSlideChange", () => {
+		Nt(this, "onSlideChange", () => {
 			var s, o;
 			const t =
 					(o = (s = this.instance) == null ? void 0 : s.plugins()) == null
@@ -11490,7 +11503,7 @@ class ph {
 				.add(this.outSlide(i))
 				.add(this.inSlide(n), "<");
 		});
-		Bt(this, "outSlide", (t) => {
+		Nt(this, "outSlide", (t) => {
 			const e = t.querySelector(".js-features-carousel-item-text"),
 				i = t.querySelector(".js-features-carousel-ill"),
 				n = $.timeline({
@@ -11523,7 +11536,7 @@ class ph {
 				n
 			);
 		});
-		Bt(this, "inSlide", (t, e = !1) => {
+		Nt(this, "inSlide", (t, e = !1) => {
 			const i = t.querySelector(".js-features-carousel-item-text"),
 				n = t.querySelector(".js-features-carousel-ill"),
 				r = $.timeline({
@@ -11565,15 +11578,16 @@ class ph {
 				r
 			);
 		});
-		Bt(this, "start", () => {
+		Nt(this, "start", () => {
 			var t, e, i;
 			this.progressTl.play(),
 				(i =
 					(e = (t = this.instance) == null ? void 0 : t.plugins()) == null
 						? void 0
-						: e.autoplay) == null || i.play();
+						: e.autoplay) == null || i.play(),
+				document.addEventListener("visibilitychange", this.onVisibilityChange);
 		});
-		Bt(this, "hide", () => {
+		Nt(this, "hide", () => {
 			const t = $.timeline();
 			if (Kt.device < 1) {
 				const e = this.DOM.slides[this.activeIndex],
@@ -11591,7 +11605,7 @@ class ph {
 				}
 			return t;
 		});
-		Bt(this, "reveal", () => {
+		Nt(this, "reveal", () => {
 			const t = $.timeline();
 			if (Kt.device < 1) {
 				const e = this.DOM.slides[this.activeIndex],
@@ -11655,7 +11669,9 @@ class ph {
 				this.instance.destroy();
 			for (let n = 0; n < this.DOM.ctas.length; n++)
 				this.DOM.ctas[n].removeEventListener("click", this.onSlideCtaClick);
-			(this.instance = void 0), (this.DOM = void 0);
+			document.removeEventListener("visibilitychange", this.onVisibilityChange),
+				(this.instance = void 0),
+				(this.DOM = void 0);
 		}
 	}
 	resize() {
@@ -11786,7 +11802,7 @@ class gh {
 const ne = new gh();
 class _h {
 	constructor() {
-		Bt(this, "onMouseMove", (t) => {
+		Nt(this, "onMouseMove", (t) => {
 			const i = t.currentTarget.querySelectorAll(".js-glow-card");
 			for (let n = 0; n < i.length; n++) {
 				const r = i[n].getBoundingClientRect(),
@@ -11815,7 +11831,7 @@ class _h {
 }
 class mh {
 	constructor() {
-		Bt(this, "scrollLinkTo", (t) => {
+		Nt(this, "scrollLinkTo", (t) => {
 			t.preventDefault();
 			const i = t.currentTarget.getAttribute("href"),
 				n = document.querySelector(`${i}`);
@@ -11923,10 +11939,10 @@ const Js = new xh();
 $.registerPlugin(mt);
 class wh {
 	constructor() {
-		Bt(this, "toggleMenu", () => {
+		Nt(this, "toggleMenu", () => {
 			this.isOpenMenu ? this.hideNav() : this.revealNav();
 		});
-		Bt(this, "onScroll", () => {
+		Nt(this, "onScroll", () => {
 			const t = window.scrollY || document.documentElement.scrollTop;
 			t > this.lastScrollTop
 				? (document.body.classList.add("is-scrolling-down"),
@@ -11935,7 +11951,7 @@ class wh {
 					document.body.classList.remove("is-scrolling-down")),
 				(this.lastScrollTop = t <= 0 ? 0 : t);
 		});
-		Bt(this, "hideNav", (t = !1, e = !1) => {
+		Nt(this, "hideNav", (t = !1, e = !1) => {
 			if (!this.isAnimatingMenu) {
 				(this.isAnimatingMenu = !0),
 					document.body.classList.remove("is-nav-open");
@@ -11985,7 +12001,7 @@ class wh {
 				);
 			}
 		});
-		Bt(this, "revealNav", () => {
+		Nt(this, "revealNav", () => {
 			if (!this.isAnimatingMenu) {
 				(this.isAnimatingMenu = !0), document.body.classList.add("is-nav-open");
 				const t = $.timeline({
@@ -12016,8 +12032,8 @@ class wh {
 				);
 			}
 		});
-		Bt(this, "hide", () => $.set(this.DOM.nav, { opacity: 0 }));
-		Bt(this, "reveal", () =>
+		Nt(this, "hide", () => $.set(this.DOM.nav, { opacity: 0 }));
+		Nt(this, "reveal", () =>
 			$.timeline().to(this.DOM.nav, {
 				opacity: 1,
 				duration: 0.8,
@@ -12260,12 +12276,12 @@ const bh = (a) => {
 	};
 class Dh {
 	constructor() {
-		Bt(this, "start", () => {
+		Nt(this, "start", () => {
 			this.DOM &&
 				this.DOM.scrollTriggerElements.length &&
 				ql.activate(this.DOM.scrollTriggerElements);
 		});
-		Bt(this, "hide", () => {
+		Nt(this, "hide", () => {
 			this.DOM &&
 				this.DOM.scrollTriggerElements.length &&
 				ql.hideAll(this.DOM.scrollTriggerElements);
@@ -12533,7 +12549,7 @@ var Ch = Eu.exports;
 const vr = Ph(Ch);
 class Eh {
 	constructor() {
-		Bt(this, "getSubInstanceFrom", (t, e) => {
+		Nt(this, "getSubInstanceFrom", (t, e) => {
 			const i = this[e];
 			let n;
 			for (let r = 0; r < i.length; r++) i[r].el === t && (n = i[r]);
@@ -12659,7 +12675,7 @@ class kh {
 $.registerPlugin(mt);
 class Ah {
 	constructor() {
-		Bt(this, "onCarouselPrev", () => {
+		Nt(this, "onCarouselPrev", () => {
 			if (!this.isAnimating) {
 				this.isAnimating = !0;
 				const t = this.activeIndex;
@@ -12678,7 +12694,7 @@ class Ah {
 					.add(this.enterSlide(i), 0);
 			}
 		});
-		Bt(this, "onCarouselNext", () => {
+		Nt(this, "onCarouselNext", () => {
 			if (!this.isAnimating) {
 				this.isAnimating = !0;
 				const t = this.activeIndex;
@@ -12697,7 +12713,7 @@ class Ah {
 					.add(this.enterSlide(i), 0);
 			}
 		});
-		Bt(this, "exitSlide", (t) => {
+		Nt(this, "exitSlide", (t) => {
 			const e = $.timeline();
 			return (
 				e.to(t, {
@@ -12712,11 +12728,11 @@ class Ah {
 				e
 			);
 		});
-		Bt(this, "enterSlide", (t) => {
+		Nt(this, "enterSlide", (t) => {
 			const e = $.timeline();
 			return e.to(t, { opacity: 1, xPercent: 0, duration: 0.8, ease: ht }), e;
 		});
-		Bt(this, "buildCardsTl", () => {
+		Nt(this, "buildCardsTl", () => {
 			const t = $.timeline();
 			for (let e = 0; e < this.DOM.cards.length; e++) {
 				const i = this.DOM.cards[e],
@@ -13007,7 +13023,7 @@ function Hl() {
 }
 class zh {
 	constructor() {
-		Bt(this, "onResize", () => {
+		Nt(this, "onResize", () => {
 			Kt.resize(),
 				document.body.classList.toggle("is-touch", Hl()),
 				ne.map("resize");
