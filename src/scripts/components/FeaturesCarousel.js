@@ -60,6 +60,20 @@ class FeaturesCarousel {
 			});
 	}
 
+	onVisibilityChange = () => {
+		const autoplay = this.instance?.plugins()?.autoplay;
+
+		if (document.visibilityState === "visible") {
+			this.progressTl.restart();
+			this.progressTl.play();
+			autoplay.reset();
+			autoplay.play();
+		} else {
+			this.progressTl.pause();
+			autoplay.stop();
+		}
+	};
+
 	onSlideCtaClick = (e) => {
 		const target = e.currentTarget;
 		const parentSlide = target.closest(".js-features-carousel-item");
@@ -226,6 +240,8 @@ class FeaturesCarousel {
 	start = () => {
 		this.progressTl.play();
 		this.instance?.plugins()?.autoplay?.play();
+
+		document.addEventListener("visibilitychange", this.onVisibilityChange);
 	};
 
 	hide = () => {
@@ -366,6 +382,8 @@ class FeaturesCarousel {
 			for (let i = 0; i < this.DOM.ctas.length; i++) {
 				this.DOM.ctas[i].removeEventListener("click", this.onSlideCtaClick);
 			}
+
+			document.removeEventListener("visibilitychange", this.onVisibilityChange);
 
 			this.instance = undefined;
 			this.DOM = undefined;

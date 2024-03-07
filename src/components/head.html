@@ -8,26 +8,64 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 	<meta name="msapplication-tap-highlight" content="no" />
-	<script defer data-domain="premai.io" src="https://plausible.io/js/script.js"></script>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#28292d" />
+	<meta name="msapplication-TileColor" content="#28292d" />
+	<meta name="theme-color" content="#28292d" />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.premai.io/" />
+	<meta property="og:title" content="{{title}}" />
+	<meta property="og:description" content="{{description}}" />
+	<meta property="og:image" content="/meta.png" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://www.premai.io/" />
+	<meta property="twitter:title" content="{{title}}" />
+	<meta property="twitter:description" content="{{description}}" />
+	<meta property="twitter:image" content="/meta.png" />
+
+	<script
+		defer
+		data-domain="premai.io"
+		src="https://plausible.io/js/script.js"
+	></script>
 	<!-- Google Tag Manager -->
-	<script>(function (w, d, s, l, i) {
-			w[l] = w[l] || []; w[l].push({
-				'gtm.start':
-					new Date().getTime(), event: 'gtm.js'
-			}); var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-NLNQ7FDK');</script>
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				"gtm.start": new Date().getTime(),
+				event: "gtm.js",
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-NLNQ7FDK");
+	</script>
 	<!-- End Google Tag Manager -->
 
 	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-N4M33PFNYF"></script>
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=G-N4M33PFNYF"
+	></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
 
-		gtag('config', 'G-N4M33PFNYF');
+		gtag("config", "G-N4M33PFNYF");
 	</script>
-
 </head>
