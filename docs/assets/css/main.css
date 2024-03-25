@@ -849,6 +849,14 @@ br + .t-grad .word {
 .button--primary {
 	background: var(--primary-gradient);
 }
+.button--primary.button--outline {
+	border-width: 1px;
+	border-color: rgb(255 255 252 / var(--tw-border-opacity));
+	--tw-border-opacity: 0.3;
+	--tw-text-opacity: 1;
+	color: rgb(255 255 252 / var(--tw-text-opacity));
+	background: none;
+}
 .button--secondary {
 	border-width: 1px;
 	border-color: rgb(255 255 252 / var(--tw-border-opacity));
@@ -1065,13 +1073,30 @@ br + .t-grad .word {
 	position: relative;
 	z-index: 2;
 }
-.nav__cta {
+.nav__ctas {
 	display: none;
+	align-items: center;
+	-moz-column-gap: 1.25rem;
+	column-gap: 1.25rem;
 }
 @media (min-width: 1024px) {
-	.nav__cta {
-		display: block;
+	.nav__ctas {
+		display: flex;
 	}
+}
+.nav__side-link {
+	position: relative;
+	display: flex;
+	align-items: center;
+	-moz-column-gap: 0.5rem;
+	column-gap: 0.5rem;
+}
+.nav__side-text {
+	font-size: 16px;
+}
+.nav__side-icon {
+	height: 1rem;
+	width: 1rem;
 }
 .nav__toggle {
 	position: relative;
@@ -1188,6 +1213,9 @@ br + .t-grad .word {
 }
 .nav-mobile__end {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.75rem;
 	overflow: hidden;
 }
 .nav-mobile__end .button {
@@ -1553,7 +1581,7 @@ br + .t-grad .word {
 	left: 50%;
 	max-height: 60%;
 	width: auto;
-	max-width: 95%;
+	max-width: 85%;
 	--tw-translate-x: -50%;
 	transform: translate(var(--tw-translate-x), var(--tw-translate-y))
 		rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
@@ -5284,4 +5312,5 @@ br + .t-grad .word {
 	--z-nav: 400;
 	--z-default: 1;
 	--z-behind: -1;
+	color-scheme: dark;
 }

@@ -4,25 +4,49 @@
 
 		<ul class="nav__items">
 			<li class="nav__item">
-				<a href="./company.html" class="nav__link js-nav-link" data-route="company">
+				<a
+					href="./company.html"
+					class="nav__link js-nav-link"
+					data-route="company"
+				>
 					<div class="nav__link-inner">Company</div>
 				</a>
 			</li>
 			<li class="nav__item">
-				<a href="https://blog.premai.io/" target="_blank" rel="noopener" class="nav__link js-nav-link">
+				<a
+					href="https://blog.premai.io/"
+					target="_blank"
+					rel="noopener"
+					class="nav__link js-nav-link"
+				>
 					<div class="nav__link-inner">Blog</div>
 				</a>
 			</li>
 			<li class="nav__item">
-				<a href="./contact.html" class="nav__link js-nav-link" data-route="contact">
+				<a
+					href="./contact.html"
+					class="nav__link js-nav-link"
+					data-route="contact"
+				>
 					<div class="nav__link-inner">Contact</div>
 				</a>
 			</li>
 		</ul>
 
-		<div class="nav__cta">
-			{{#>button tag="a" href="https://app.premai.io/accounts/signup/"
-			target="_blank" rel="noopener" theme="secondary" }} Sign up {{/button}}
+		<div class="nav__ctas">
+			<a
+				href="https://premai.notion.site/Documentation-8bc7a66357e5482896da147e4874f100"
+				target="_blank"
+				rel="noopener"
+				class="nav__side-link"
+			>
+				<span class="nav__side-text">Docs</span>
+				<span class="nav__side-icon">{{> icons/external-link}}</span>
+			</a>
+			<div>
+				{{#>button tag="a" href="https://app.premai.io/accounts/signup/"
+				target="_blank" rel="noopener" theme="secondary" }} Sign up {{/button}}
+			</div>
 		</div>
 
 		<div class="nav__toggle js-nav-toggle">
@@ -38,21 +62,40 @@
 
 		<ul class="nav-mobile__links">
 			<li class="nav-mobile__item">
-				<a href="./company.html" class="nav-mobile__link js-nav-mobile-link" data-route="company">Company</a>
+				<a
+					href="./company.html"
+					class="nav-mobile__link js-nav-mobile-link"
+					data-route="company"
+					>Company</a
+				>
 			</li>
 			<li class="nav-mobile__item">
-				<a href="https://blog.premai.io/" target="_blank" rel="noopener"
-					class="nav-mobile__link js-nav-mobile-link">Blog</a>
+				<a
+					href="https://blog.premai.io/"
+					target="_blank"
+					rel="noopener"
+					class="nav-mobile__link js-nav-mobile-link"
+					>Blog</a
+				>
 			</li>
 			<li class="nav-mobile__item">
-				<a href="./contact.html" class="nav-mobile__link js-nav-mobile-link" data-route="contact">Contact</a>
+				<a
+					href="./contact.html"
+					class="nav-mobile__link js-nav-mobile-link"
+					data-route="contact"
+					>Contact</a
+				>
 			</li>
 		</ul>
 
 		<div class="nav-mobile__end">
-			{{#>button tag="a" href="https://app.premai.io/accounts/signup/"
-			target="_blank" rel="noopener" theme="secondary" class="js-nav-mobile-cta"
-			}} Sign up {{/button}}
+			{{#>button tag="a"
+			href="https://premai.notion.site/Documentation-8bc7a66357e5482896da147e4874f100"
+			target="_blank" rel="noopener" outline="true" class="js-nav-mobile-cta" }}
+			Docs {{/button}} {{#>button tag="a"
+			href="https://app.premai.io/accounts/signup/" target="_blank"
+			rel="noopener" theme="secondary" class="js-nav-mobile-cta" }} Sign up
+			{{/button}}
 		</div>
 	</div>
 
