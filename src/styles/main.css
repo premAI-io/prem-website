@@ -65,6 +65,8 @@
 	--z-nav: 400;
 	--z-default: 1;
 	--z-behind: -1;
+
+	color-scheme: dark;
 }
 
 @layer base {

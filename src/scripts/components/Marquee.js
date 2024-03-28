@@ -1,3 +1,4 @@
+import gsap from "gsap";
 import { horizontalLoop } from "../helpers/animation";
 
 class Marquee {
@@ -13,7 +14,21 @@ class Marquee {
 			reversed: this.config.reversed,
 			paddingRight: 40,
 		});
+
+		this.DOM.container.addEventListener("mouseenter", this.onMouseEnter);
+		this.DOM.container.addEventListener("mouseleave", this.onMouseLeave);
 	}
+
+	onMouseEnter = () => {
+		gsap.to(this.loop, { timeScale: 0, overwrite: true });
+	};
+
+	onMouseLeave = () => {
+		gsap.to(this.loop, {
+			timeScale: this.config.reversed ? -1 : 1,
+			overwrite: true,
+		});
+	};
 
 	init(options) {
 		this.DOM = {};

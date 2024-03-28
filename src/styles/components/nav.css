@@ -54,8 +54,20 @@
 	@apply relative z-[2];
 }
 
-.nav__cta {
-	@apply hidden lg:block;
+.nav__ctas {
+	@apply hidden lg:flex items-center gap-x-5;
+}
+
+.nav__side-link {
+	@apply relative flex items-center gap-x-2;
+}
+
+.nav__side-text {
+	font-size: 16px;
+}
+
+.nav__side-icon {
+	@apply w-4 h-4;
 }
 
 .nav__toggle {
@@ -137,7 +149,7 @@
 }
 
 .nav-mobile__end {
-	@apply relative overflow-hidden;
+	@apply relative flex flex-col gap-y-3 overflow-hidden;
 	.button {
 		@apply w-full;
 	}

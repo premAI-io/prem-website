@@ -99,12 +99,14 @@ class Nav {
 					ease,
 				})
 				.to(
-					this.DOM.navMobileCta,
+					this.DOM.navMobileCtas,
 					{
+						opacity: 0,
 						yPercent: -100,
+						stagger: tlProp(0.1, immediate),
 						duration: tlProp(0.8, immediate),
 						onComplete: () => {
-							gsap.set(this.DOM.navMobileCta, {
+							gsap.set(this.DOM.navMobileCtas, {
 								yPercent: 100,
 							});
 						},
@@ -163,9 +165,11 @@ class Nav {
 					ease,
 				})
 				.to(
-					this.DOM.navMobileCta,
+					this.DOM.navMobileCtas,
 					{
+						opacity: 1,
 						yPercent: 0,
+						stagger: 0.1,
 						duration: 0.8,
 						ease,
 					},
@@ -230,8 +234,8 @@ class Nav {
 			);
 			this.DOM.navMobileBg =
 				this.DOM.navMobile.querySelector(".js-nav-mobile-bg");
-			this.DOM.navMobileCta =
-				this.DOM.navMobile.querySelector(".js-nav-mobile-cta");
+			this.DOM.navMobileCtas =
+				this.DOM.navMobile.querySelectorAll(".js-nav-mobile-cta");
 
 			this.isOpenMenu = false;
 			this.isAnimatingMenu = false;

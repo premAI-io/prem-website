@@ -32,6 +32,10 @@
 
 .button--primary {
 	background: var(--primary-gradient);
+	&.button--outline {
+		@apply border border-white border-opacity-30 text-white;
+		background: none;
+	}
 }
 
 .button--secondary {
