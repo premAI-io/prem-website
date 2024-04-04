@@ -980,6 +980,52 @@ br + .t-grad .word {
 		margin-right: 2rem;
 	}
 }
+.l-privacy {
+	padding-top: 10rem;
+	--tw-text-opacity: 1;
+	color: rgb(255 255 252 / var(--tw-text-opacity));
+}
+.l-privacy #iubenda_policy .iub_content {
+	padding: 0;
+	--tw-text-opacity: 1;
+	color: rgb(255 255 252 / var(--tw-text-opacity));
+}
+.l-privacy #iubenda_policy .iub_content a,
+.l-privacy #iubenda_policy .iub_content h1,
+.l-privacy #iubenda_policy .iub_content h2,
+.l-privacy #iubenda_policy .iub_content h3,
+.l-privacy #iubenda_policy .iub_content h4,
+.l-privacy #iubenda_policy .iub_content h5,
+.l-privacy #iubenda_policy .iub_content h6,
+.l-privacy #iubenda_policy .iub_content p {
+	--tw-text-opacity: 1;
+	color: rgb(255 255 252 / var(--tw-text-opacity));
+}
+.l-privacy #iubenda_policy .iub_content h1 {
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+}
+.l-privacy #iubenda_policy .iub_content .box_primary {
+	border-radius: 0.5rem;
+	border-width: 1px;
+	--tw-border-opacity: 1;
+	border-color: rgb(255 255 252 / var(--tw-border-opacity));
+	background-color: transparent;
+	padding-top: 0;
+	--tw-text-opacity: 1;
+	color: rgb(255 255 252 / var(--tw-text-opacity));
+	--tw-shadow: 0 0 #0000;
+	--tw-shadow-colored: 0 0 #0000;
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+		var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.l-privacy #iubenda_policy .iub_content .icon_ribbon {
+	background-image: none;
+}
+.l-privacy #iubenda_policy .legal_pp .definitions .expand-click.w_icon_24 {
+	margin-top: 0;
+	padding: 0.75rem 1rem;
+}
 .nav {
 	position: fixed;
 	top: 0;
@@ -1768,6 +1814,11 @@ br + .t-grad .word {
 .trusted__row-item svg {
 	max-height: 52px;
 	max-width: 120px;
+}
+.trusted__row-item--lg img,
+.trusted__row-item--lg svg {
+	max-height: 100px;
+	max-width: 80%;
 }
 .collaborate {
 	margin-bottom: 6rem;
@@ -3604,8 +3655,13 @@ br + .t-grad .word {
 }
 .newsletter__section {
 	position: relative;
-	margin-bottom: 14rem;
+	margin-bottom: 7rem;
 	width: 100%;
+}
+@media (min-width: 1024px) {
+	.newsletter__section {
+		margin-bottom: 14rem;
+	}
 }
 .newsletter__content {
 	position: relative;
@@ -3616,26 +3672,65 @@ br + .t-grad .word {
 	align-items: center;
 }
 .newsletter__label {
-	margin-bottom: 3rem;
+	margin-bottom: 1.25rem;
+}
+@media (min-width: 768px) {
+	.newsletter__label {
+		margin-bottom: 3rem;
+	}
 }
 .newsletter__title {
-	margin-bottom: 2.25rem;
+	margin-bottom: 1.5rem;
 	text-align: center;
 }
+@media (min-width: 768px) {
+	.newsletter__title {
+		margin-bottom: 2.25rem;
+	}
+}
 .newsletter__text {
-	margin-bottom: 3.5rem;
+	margin-bottom: 2rem;
+	padding-left: 12.5%;
+	padding-right: 12.5%;
 	text-align: center;
 	--tw-text-opacity: 1;
 	color: rgb(234 234 234 / var(--tw-text-opacity));
 }
+@media (min-width: 768px) {
+	.newsletter__text {
+		margin-bottom: 3.5rem;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
 .newsletter__form {
 	display: flex;
-	align-items: stretch;
-	justify-content: center;
+	width: 100%;
+	flex-direction: column;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+}
+@media (min-width: 768px) {
+	.newsletter__form {
+		width: auto;
+		flex-direction: row;
+		align-items: stretch;
+		justify-content: center;
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 .newsletter__input-wrap {
-	margin-right: 1.5rem;
-	max-width: 290px;
+	position: relative;
+	margin-bottom: 0.75rem;
+	max-width: 100%;
+}
+@media (min-width: 768px) {
+	.newsletter__input-wrap {
+		margin-right: 1.5rem;
+		margin-bottom: 0;
+		max-width: 290px;
+	}
 }
 .newsletter__input {
 	height: 100%;
@@ -3650,15 +3745,33 @@ br + .t-grad .word {
 	color: rgb(255 255 252 / var(--tw-text-opacity));
 	background: var(--secondary-gradient);
 }
+.newsletter__input-error {
+	position: absolute;
+	top: calc(100% + 8px);
+	left: 0;
+	font-size: 0.75rem;
+	line-height: 1rem;
+	--tw-text-opacity: 1;
+	color: rgb(245 142 142 / var(--tw-text-opacity));
+}
+.is-success .newsletter__input-error {
+	color: #d6f9dd;
+}
 .newsletter__ill {
 	position: absolute;
 	top: 50%;
+	display: none;
 	width: 32.3%;
 	--tw-translate-y: -50%;
 	transform: translate(var(--tw-translate-x), var(--tw-translate-y))
 		rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
 		scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 	overflow: hidden;
+}
+@media (min-width: 1024px) {
+	.newsletter__ill {
+		display: block;
+	}
 }
 .newsletter__ill svg {
 	position: relative;
@@ -5312,5 +5425,4 @@ br + .t-grad .word {
 	--z-nav: 400;
 	--z-default: 1;
 	--z-behind: -1;
-	color-scheme: dark;
 }

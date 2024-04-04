@@ -1,5 +1,5 @@
 .newsletter__section {
-	@apply relative w-full mb-56;
+	@apply relative w-full mb-28 lg:mb-56;
 }
 
 .newsletter__content {
@@ -7,23 +7,23 @@
 }
 
 .newsletter__label {
-	@apply mb-12;
+	@apply mb-5 md:mb-12;
 }
 
 .newsletter__title {
-	@apply mb-9 text-center;
+	@apply mb-6 md:mb-9 text-center;
 }
 
 .newsletter__text {
-	@apply text-gray-200 text-center mb-14;
+	@apply text-gray-200 text-center mb-8 px-[12.5%] md:mb-14 md:px-0;
 }
 
 .newsletter__form {
-	@apply flex justify-center items-stretch;
+	@apply flex flex-col w-full px-[2.5%] md:px-0 md:w-auto md:justify-center md:items-stretch md:flex-row;
 }
 
 .newsletter__input-wrap {
-	@apply max-w-[290px] mr-6;
+	@apply relative max-w-full mb-3 md:max-w-[290px] md:mr-6 md:mb-0;
 }
 
 .newsletter__input {
@@ -31,8 +31,15 @@
 	background: var(--secondary-gradient);
 }
 
+.newsletter__input-error {
+	@apply text-xs text-pink absolute top-[calc(100%+8px)] left-0;
+	.is-success & {
+		color: #d6f9dd;
+	}
+}
+
 .newsletter__ill {
-	@apply absolute top-1/2 w-[32.3%] -translate-y-1/2 overflow-hidden;
+	@apply hidden lg:block absolute top-1/2 w-[32.3%] -translate-y-1/2 overflow-hidden;
 	svg {
 		@apply block relative w-full h-auto;
 	}
