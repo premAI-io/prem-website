@@ -135,6 +135,36 @@ export const scrollTriggerTransitions = {
 							);
 						break;
 					}
+					case "newsletter": {
+						const mm = gsap.matchMedia();
+						mm.add(
+							{
+								isDesk: "(min-width: 1024px)",
+							},
+							(context) => {
+								const { isDesk } = context.conditions;
+								if (isDesk) {
+									const ills = element.querySelectorAll(".js-anim-ill");
+									const triggerTl = gsap.timeline({
+										scrollTrigger: {
+											trigger: element,
+											start: "top bottom-=30%",
+											end: "bottom top+=50%",
+											scrub: true,
+											ease: "none",
+										},
+									});
+
+									triggerTl.from(ills, {
+										opacity: 0,
+										xPercent: (i) => (i % 2 === 0 ? -60 : 60),
+									});
+								}
+							},
+						);
+
+						break;
+					}
 					case "anim-group": {
 						const animGroups = element.querySelectorAll(".js-anim-group");
 						const animGroupsTl = gsap.timeline({

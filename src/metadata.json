@@ -13,5 +13,20 @@
 		"pageName": "contact",
 		"title": "Prem - AI that you Own. Always - Contact",
 		"description": "Accelerating the advent of personalized LLMs."
+	},
+	"/privacy.html": {
+		"pageName": "privacy",
+		"title": "Prem - AI that you Own. Always - Privacy",
+		"description": "Accelerating the advent of personalized LLMs."
+	},
+	"/cookie-policy.html": {
+		"pageName": "cookie-policy",
+		"title": "Prem - AI that you Own. Always - Cookies",
+		"description": "Accelerating the advent of personalized LLMs."
+	},
+	"/terms.html": {
+		"pageName": "terms",
+		"title": "Prem - AI that you Own. Always - Terms",
+		"description": "Accelerating the advent of personalized LLMs."
 	}
 }
