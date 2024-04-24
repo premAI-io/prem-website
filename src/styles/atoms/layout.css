@@ -34,6 +34,10 @@
 	flex: 1 0 auto;
 }
 
+.bg-secondary-gradient {
+	background: var(--secondary-gradient);
+}
+
 .lazy-el {
 	opacity: 0;
 	&:not(.initial) {

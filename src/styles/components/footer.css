@@ -1,11 +1,22 @@
 .footer {
-	@apply w-full relative border-t border-t-white border-opacity-35 py-11 lg:py-12;
+	@apply relative;
+}
+
+.footer__main-content {
+	@apply w-full bg-gray-800 relative border-t border-t-white border-opacity-35 py-11 lg:py-12 z-[2];
 	border-top-left-radius: 32px;
 	border-top-right-radius: 32px;
 }
 
+.footer__shape-bg {
+	@apply hidden lg:block z-[1] absolute bottom-[80%] left-0 w-full h-full pointer-events-none overflow-hidden;
+	svg {
+		@apply w-full h-auto;
+	}
+}
+
 .footer__container {
-	@apply flex-col;
+	@apply flex-col z-[2];
 }
 
 .footer__body {

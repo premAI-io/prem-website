@@ -85,6 +85,28 @@ export const hidePage = ({
 
 			break;
 		}
+		case "developers":
+		case "business": {
+			const centerHero = container.querySelector(".js-hero");
+			const centerHeroLabel = centerHero.querySelector(".js-divider-label");
+			const centerHeroTitle = centerHero.querySelector(".js-title");
+			const centerHeroSubtitle = centerHero.querySelector(".js-subtitle");
+			const centerHeroMedia = centerHero.querySelector(".js-media");
+			const centerHeroCta = centerHero.querySelector(".js-cta");
+
+			gsap.set(
+				[centerHeroLabel, centerHeroTitle, centerHeroSubtitle, centerHeroMedia],
+				{
+					opacity: 0,
+					y: 40,
+				},
+			);
+
+			if (centerHeroCta) {
+				gsap.set(centerHeroCta, { opacity: 0, y: 40 });
+			}
+			break;
+		}
 		default:
 			break;
 	}
@@ -271,6 +293,45 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 					},
 					1.5,
 				);
+			break;
+		}
+		case "developers":
+		case "business": {
+			const centerHero = container.querySelector(".js-hero");
+			const centerHeroLabel = centerHero.querySelector(".js-divider-label");
+			const centerHeroTitle = centerHero.querySelector(".js-title");
+			const centerHeroSubtitle = centerHero.querySelector(".js-subtitle");
+			const centerHeroMedia = centerHero.querySelector(".js-media");
+			const centerHeroCta = centerHero.querySelector(".js-cta");
+
+			tl.to(
+				[centerHeroLabel, centerHeroTitle, centerHeroSubtitle, centerHeroMedia],
+				{
+					duration: 1,
+					opacity: 1,
+					y: 0,
+					clearProps: "opacity,y",
+					stagger: {
+						from: "end",
+						amount: 0.1,
+					},
+					ease,
+				},
+			);
+
+			if (centerHeroCta) {
+				tl.to(
+					centerHeroCta,
+					{
+						duration: 1,
+						opacity: 1,
+						y: 0,
+						clearProps: "opacity,y",
+						ease,
+					},
+					0,
+				);
+			}
 			break;
 		}
 		default:

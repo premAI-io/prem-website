@@ -15,7 +15,7 @@
 }
 
 .status__content {
-	@apply w-[90%] md:w-[40%] order-2 md:max-w-[416px] md:order-1 relative z-[2];
+	@apply w-[90%] md:w-[44%] order-2 md:max-w-[416px] md:order-1 relative z-[2];
 }
 
 .status__title {
@@ -27,7 +27,7 @@
 }
 
 .status__ill {
-	@apply relative order-1 md:order-2 w-[98%] pointer-events-none md:absolute md:left-auto md:top-auto md:w-[55%] md:-right-[5%] md:bottom-0 xl:-bottom-[12%] xl:-right-[12%];
+	@apply relative order-1 md:order-2 w-[98%] pointer-events-none md:absolute md:left-auto md:top-auto md:w-[45%] md:right-[5%] md:bottom-[5%];
 }
 
 .status__ill-inner {

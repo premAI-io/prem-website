@@ -10,6 +10,10 @@
 	@apply text-center mb-11 md:mb-16;
 }
 
+.solution__text {
+	@apply text-center text-gray-200 max-w-[594px] mx-auto mb-10 md:mb-20;
+}
+
 .solution__stats-container {
 	@apply relative max-w-full overflow-hidden;
 }
@@ -40,11 +44,11 @@
 }
 
 .solution__divider {
-	@apply hidden md:flex mb-12;
+	@apply hidden md:flex mb-11 lg:mb-14;
 }
 
 .solution__features {
-	@apply flex items-center justify-center flex-col mb-16 md:items-stretch md:flex-row md:gap-x-6 lg:gap-x-10 lg:mb-20;
+	@apply flex items-center justify-center flex-col mb-11 md:items-stretch md:flex-row md:gap-x-6 lg:gap-x-10 lg:mb-14;
 }
 
 .solution__feature {
@@ -67,6 +71,12 @@
 
 .solution__cta {
 	@apply flex justify-center;
+}
+
+.solution--benefit {
+	.solution__title {
+		@apply mb-9;
+	}
 }
 
 @media screen and (max-width: 767px) {

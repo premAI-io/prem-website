@@ -134,18 +134,18 @@
 }
 
 .nav-mobile__links {
-	@apply flex flex-col;
+	@apply flex flex-col pt-6 xs:pt-0;
 }
 
 .nav-mobile__item {
 	@apply relative overflow-hidden;
 	&:not(:last-child) {
-		@apply mb-8;
+		@apply mb-4 xs:mb-8;
 	}
 }
 
 .nav-mobile__link {
-	@apply block text-[32px] font-medium leading-[1.125] tracking-[0.5px];
+	@apply block text-[24px] xs:text-[32px] font-medium leading-[1.125] tracking-[0.5px];
 }
 
 .nav-mobile__end {

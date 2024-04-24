@@ -23,7 +23,7 @@
 }
 
 .hero--home {
-	@apply pt-[calc(var(--v-height)*0.21)] 2xl:pt-[calc(var(--v-height)*0.3006)] mb-24 md:mb-[calc(var(--v-width)*0.2)];
+	@apply pt-[calc(var(--v-height)*0.24)] 2xl:pt-[calc(var(--v-height)*0.3006)] mb-24 md:mb-[calc(var(--v-width)*0.2)];
 
 	.hero__container {
 		@apply flex-col items-start lg:flex-row lg:items-center;
@@ -34,7 +34,7 @@
 	}
 
 	.hero__recap {
-		@apply w-full relative overflow-hidden lg:w-auto;
+		@apply w-full relative overflow-hidden lg:w-auto lg:overflow-initial;
 	}
 
 	.hero__ill {
@@ -44,6 +44,19 @@
 			/* Svg width == Svg height == 96% of viewport width, minus 0.35 * viewport width */
 			top: calc((var(--v-width) * 0.61) - (var(--v-width) * 0.96));
 		}
+	}
+
+	.hero__title {
+		@apply text-[32px] md:text-[46px] leading-[1.173];
+		.t-grad:last-of-type {
+			.word {
+				@apply md:!ml-3 !ml-0;
+			}
+		}
+	}
+
+	.hero__subtitle {
+		@apply text-[18px] leading-[1.333] max-w-[544px];
 	}
 }
 
@@ -99,6 +112,61 @@
 
 		&:last-child {
 			@apply top-[14%] left-[82%];
+		}
+	}
+}
+
+.hero--center {
+	@apply pt-[calc(var(--v-height)*0.24)] mb-[calc(var(--v-width)*0.135)];
+	.hero__container {
+		@apply flex-col justify-center items-center;
+	}
+
+	.hero__divider {
+		@apply mb-5;
+	}
+
+	.hero__title {
+		@apply text-center mb-4 text-[36px] md:text-[54px];
+		.t-grad {
+			.word {
+				@apply !ml-0;
+			}
+		}
+	}
+
+	.hero__subtitle {
+		@apply text-[18px] md:text-[24px] max-w-[620px] text-center leading-[1.333] text-gray-200 mb-16 xl:mb-44;
+		strong {
+			@apply text-white;
+		}
+	}
+
+	.hero__ill {
+		@apply absolute top-[40%] md:top-0 left-0 w-full pointer-events-none overflow-hidden md:overflow-initial;
+		svg {
+			@apply w-[130%] ml-[-15%] md:mx-auto md:w-full h-auto aspect-square;
+		}
+	}
+
+	.hero__media {
+		@apply relative;
+	}
+
+	.hero__img {
+		@apply block relative mx-auto max-w-full md:max-w-[90%] xl:max-w-[1100px] h-auto z-[2];
+	}
+
+	.hero__img-ill {
+		@apply absolute top-1/2 left-0 w-full -translate-y-1/2 pointer-events-none;
+		svg {
+			@apply w-full h-auto;
+		}
+	}
+
+	&.is-business {
+		.hero__subtitle {
+			@apply mb-12;
 		}
 	}
 }

@@ -1,0 +1,57 @@
+.workflow {
+	@apply mb-40 xl:mb-64 text-center;
+}
+
+.workflow__label {
+	@apply mb-8;
+}
+
+.workflow__title {
+	@apply mb-11 xl:mb-24;
+}
+
+.workflow__content {
+	@apply relative px-[2%] xl:px-0;
+}
+
+.workflow__bg {
+	@apply hidden md:block w-full absolute top-1/2 left-0 -translate-y-1/2 pointer-events-none opacity-30;
+	svg {
+		@apply w-full h-auto;
+	}
+}
+
+.workflow__ill {
+	@apply hidden md:block w-[540px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none;
+	svg {
+		@apply w-full h-auto;
+	}
+}
+
+.workflow__items {
+	@apply flex flex-col md:flex-row md:items-stretch md:justify-center md:gap-x-10 xl:gap-x-28 relative z-[2];
+}
+
+.workflow__item {
+	@apply flex flex-col items-center justify-center text-center relative w-full md:w-[309px] text-gray-200 border border-white border-opacity-30 rounded-2xl py-10 px-12;
+	background: var(--secondary-gradient);
+
+	&:not(:last-child) {
+		@apply mb-8 md:mb-0;
+		&::after {
+			content: "";
+			@apply hidden md:block absolute top-1/2 left-full w-10 xl:w-28 h-[1px] border border-white border-dashed border-opacity-30 pointer-events-none;
+		}
+	}
+}
+
+.workflow__item-img {
+	@apply w-auto h-32 mb-5 lg:h-36 lg:mb-10;
+}
+
+.workflow__item-text {
+	@apply text-gray-200;
+}
+
+@media screen and (max-width: 1023px) {
+}

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-US">
+	{{> head}}
+
+	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+		{{> pre-content}} {{> page-loader}}
+
+		<div class="page__wrap" data-router-view="business" id="top">
+			{{> nav}} {{#>hero variant="center" class="is-business js-hero" }}
+
+			<div class="hero__ill" aria-hidden="true">
+				{{> illustrations/bg-ellipse}}
+			</div>
+
+			<div class="l-container hero__container">
+				<div class="divider-label hero__divider js-divider-label">
+					<div
+						class="divider-label__ill js-divider-label-ill"
+						aria-hidden="true"
+					>
+						{{> illustrations/divider-sm-left}}
+					</div>
+					<p class="divider-label__text h5 js-divider-label-text">
+						For Business
+					</p>
+					<div
+						class="divider-label__ill js-divider-label-ill"
+						aria-hidden="true"
+					>
+						{{> illustrations/divider-sm-right}}
+					</div>
+				</div>
+
+				<h1 class="hero__title js-title" data-split="words">
+					<span class="t-grad">Elevate</span> your AI Strategy.
+				</h1>
+				<p class="hero__subtitle js-subtitle" data-split="words">
+					If AI is in your roadmap, we will help you to achieve it.
+				</p>
+
+				<div class="hero__cta">
+					{{#>button tag="a" href="./contact.html" theme="secondary"
+					class="js-cta" }} Contact Solution team {{/button}}
+				</div>
+
+				<div class="hero__media js-media">
+					<img
+						src="./images/business-main.png"
+						alt="Business Related screens overview"
+						class="hero__img"
+						draggable="false"
+					/>
+					<div class="hero__img-ill" aria-hidden="true">
+						{{> illustrations/bg-radial-lines}}
+					</div>
+				</div>
+			</div>
+
+			{{/hero}}
+
+			<main>
+				{{> trusted}} {{> challenges}} {{#>timeline }}
+				<div class="timeline__item" data-scroll-trigger="item">
+					<div class="timeline__item-content">
+						<p class="timeline__item-title h3">Gather Requirements</p>
+						<p class="timeline__item-text">
+							Understanding your unique needs is the cornerstone of our approach
+						</p>
+					</div>
+
+					<div class="timeline__item-icon" aria-hidden="true"></div>
+				</div>
+
+				<div class="timeline__item" data-scroll-trigger="item">
+					<div class="timeline__item-content">
+						<p class="timeline__item-title h3">POC and Models Development</p>
+						<p class="timeline__item-text">
+							Understanding your unique needs is the cornerstone of our approach
+						</p>
+					</div>
+
+					<div class="timeline__item-icon" aria-hidden="true"></div>
+				</div>
+
+				<div class="timeline__item" data-scroll-trigger="item">
+					<div class="timeline__item-content">
+						<p class="timeline__item-title h3">Client Validation</p>
+						<p class="timeline__item-text">
+							Through collaborative efforts and transparent communication, we
+							work on validation to refine
+						</p>
+					</div>
+
+					<div class="timeline__item-icon" aria-hidden="true"></div>
+				</div>
+
+				<div class="timeline__item" data-scroll-trigger="item">
+					<div class="timeline__item-content">
+						<p class="timeline__item-title h3">MVP (Minimum Viable Product)</p>
+						<p class="timeline__item-text">
+							Your vision comes to life as we transition to the creation of a
+							robust Minimum Viable Product (MVP)
+						</p>
+					</div>
+
+					<div class="timeline__item-icon" aria-hidden="true"></div>
+				</div>
+
+				<div class="timeline__item" data-scroll-trigger="item">
+					<div class="timeline__item-content">
+						<p class="timeline__item-title h3">Production Excellence</p>
+						<p class="timeline__item-text">
+							We make your AI strategy alve by deploying solutions that redefine
+							industry standards.
+						</p>
+					</div>
+
+					<div class="timeline__item-icon" aria-hidden="true"></div>
+				</div>
+
+				<div class="timeline__item" data-scroll-trigger="item">
+					<div class="timeline__item-content">
+						<p class="timeline__item-title h3">Continuous improvement</p>
+						<p class="timeline__item-text">
+							We don't stop at deployment, we continuously enhance your AI
+							strategy.
+						</p>
+					</div>
+
+					<div class="timeline__item-icon" aria-hidden="true"></div>
+				</div>
+
+				{{/timeline}} {{> benefits-business}} {{> services}} {{> eclipse}}
+			</main>
+
+			{{> footer}}
+		</div>
+
+		{{> tail}}
+	</body>
+</html>

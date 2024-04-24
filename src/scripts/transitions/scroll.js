@@ -41,6 +41,11 @@ export const scrollTriggerTransitions = {
 						gsap.set(animGroupsItems, { y: 50, opacity: 0 });
 						break;
 					}
+					case "group": {
+						const groupItems = element.querySelectorAll(".js-anim-item");
+						gsap.set(groupItems, { yPercent: 20, opacity: 0 });
+						break;
+					}
 					case "item": {
 						gsap.set(element, { y: 50, opacity: 0 });
 						break;
@@ -191,6 +196,22 @@ export const scrollTriggerTransitions = {
 						}
 						break;
 					}
+					case "group": {
+						const groupItems = element.querySelectorAll(".js-anim-item");
+						const groupTl = gsap.timeline({
+							scrollTrigger: sectionTriggerOptions,
+						});
+
+						groupTl.to(groupItems, {
+							yPercent: 0,
+							opacity: 1,
+							duration: 1,
+							ease,
+							stagger: 0.08,
+							clearProps: "y,opacity",
+						});
+						break;
+					}
 					case "item": {
 						const triggerTl = gsap.timeline({
 							scrollTrigger: sectionTriggerOptions,
@@ -201,6 +222,7 @@ export const scrollTriggerTransitions = {
 							opacity: 1,
 							duration: 1,
 							ease,
+							clearProps: "y,opacity",
 						});
 						break;
 					}

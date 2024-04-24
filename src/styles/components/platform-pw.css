@@ -1,0 +1,46 @@
+.platform-pw {
+	@apply mb-40 relative flex items-center flex-col;
+}
+
+.platform-pw__divider {
+	@apply mb-8;
+}
+
+.platform-pw__content {
+	@apply relative px-[5%] z-[2] md:px-0;
+}
+
+.platform-pw__title {
+	@apply text-center mb-10 lg:mb-16;
+}
+
+.platform-pw__desc {
+	@apply text-center max-w-80 mx-auto mb-7 lg:mb-0;
+}
+
+.platform-pw__ill {
+	@apply relative -mt-12 pointer-events-none;
+	svg {
+		@apply w-full h-auto;
+	}
+}
+
+.platform-pw__image {
+	@apply absolute pointer-events-none h-auto z-[2];
+}
+
+.platform-pw__image--first {
+	@apply hidden lg:block top-[40%] w-[300px] right-[calc(100%+30px)] xxl:left-auto xxl:w-[400px] xxl:right-[calc(100%+50px)];
+}
+
+.platform-pw__image--second {
+	@apply hidden lg:block top-[12%] left-[calc(100%+90px)] w-[200px] xxl:w-[253px];
+}
+
+.platform-pw__image--last {
+	@apply hidden lg:block top-[90%] left-[calc(100%+52px)] w-[280px] xxl:w-[374px];
+}
+
+.platform-pw__ctas {
+	@apply md:absolute md:left-0 md:bottom-20 w-full flex flex-col gap-y-3 px-[5%] xs:px-0 xs:flex-row xs:items-center xs:justify-center xs:gap-x-7 xs:gap-y-0;
+}

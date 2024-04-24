@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-US">
+	{{> head}}
+
+	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+		{{> pre-content}} {{> page-loader}}
+
+		<div class="page__wrap" data-router-view="developers" id="top">
+			{{> nav}} {{#>hero variant="center" class="js-hero" }}
+
+			<div class="hero__ill" aria-hidden="true">
+				{{> illustrations/bg-ellipse}}
+			</div>
+
+			<div class="l-container hero__container">
+				<div class="divider-label hero__divider js-divider-label">
+					<div
+						class="divider-label__ill js-divider-label-ill"
+						aria-hidden="true"
+					>
+						{{> illustrations/divider-sm-left}}
+					</div>
+					<p class="divider-label__text h5 js-divider-label-text">
+						For Developers
+					</p>
+					<div
+						class="divider-label__ill js-divider-label-ill"
+						aria-hidden="true"
+					>
+						{{> illustrations/divider-sm-right}}
+					</div>
+				</div>
+
+				<h1 class="hero__title js-title" data-split="words">
+					AI that simply <span class="t-grad">works</span>
+				</h1>
+				<p class="hero__subtitle js-subtitle" data-split="words">
+					Intuitive Generative AI developer platform. Focus on your product, we
+					<strong> handle</strong> the <strong>AI challenges</strong>.
+				</p>
+
+				<div class="hero__media js-media">
+					<img
+						src="./images/developers-main.webp"
+						alt="Developer Platform screens overview"
+						class="hero__img"
+						draggable="false"
+					/>
+					<div class="hero__img-ill" aria-hidden="true">
+						{{> illustrations/bg-radial-lines}}
+					</div>
+				</div>
+			</div>
+
+			{{/hero}}
+
+			<main>
+				{{> certifications}} {{> workflow}} {{> platform}} {{> benefits}}
+				{{>compute }} {{> status}} {{> customer}}
+			</main>
+
+			{{> footer}}
+		</div>
+
+		{{> tail}}
+	</body>
+</html>
