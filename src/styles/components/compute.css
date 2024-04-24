@@ -7,11 +7,15 @@
 }
 
 .compute__label {
-	@apply mb-9;
+	@apply mb-10;
 }
 
 .compute__title {
 	@apply mb-10;
+}
+
+.compute__text {
+	@apply w-full lg:w-[76%] mb-11 font-normal text-gray-200;
 }
 
 .compute__bg {

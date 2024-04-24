@@ -1,5 +1,5 @@
 .button {
-	@apply inline-flex items-center justify-center py-3 px-8 relative font-medium rounded-lg;
+	@apply inline-flex items-center justify-center text-center py-3 px-8 relative font-medium rounded-lg;
 	backface-visibility: hidden;
 	transform: translateZ(0);
 	transition: transform 0.3s var(--ease-power4);

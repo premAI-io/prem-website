@@ -1,0 +1,23 @@
+.customer__stories {
+	@apply mb-20 lg:mb-44 text-center;
+}
+
+.customer__label {
+	@apply mb-7 lg:mb-11;
+}
+
+.customer__title {
+	@apply mb-4 lg:mb-8;
+}
+
+.customer__text {
+	@apply max-w-[80%] lg:max-w-[700px] mx-auto mb-6 lg:mb-11 text-gray-200;
+}
+
+.customer__ill {
+	@apply mb-14 max-w-[90%] lg:max-w-[860px] mx-auto;
+}
+
+.customer__image {
+	@apply w-full h-auto;
+}

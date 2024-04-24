@@ -19,8 +19,11 @@
 @import "./components/nav.css";
 @import "./components/hero.css";
 @import "./components/features-carousel.css";
+@import "./components/highlight-section.css";
 @import "./components/trusted.css";
 @import "./components/collaborate.css";
+@import "./components/certifications.css";
+@import "./components/platform-pw.css";
 @import "./components/platform.css";
 @import "./components/models.css";
 @import "./components/solution.css";
@@ -29,10 +32,14 @@
 @import "./components/status.css";
 @import "./components/blog.css";
 @import "./components/book.css";
+@import "./components/customer.css";
 @import "./components/vision.css";
 @import "./components/mission.css";
-@import "./components/team.css";
+@import "./components/services.css";
+@import "./components/workflow.css";
+@import "./components/timeline.css";
 @import "./components/newsletter.css";
+@import "./components/eclipse.css";
 @import "./components/footer.css";
 
 @import "tailwindcss/utilities";
@@ -150,5 +157,11 @@
 	b,
 	strong {
 		font-weight: bold;
+	}
+}
+
+@layer utilities {
+	.overflow-initial {
+		overflow: initial;
 	}
 }

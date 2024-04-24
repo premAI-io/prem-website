@@ -1,7 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-	content: ["./**/src/*.{html,js}"],
+	content: ["./**/src/*.{html,js}", "./**/src/components/*.{html,js}"],
 	theme: {
 		fontFamily: {
 			sans: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
@@ -20,6 +20,12 @@ module.exports = {
 			wine: "#b57487",
 			caramel: "#f2d398",
 			malibu: "#7f96ff",
+		},
+		extend: {
+			screens: {
+				xs: "375px",
+				xxl: "1440px",
+			},
 		},
 	},
 	plugins: [],

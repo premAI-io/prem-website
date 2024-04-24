@@ -2,6 +2,7 @@
 	class="{{classes
 		"hero"
 		(ifCond variant (concat "hero--" (op variant "||" "default")))
+		class
 	}}"
 >
 	{{> @partial-block}}
