@@ -4,6 +4,16 @@
 		"title": "Prem - AI that you Own. Always - Home",
 		"description": "Accelerating the advent of personalized LLMs."
 	},
+	"/for-developers.html": {
+		"pageName": "developers",
+		"title": "Prem - AI that you Own. Always - Developers",
+		"description": "Accelerating the advent of personalized LLMs."
+	},
+	"/for-business.html": {
+		"pageName": "business",
+		"title": "Prem - AI that you Own. Always - Business",
+		"description": "Accelerating the advent of personalized LLMs."
+	},
 	"/company.html": {
 		"pageName": "company",
 		"title": "Prem - AI that you Own. Always - Company",

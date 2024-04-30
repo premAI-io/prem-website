@@ -1,101 +1,63 @@
 <!doctype html>
 <html lang="en-US">
-	{{> head}}
+{{> head}}
 
-	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
-		<!-- Google Tag Manager (noscript) -->
-		<noscript
-			><iframe
-				src="https://www.googletagmanager.com/ns.html?id=GTM-NLNQ7FDK"
-				height="0"
-				width="0"
-				style="display: none; visibility: hidden"
-			></iframe
-		></noscript>
-		<!-- End Google Tag Manager (noscript) -->
-		{{> page-loader}}
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	{{> pre-content}} {{> page-loader}}
 
-		<div class="page__wrap" data-router-view="homepage" id="top">
-			{{> nav}} {{#>hero variant="home" }}
+	<div class="page__wrap" data-router-view="homepage" id="top">
+		{{> nav}} {{#>hero variant="home" }}
 
-			<div class="hero__ill js-hero-ill" aria-hidden="true">
-				{{> illustrations/space-ill}}
-			</div>
-
-			<div class="l-container hero__container">
-				<div class="hero__content js-hero-content">
-					<div class="hero__post-preview">
-						{{#>badge
-						href="https://blog.premai.io/announcing-our-startup-grants-program/"
-						target="_blank" rel="noopener" class="js-badge" }}
-						<div class="badge__icon">{{> icons/sparkles}}</div>
-						<div class="p-sm badge__text">
-							We launched a Generative AI Startup Program! Apply now
-							<span class="badge__arrow">{{> icons/chevron-right}}</span>
-						</div>
-						{{/badge}}
-					</div>
-
-					<h1 class="hero__title js-title" data-split="words">
-						AI that you own. <br />
-						<span class="t-grad">Always.</span>
-					</h1>
-					<p class="h4 hero__subtitle js-subtitle" data-split="words">
-						Accelerating the advent of personalized LLMS.
-					</p>
-
-					<div class="hero__ctas">
-						{{#>button tag="a" href="#platform" class="js-cta js-hash-scroll" }}
-						Start building now {{/button}} {{#>button tag="a"
-						href="./contact.html" theme="secondary" class="js-cta" }} Contact
-						sales {{/button}}
-					</div>
-				</div>
-
-				<div class="hero__recap">{{> features-carousel}}</div>
-			</div>
-			{{/hero}}
-
-			<main>
-				{{> trusted}} {{> collaborate}} {{>solution}} {{> models}} {{>
-				platform}} {{> compute}} {{> testimonials}} {{> status}} {{> blog}} {{>
-				book}} {{> newsletter}}
-			</main>
-
-			{{> footer}}
+		<div class="hero__ill js-hero-ill" aria-hidden="true">
+			{{> illustrations/space-ill}}
 		</div>
 
-		{{> tail}}
-		<script type="text/javascript">
-			_linkedin_partner_id = "5846546";
-			window._linkedin_data_partner_ids =
-				window._linkedin_data_partner_ids || [];
-			window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-		</script>
-		<script type="text/javascript">
-			(function (l) {
-				if (!l) {
-					window.lintrk = function (a, b) {
-						window.lintrk.q.push([a, b]);
-					};
-					window.lintrk.q = [];
-				}
-				var s = document.getElementsByTagName("script")[0];
-				var b = document.createElement("script");
-				b.type = "text/javascript";
-				b.async = true;
-				b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-				s.parentNode.insertBefore(b, s);
-			})(window.lintrk);
-		</script>
-		<noscript>
-			<img
-				height="1"
-				width="1"
-				style="display: none"
-				alt=""
-				src="https://px.ads.linkedin.com/collect/?pid=5846546&fmt=gif"
-			/>
-		</noscript>
-	</body>
+		<div class="l-container hero__container">
+			<div class="hero__content js-hero-content">
+				<div class="hero__post-preview">
+					{{#>badge
+					href="https://blog.premai.io/announcing-our-startup-grants-program/"
+					target="_blank" rel="noopener" class="js-badge" }}
+					<div class="badge__icon">{{> icons/sparkles}}</div>
+					<div class="p-sm badge__text">
+						We launched a Generative AI Startup Program! Apply now
+						<span class="badge__arrow">{{> icons/chevron-right}}</span>
+					</div>
+					{{/badge}}
+				</div>
+
+				<h1 class="hero__title js-title" data-split="words">
+					Elevate your AI Strategy with <br />
+					<span class="t-grad">Ownership</span> and
+					<span class="t-grad">Control.</span>
+				</h1>
+				<p class="h4 hero__subtitle js-subtitle" data-split="words">
+					Leverage State of the Art Generative AI for the Future of your
+					Organization. Don't lag behind.
+				</p>
+
+				<div class="hero__ctas">
+					{{#>button tag="a" href="https://app.premai.io/accounts/signup/"
+					class="js-cta" target="_blank" rel="noopener" }} Start building now
+					{{/button}} {{#>button tag="a" href="./contact.html"
+					theme="secondary" class="js-cta" }} Contact sales {{/button}}
+				</div>
+			</div>
+
+			<div class="hero__recap">{{> features-carousel}}</div>
+		</div>
+		{{/hero}}
+
+		<main>
+			{{> highlight-section}} {{> trusted}} {{> collaborate}} {{>
+			platform-pw}} {{>solution}} {{> models}} {{> testimonials}} {{> blog}}
+			{{> book}} {{> newsletter}}
+		</main>
+
+		{{> footer}}
+	</div>
+
+	{{> tail}}
+</body>
+
 </html>

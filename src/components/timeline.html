@@ -1,0 +1,13 @@
+<section
+	class="{{classes
+		"timeline__section"
+		(ifCond variant (concat "timeline__section--" (op variant "||" "default")))
+		class
+	}}"
+>
+	<p class="h2 timeline__title" data-scroll-trigger="item">How does it <span class="t-grad">work</span>?</p>
+
+	<div class="timeline">
+		{{> @partial-block}}
+	</div>
+</section>

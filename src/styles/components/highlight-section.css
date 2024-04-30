@@ -1,0 +1,26 @@
+.highlight-section {
+	@apply relative flex items-center justify-center pt-[calc(var(--v-height)*0.15)] mb-[calc(var(--v-height)*0.21)];
+}
+
+.highlight-section__ill {
+	@apply w-full md:w-[calc(var(--v-width)*0.5)] md:max-w-[756px];
+	svg {
+		@apply w-full h-auto;
+	}
+}
+
+.highlight-section__ill-inner {
+	@apply w-full relative;
+}
+
+.highlight-section__title {
+	@apply absolute text-[7vw] xs:text-[4.692vw] leading-[1.138] font-medium;
+}
+
+.highlight-section__title--left {
+	@apply top-[15%] left-[14.88%];
+}
+
+.highlight-section__title--right {
+	@apply bottom-[15%] right-[14.88%];
+}

@@ -56,7 +56,7 @@
 }
 
 .testimonial__card__text {
-	@apply font-normal text-[16px] lg:text-[20px] 2xl:text-[28px];
+	@apply font-normal text-[12px] xs:text-[14px] md:text-[16px] lg:text-[20px] 2xl:text-[28px];
 }
 
 .testimonial__card__end__inner {

@@ -1,0 +1,37 @@
+.eclipse__section {
+	@apply relative overflow-hidden pb-48;
+}
+
+.eclipse__bg {
+	@apply absolute top-0 left-0 w-full pointer-events-none overflow-hidden opacity-45 z-[2];
+	svg {
+		@apply w-full h-auto mx-auto;
+	}
+}
+
+.eclipse__ill {
+	@apply absolute top-[60%] left-0 w-full z-[1];
+	svg {
+		@apply w-full h-auto;
+	}
+}
+
+.eclipse__content {
+	@apply mx-auto relative w-[90%] xl:w-[916px] lg:h-[916px] flex flex-col items-center justify-center z-[3];
+}
+
+.eclipse__circle {
+	@apply relative lg:absolute lg:top-0 lg:left-0 w-full aspect-square bg-gray-800 border border-white border-opacity-30 rounded-[50%] opacity-85 z-[1];
+}
+
+.eclipse__inner {
+	@apply absolute top-1/2 left-0 -translate-y-1/2 w-full lg:translate-y-0 lg:top-auto lg:left-auto lg:relative text-center px-[8%] z-[2];
+}
+
+.eclipse__title {
+	@apply text-[18px] md:text-[28px] mb-2 md:mb-9;
+}
+
+.eclipse__text {
+	@apply text-[12px] md:text-[16px] max-w-[558px] mx-auto text-gray-200 mb-2 md:mb-14;
+}
