@@ -1444,11 +1444,11 @@ br + .t-grad .word {
 		font-size: 46px;
 	}
 }
-.hero--home .hero__title .t-grad .word {
+.hero--home .hero__title .t-grad:last-of-type .word {
 	margin-left: 0 !important;
 }
 @media (min-width: 768px) {
-	.hero--home .hero__title .t-grad .word {
+	.hero--home .hero__title .t-grad:last-of-type .word {
 		margin-left: 0.75rem !important;
 	}
 }
@@ -1549,7 +1549,7 @@ br + .t-grad .word {
 	left: 82%;
 }
 .hero--center {
-	margin-bottom: calc(var(--v-width) * 0.2);
+	margin-bottom: calc(var(--v-width) * 0.135);
 	padding-top: calc(var(--v-height) * 0.24);
 }
 .hero--center .hero__container {
@@ -1618,6 +1618,8 @@ br + .t-grad .word {
 }
 @media (min-width: 768px) {
 	.hero--center .hero__ill svg {
+		margin-left: auto;
+		margin-right: auto;
 		width: 100%;
 	}
 }

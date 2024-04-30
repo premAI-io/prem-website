@@ -48,7 +48,7 @@
 
 	.hero__title {
 		@apply text-[32px] md:text-[46px] leading-[1.173];
-		.t-grad {
+		.t-grad:last-of-type {
 			.word {
 				@apply md:!ml-3 !ml-0;
 			}
@@ -117,7 +117,7 @@
 }
 
 .hero--center {
-	@apply pt-[calc(var(--v-height)*0.24)] mb-[calc(var(--v-width)*0.2)];
+	@apply pt-[calc(var(--v-height)*0.24)] mb-[calc(var(--v-width)*0.135)];
 	.hero__container {
 		@apply flex-col justify-center items-center;
 	}
@@ -145,7 +145,7 @@
 	.hero__ill {
 		@apply absolute top-[40%] md:top-0 left-0 w-full pointer-events-none overflow-hidden md:overflow-initial;
 		svg {
-			@apply w-[130%] ml-[-15%] md:w-full h-auto aspect-square;
+			@apply w-[130%] ml-[-15%] md:mx-auto md:w-full h-auto aspect-square;
 		}
 	}
 

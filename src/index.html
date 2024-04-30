@@ -1,62 +1,63 @@
 <!doctype html>
 <html lang="en-US">
-	{{> head}}
+{{> head}}
 
-	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
-		{{> pre-content}} {{> page-loader}}
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	{{> pre-content}} {{> page-loader}}
 
-		<div class="page__wrap" data-router-view="homepage" id="top">
-			{{> nav}} {{#>hero variant="home" }}
+	<div class="page__wrap" data-router-view="homepage" id="top">
+		{{> nav}} {{#>hero variant="home" }}
 
-			<div class="hero__ill js-hero-ill" aria-hidden="true">
-				{{> illustrations/space-ill}}
-			</div>
-
-			<div class="l-container hero__container">
-				<div class="hero__content js-hero-content">
-					<div class="hero__post-preview">
-						{{#>badge
-						href="https://blog.premai.io/announcing-our-startup-grants-program/"
-						target="_blank" rel="noopener" class="js-badge" }}
-						<div class="badge__icon">{{> icons/sparkles}}</div>
-						<div class="p-sm badge__text">
-							We launched a Generative AI Startup Program! Apply now
-							<span class="badge__arrow">{{> icons/chevron-right}}</span>
-						</div>
-						{{/badge}}
-					</div>
-
-					<h1 class="hero__title js-title" data-split="words">
-						Elevate your AI Strategy with <br />
-						<span class="t-grad">Ownership</span> and
-						<span class="t-grad">Control.</span>
-					</h1>
-					<p class="h4 hero__subtitle js-subtitle" data-split="words">
-						Leverage State of the Art Generative AI for the Future of your
-						Organization. Don't lag behind.
-					</p>
-
-					<div class="hero__ctas">
-						{{#>button tag="a" href="#platform-pw" class="js-cta js-hash-scroll"
-						}} Start building now {{/button}} {{#>button tag="a"
-						href="./contact.html" theme="secondary" class="js-cta" }} Contact
-						sales {{/button}}
-					</div>
-				</div>
-
-				<div class="hero__recap">{{> features-carousel}}</div>
-			</div>
-			{{/hero}}
-
-			<main>
-				{{> highlight-section}} {{> trusted}} {{> collaborate}} {{>
-				platform-pw}} {{>solution}} {{> models}} {{> testimonials}} {{> blog}}
-				{{> book}} {{> newsletter}}
-			</main>
-
-			{{> footer}}
+		<div class="hero__ill js-hero-ill" aria-hidden="true">
+			{{> illustrations/space-ill}}
 		</div>
 
-		{{> tail}}
-	</body>
+		<div class="l-container hero__container">
+			<div class="hero__content js-hero-content">
+				<div class="hero__post-preview">
+					{{#>badge
+					href="https://blog.premai.io/announcing-our-startup-grants-program/"
+					target="_blank" rel="noopener" class="js-badge" }}
+					<div class="badge__icon">{{> icons/sparkles}}</div>
+					<div class="p-sm badge__text">
+						We launched a Generative AI Startup Program! Apply now
+						<span class="badge__arrow">{{> icons/chevron-right}}</span>
+					</div>
+					{{/badge}}
+				</div>
+
+				<h1 class="hero__title js-title" data-split="words">
+					Elevate your AI Strategy with <br />
+					<span class="t-grad">Ownership</span> and
+					<span class="t-grad">Control.</span>
+				</h1>
+				<p class="h4 hero__subtitle js-subtitle" data-split="words">
+					Leverage State of the Art Generative AI for the Future of your
+					Organization. Don't lag behind.
+				</p>
+
+				<div class="hero__ctas">
+					{{#>button tag="a" href="https://app.premai.io/accounts/signup/"
+					class="js-cta" target="_blank" rel="noopener" }} Start building now
+					{{/button}} {{#>button tag="a" href="./contact.html"
+					theme="secondary" class="js-cta" }} Contact sales {{/button}}
+				</div>
+			</div>
+
+			<div class="hero__recap">{{> features-carousel}}</div>
+		</div>
+		{{/hero}}
+
+		<main>
+			{{> highlight-section}} {{> trusted}} {{> collaborate}} {{>
+			platform-pw}} {{>solution}} {{> models}} {{> testimonials}} {{> blog}}
+			{{> book}} {{> newsletter}}
+		</main>
+
+		{{> footer}}
+	</div>
+
+	{{> tail}}
+</body>
+
 </html>
