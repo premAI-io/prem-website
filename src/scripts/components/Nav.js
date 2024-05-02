@@ -89,7 +89,7 @@ class Nav {
 			hideTl
 				.to(this.DOM.navMobileLinks, {
 					yPercent: -100,
-					duration: tlProp(0.8, immediate),
+					duration: tlProp(0.2, immediate),
 					stagger: tlProp(0.1, immediate),
 					onComplete: () => {
 						gsap.set(this.DOM.navMobileLinks, {
@@ -103,8 +103,8 @@ class Nav {
 					{
 						opacity: 0,
 						yPercent: -100,
-						stagger: tlProp(0.1, immediate),
-						duration: tlProp(0.8, immediate),
+						// stagger: tlProp(0.1, immediate),
+						duration: tlProp(0.2, immediate),
 						onComplete: () => {
 							gsap.set(this.DOM.navMobileCtas, {
 								yPercent: 100,
@@ -119,7 +119,7 @@ class Nav {
 				})
 				.to(this.DOM.navMobileBg, {
 					yPercent: -100,
-					duration: tlProp(0.8, immediate),
+					duration: tlProp(0.2, immediate),
 					onComplete: () => {
 						gsap.set(this.DOM.navMobileBg, {
 							yPercent: 100,
@@ -161,7 +161,7 @@ class Nav {
 				})
 				.to(this.DOM.navMobileBg, {
 					yPercent: 0,
-					duration: 0.8,
+					duration: 0.2,
 					ease,
 				})
 				.to(
@@ -170,7 +170,7 @@ class Nav {
 						opacity: 1,
 						yPercent: 0,
 						stagger: 0.1,
-						duration: 0.8,
+						duration: 0.2,
 						ease,
 					},
 					"-=0.34",
@@ -180,7 +180,7 @@ class Nav {
 					{
 						yPercent: 0,
 						stagger: 0.1,
-						duration: 0.8,
+						duration: 0.2,
 						ease,
 					},
 					"-=0.34",
@@ -197,7 +197,7 @@ class Nav {
 	reveal = () => {
 		return gsap.timeline().to(this.DOM.nav, {
 			opacity: 1,
-			duration: 0.8,
+			duration: 0.2,
 			ease,
 			clearProps: "opacity",
 		});

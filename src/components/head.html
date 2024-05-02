@@ -30,7 +30,12 @@
 	<meta property="twitter:title" content="{{title}}" />
 	<meta property="twitter:description" content="{{description}}" />
 	<meta property="twitter:image" content="/meta.png" />
-
+	<link
+		rel="preload"
+		href="./styles/main.css"
+		as="style"
+		onload="this.onload=null;this.rel='stylesheet'"
+	/>
 	<script defer data-domain="premai.io" src="https://plausible.io/js/script.js"></script>
 	<!-- Google Tag Manager -->
 	<script>

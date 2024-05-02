@@ -145,7 +145,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 			const homeHeroSubtitleWords = homeHeroSubtitle.querySelectorAll(".word");
 
 			tl.to([homeIllOuter, homeIllMiddle, homeIllInner], {
-				duration: 2,
+				duration: 0.8,
 				y: 0,
 				stagger: 0.1,
 				scale: 1,
@@ -155,7 +155,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					homeHeroBadge,
 					{
-						duration: 1,
+						duration: 0.3,
 						opacity: 1,
 						y: 0,
 						ease,
@@ -165,7 +165,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					homeHeroTitle,
 					{
-						duration: 1,
+						duration: 0.3,
 						opacity: 1,
 						y: 0,
 						stagger: 0.02,
@@ -176,7 +176,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					homeHeroSubtitleWords,
 					{
-						duration: 1,
+						duration: 0.3,
 						opacity: 1,
 						y: 0,
 						stagger: 0.02,
@@ -187,7 +187,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					homeHeroCtas,
 					{
-						duration: 1,
+						duration: 0.3,
 						opacity: 1,
 						y: 0,
 						stagger: 0.1,
@@ -220,7 +220,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 			tl.to(
 				companyHeroBadge,
 				{
-					duration: 1,
+					duration: 0.3,
 					opacity: 1,
 					y: 0,
 					ease,
@@ -230,7 +230,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					companyHeroTitle,
 					{
-						duration: 1,
+						duration: 0.3,
 						opacity: 1,
 						y: 0,
 						stagger: 0.02,
@@ -241,7 +241,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					companyHeroSubtitleWords,
 					{
-						duration: 1,
+						duration: 0.3,
 						opacity: 1,
 						y: 0,
 						stagger: 0.01,
@@ -287,7 +287,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					companyHeroBg,
 					{
-						duration: 1,
+						duration: 0.3,
 						opacity: 1,
 						ease,
 					},
@@ -307,7 +307,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 			tl.to(
 				[centerHeroLabel, centerHeroTitle, centerHeroSubtitle, centerHeroMedia],
 				{
-					duration: 1,
+					duration: 0.3,
 					opacity: 1,
 					y: 0,
 					clearProps: "opacity,y",
@@ -323,7 +323,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				tl.to(
 					centerHeroCta,
 					{
-						duration: 1,
+						duration: 0.3,
 						opacity: 1,
 						y: 0,
 						clearProps: "opacity,y",
@@ -355,7 +355,7 @@ export const pageTransitionIn = (immediate = false) => {
 	inTl
 		.set(DOM.pageTransition, { display: "block", zIndex: 421 })
 		.to(DOM.pageTransition, {
-			duration: tlProp(1, immediate),
+			duration: tlProp(0.3, immediate),
 			opacity: 1,
 			ease,
 		});
@@ -371,7 +371,7 @@ export const pageTransitionOut = () => {
 	});
 
 	outTl.to(DOM.pageTransition, {
-		duration: 1,
+		duration: 0.3,
 		opacity: 0,
 		ease,
 	});
