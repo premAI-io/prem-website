@@ -29,6 +29,10 @@ class Application {
 
 			router.init();
 			iman.add("nav", new Nav());
+
+			document.querySelectorAll("a").forEach((e) => {
+				e.href = e.href + location.search;
+			});
 		});
 
 		window.addEventListener("load", () => {
