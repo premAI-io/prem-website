@@ -1,11 +1,9 @@
-<section class="platform" id="platform">
+<section class="platform js-platform-previews" id="platform">
 	<div class="divider-label platform__label" data-scroll-trigger="item">
 		<div class="divider-label__ill" aria-hidden="true">
 			{{> illustrations/divider-sm-left}}
 		</div>
-		<p class="divider-label__text h5">
-			Focus on your Product Innovation
-		</p>
+		<p class="divider-label__text h5">Focus on your Product Innovation</p>
 		<div class="divider-label__ill" aria-hidden="true">
 			{{> illustrations/divider-sm-right}}
 		</div>
@@ -13,93 +11,113 @@
 
 	<p class="h2 platform__title" data-scroll-trigger="item">Prem Platform</p>
 
-	<div class="platform__items glow-rad__section js-glow-cards">
+	<div class="platform__items glow-rad__section">
 		<div class="l-container platform__container js-glow-cards">
-			<div class="article platform__card glow-rad__item js-glow-card" data-scroll-trigger="item">
-				<div class="platform-card__ill">
-					<img src="./images/experiment-and-test.png" alt="Experiment and Test" draggable="false" />
-				</div>
+			<article
+				class="platform__card glow-rad__item js-glow-card"
+				data-scroll-trigger="item"
+				data-animation-id="experiment"
+			>
 				<div class="platform__card-content">
-					<p class="h3 platform__card-title">Experiment and test</p>
-					<p class="platform__card-description">
-						Simultaneously test and benchmark multiple models, comparing performance metrics tailored to
-						your use case.
+					<div class="platform__card-icon">{{> icons/lab }}</div>
+					<p class="platform__card-title">Experiment and Test</p>
+					<p class="platform__card-desc">
+						Test multiple models at the same time and challenge them on your use
+						case.
 					</p>
 				</div>
 
-				<div class="glow-rad" aria-hidden="true"></div>
-			</div>
-
-			<div class="article platform__card glow-rad__item js-glow-card" data-scroll-trigger="item">
-				<div class="platform-card__ill">
-					<img src="./images/best-model.png" alt="Launch the best model" draggable="false" />
+				<div class="platform__card-scene">
+					<div class="platform__card-ill platform__card-ill--experiment"></div>
 				</div>
+				<div class="glow-rad" aria-hidden="true"></div>
+			</article>
+
+			<article
+				class="platform__card glow-rad__item js-glow-card"
+				data-scroll-trigger="item"
+			>
 				<div class="platform__card-content">
-					<p class="h3 platform__card-title">Launch the best model</p>
-					<p class="platform__card-description">
-						Start with the best model, choosing the perfect parameters for your
-						use case. Seamlessly transition between models in production without
-						needing code edits.
+					<div class="platform__card-icon">{{> icons/rocket }}</div>
+					<p class="platform__card-title">Launch the best model</p>
+					<p class="platform__card-desc">
+						Launch the best model wit the perfect parameters for your use case.
+						Easily switch model in production without need to change any line of
+						code.
 					</p>
 				</div>
-				<div class="glow-rad" aria-hidden="true"></div>
-			</div>
 
-			<div class="article platform__card glow-rad__item js-glow-card" data-scroll-trigger="item">
-				<div class="platform-card__ill">
-					<img src="./images/integrate-ease.png" alt="Seamless Integration" draggable="false" />
-				</div>
+				<div class="platform__card-scene"></div>
+				<div class="glow-rad" aria-hidden="true"></div>
+			</article>
+
+			<article
+				class="platform__card glow-rad__item js-glow-card"
+				data-scroll-trigger="item"
+			>
 				<div class="platform__card-content">
-					<p class="h3 platform__card-title">Seamless Integration</p>
-					<p class="platform__card-description">
-						Leverage our JS and Python SDKs for effortless integration into your product. The intuitive UI
-						handles model specification, eliminating complexity.
+					<div class="platform__card-icon">{{> icons/code }}</div>
+					<p class="platform__card-title">Integrate with ease</p>
+					<p class="platform__card-desc">
+						Javascript and Python SDK to easily integrate Prem in your product.
+						No need to specify the model. Everything is handled by UI.
 					</p>
 				</div>
-				<div class="glow-rad" aria-hidden="true"></div>
-			</div>
 
-			<div class="article platform__card glow-rad__item js-glow-card" data-scroll-trigger="item">
-				<div class="platform-card__ill">
-					<img src="./images/monitor-ai-case.png" alt="Monitor Your AI case" draggable="false" />
-				</div>
+				<div class="platform__card-scene"></div>
+				<div class="glow-rad" aria-hidden="true"></div>
+			</article>
+
+			<article
+				class="platform__card glow-rad__item js-glow-card"
+				data-scroll-trigger="item"
+			>
 				<div class="platform__card-content">
-					<p class="h3 platform__card-title">Proactive Monitoring</p>
-					<p class="platform__card-description">
-						Maintain control over model outputs for your use case, with the ability to refine prompts
-						dynamically for optimal performance.
+					<div class="platform__card-icon">{{> icons/desktop-pc }}</div>
+					<p class="platform__card-title">Monitor your AI use case</p>
+					<p class="platform__card-desc">
+						Control the output of your models with ease and adjust prompt
+						accordingly.
 					</p>
 				</div>
-				<div class="glow-rad" aria-hidden="true"></div>
-			</div>
 
-			<div class="article platform__card glow-rad__item js-glow-card" data-scroll-trigger="item">
-				<div class="platform-card__ill">
-					<img src="./images/connect-documents.png" alt="Connect your documents" draggable="false" />
-				</div>
+				<div class="platform__card-scene"></div>
+				<div class="glow-rad" aria-hidden="true"></div>
+			</article>
+
+			<article
+				class="platform__card glow-rad__item js-glow-card"
+				data-scroll-trigger="item"
+			>
 				<div class="platform__card-content">
-					<p class="h3 platform__card-title">Data Integration</p>
-					<p class="platform__card-description">
-						Enrich your AI assistant with domain-specific knowledge by seamlessly connecting and integrating
-						multiple data sources with a single click.
+					<div class="platform__card-icon">{{> icons/folder-plus }}</div>
+					<p class="platform__card-title">Connect your documents</p>
+					<p class="platform__card-desc">
+						Enhance the Assistant with your Documents Knowledge. Connect
+						multiple data sources in a click.
 					</p>
 				</div>
-				<div class="glow-rad" aria-hidden="true"></div>
-			</div>
 
-			<div class="article platform__card glow-rad__item js-glow-card" data-scroll-trigger="item">
-				<div class="platform-card__ill">
-					<img src="./images/models-training.png" alt="Train your own models" draggable="false" />
-				</div>
+				<div class="platform__card-scene"></div>
+				<div class="glow-rad" aria-hidden="true"></div>
+			</article>
+
+			<article
+				class="platform__card glow-rad__item js-glow-card"
+				data-scroll-trigger="item"
+			>
 				<div class="platform__card-content">
-					<p class="h3 platform__card-title">Train your Model</p>
-					<p class="platform__card-description">
-						Leverage our autonomous fine-tuning and training agents for Continuous Model Refinement,
-						ensuring real-time quality improvements to your AI models.
+					<div class="platform__card-icon">{{> icons/gym }}</div>
+					<p class="platform__card-title">Train your own Model</p>
+					<p class="platform__card-desc">
+						Exploit our autonomous fine-tuning agent for online learning and
+						continuous quality improvements.
 					</p>
 				</div>
+
+				<div class="platform__card-scene"></div>
 				<div class="glow-rad" aria-hidden="true"></div>
-			</div>
+			</article>
 		</div>
 
 		<div class="platform__cta" data-scroll-trigger="item">

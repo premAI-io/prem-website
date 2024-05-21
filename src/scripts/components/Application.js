@@ -4,10 +4,10 @@ import iman from "./InstanceManager";
 import GlowCards from "./GlowCards";
 import HashScroll from "./HashScroll";
 import layout from "./Layout";
-// import LazyLoader from "./LazyLoader";
 import MarqueeManager from "./MarqueeManager";
 import Nav from "./Nav";
 import Newsletter from "./Newsletter";
+import PlatformPreviews from "./PlatformPreviews";
 import router from "./Router";
 import ScrollAnimator from "./ScrollAnimator";
 import splitText from "./SplitText";
@@ -46,6 +46,7 @@ class Application {
 			iman.add("testimonials", new Testimonials());
 			iman.add("glowCards", new GlowCards());
 			iman.add("team", new Team());
+			iman.add("platformPreviews", new PlatformPreviews());
 			iman.add("newsletter", new Newsletter());
 			iman.add("scrollAnimator", new ScrollAnimator());
 
