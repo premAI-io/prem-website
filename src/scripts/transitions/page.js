@@ -257,16 +257,12 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 					},
 					0,
 				)
-				.to(
-					companyIllBalls,
-					{
-						duration: 0.15,
-						scale: 1,
-						stagger: 0.05,
-						ease,
-					},
-					"-=1",
-				)
+				.to(companyIllBalls, {
+					duration: 0.15,
+					scale: 1,
+					stagger: 0.05,
+					ease,
+				})
 				.to(companyIllGlow, {
 					duration: 0.15,
 					opacity: 1,
