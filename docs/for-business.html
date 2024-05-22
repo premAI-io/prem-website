@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en-US">
 <head itemscope itemtype="http://schema.org/WebSite">
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+	<script>
+		// use a script tag or an external JS file
+		document.addEventListener("DOMContentLoaded", (event) => {
+			gsap.registerPlugin(ScrollTrigger, Draggable);
+			// gsap code here!
+		});
+	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Prem - AI that you Own. Always - Business</title>
 	<meta name="description" content="Accelerating the advent of personalized LLMs." />
@@ -32,7 +43,11 @@
 	<meta property="twitter:title" content="Prem - AI that you Own. Always - Business" />
 	<meta property="twitter:description" content="Accelerating the advent of personalized LLMs." />
 	<meta property="twitter:image" content="/meta.png" />
-	<script defer data-domain="premai.io" src="https://plausible.io/js/script.js"></script>
+	<script
+		defer
+		data-domain="premai.io"
+		src="https://plausible.io/js/script.js"
+	></script>
 	<!-- Google Tag Manager -->
 	<script>
 		(function (w, d, s, l, i) {
@@ -52,7 +67,10 @@
 	<!-- End Google Tag Manager -->
 
 	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-N4M33PFNYF"></script>
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=G-N4M33PFNYF"
+	></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() {
@@ -65,17 +83,23 @@
 	<!-- Hotjar Tracking Code for https://premai.io -->
 	<script>
 		(function (h, o, t, j, a, r) {
-			h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+			h.hj =
+				h.hj ||
+				function () {
+					(h.hj.q = h.hj.q || []).push(arguments);
+				};
 			h._hjSettings = { hjid: 4933213, hjsv: 6 };
-			a = o.getElementsByTagName('head')[0];
-			r = o.createElement('script'); r.async = 1;
+			a = o.getElementsByTagName("head")[0];
+			r = o.createElement("script");
+			r.async = 1;
 			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
 			a.appendChild(r);
-		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+		})(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
 	</script>
   <script type="module" crossorigin src="./assets/scripts/main.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/css/main.css">
 </head>
+
 <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
 	<!-- Google Tag Manager (noscript) -->
 <noscript
