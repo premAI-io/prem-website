@@ -37,6 +37,7 @@ export default defineConfig({
 	build: {
 		outDir: "../docs",
 		rollupOptions: {
+			external:["gsap", 'gsap/ScrollTrigger', "gsap/Draggable"],
 			output: {
 				assetFileNames: (assetInfo) => {
 					let extType = assetInfo.name.split(".").at(-1);

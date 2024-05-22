@@ -1,5 +1,4 @@
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
 
 import {
 	dividerLabelHide,
@@ -57,8 +56,6 @@ export const scrollTriggerTransitions = {
 		}
 	},
 	activate: (elements) => {
-		gsap.registerPlugin(ScrollTrigger);
-
 		for (let i = 0; i < elements.length; i++) {
 			const element = elements[i];
 			const scrollType = element.dataset.scrollTrigger;

@@ -1,5 +1,5 @@
-import { gsap } from "gsap";
-import { Draggable } from "gsap/Draggable";
+// import { gsap } from "gsap";
+// import { Draggable } from "gsap/Draggable";
 
 export const ease = "power4.inOut";
 export const expo = "expo.inOut";

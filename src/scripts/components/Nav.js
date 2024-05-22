@@ -1,10 +1,7 @@
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
 
 import router from "./Router";
 import { ease, tlProp } from "../helpers/animation";
-
-gsap.registerPlugin(ScrollTrigger);
 
 class Nav {
 	constructor() {
@@ -161,7 +158,7 @@ class Nav {
 				})
 				.to(this.DOM.navMobileBg, {
 					yPercent: 0,
-					duration: 0.2,
+					duration: 0.1,
 					ease,
 				})
 				.to(
@@ -170,7 +167,7 @@ class Nav {
 						opacity: 1,
 						yPercent: 0,
 						stagger: 0.1,
-						duration: 0.2,
+						duration: 0.1,
 						ease,
 					},
 					"-=0.34",
@@ -180,7 +177,7 @@ class Nav {
 					{
 						yPercent: 0,
 						stagger: 0.1,
-						duration: 0.2,
+						duration: 0.1,
 						ease,
 					},
 					"-=0.34",

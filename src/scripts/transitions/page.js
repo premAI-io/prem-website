@@ -1,4 +1,3 @@
-import { gsap } from "gsap";
 import iman from "../components/InstanceManager";
 
 import { ease, tlProp } from "../helpers/animation";
@@ -145,7 +144,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 			const homeHeroSubtitleWords = homeHeroSubtitle.querySelectorAll(".word");
 
 			tl.to([homeIllOuter, homeIllMiddle, homeIllInner], {
-				duration: 0.8,
+				duration: 0.3,
 				y: 0,
 				stagger: 0.1,
 				scale: 1,
@@ -160,7 +159,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 						y: 0,
 						ease,
 					},
-					0.75,
+					0.3,
 				)
 				.to(
 					homeHeroTitle,
@@ -171,7 +170,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 						stagger: 0.02,
 						ease,
 					},
-					0.75,
+					0.3,
 				)
 				.to(
 					homeHeroSubtitleWords,
@@ -182,7 +181,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 						stagger: 0.02,
 						ease,
 					},
-					0.75,
+					0.3,
 				)
 				.to(
 					homeHeroCtas,
@@ -194,11 +193,11 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 						clearProps: "opacity,y",
 						ease,
 					},
-					0.75,
+					0.3,
 				);
 
 			if (featuresCarouselInstance) {
-				tl.add(featuresCarouselInstance.reveal(), 0.75);
+				tl.add(featuresCarouselInstance.reveal(), 0.5);
 			}
 			break;
 		}
@@ -220,56 +219,52 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 			tl.to(
 				companyHeroBadge,
 				{
-					duration: 0.3,
+					duration: 0.15,
 					opacity: 1,
 					y: 0,
 					ease,
 				},
-				0.75,
+				0.3,
 			)
 				.to(
 					companyHeroTitle,
 					{
-						duration: 0.3,
+						duration: 0.15,
 						opacity: 1,
 						y: 0,
 						stagger: 0.02,
 						ease,
 					},
-					0.75,
+					0.3,
 				)
 				.to(
 					companyHeroSubtitleWords,
 					{
-						duration: 0.3,
+						duration: 0.15,
 						opacity: 1,
 						y: 0,
 						stagger: 0.01,
 						ease,
 					},
-					0.75,
+					0.3,
 				)
 				.to(
 					companyIllStripe,
 					{
-						duration: 2,
+						duration: 0.15,
 						strokeDashoffset: 0,
 						ease,
 					},
 					0,
 				)
-				.to(
-					companyIllBalls,
-					{
-						duration: 0.8,
-						scale: 1,
-						stagger: 0.05,
-						ease,
-					},
-					"-=1",
-				)
+				.to(companyIllBalls, {
+					duration: 0.15,
+					scale: 1,
+					stagger: 0.05,
+					ease,
+				})
 				.to(companyIllGlow, {
-					duration: 0.8,
+					duration: 0.15,
 					opacity: 1,
 					scale: 1,
 					ease,
@@ -277,21 +272,21 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					companyIllRad,
 					{
-						duration: 2,
+						duration: 0.15,
 						scale: 1,
 						opacity: 0.45,
 						ease,
 					},
-					1,
+					0.4,
 				)
 				.to(
 					companyHeroBg,
 					{
-						duration: 0.3,
+						duration: 0.15,
 						opacity: 1,
 						ease,
 					},
-					1.5,
+					0.3,
 				);
 			break;
 		}
@@ -307,7 +302,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 			tl.to(
 				[centerHeroLabel, centerHeroTitle, centerHeroSubtitle, centerHeroMedia],
 				{
-					duration: 0.3,
+					duration: 0.05,
 					opacity: 1,
 					y: 0,
 					clearProps: "opacity,y",
@@ -323,7 +318,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				tl.to(
 					centerHeroCta,
 					{
-						duration: 0.3,
+						duration: 0.05,
 						opacity: 1,
 						y: 0,
 						clearProps: "opacity,y",
@@ -339,7 +334,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 	}
 
 	if (navInstance) {
-		tl.add(navInstance.reveal(), 0.5);
+		tl.add(navInstance.reveal(), 0.1);
 	}
 
 	return tl;
@@ -355,7 +350,7 @@ export const pageTransitionIn = (immediate = false) => {
 	inTl
 		.set(DOM.pageTransition, { display: "block", zIndex: 421 })
 		.to(DOM.pageTransition, {
-			duration: tlProp(0.3, immediate),
+			duration: tlProp(0.05, immediate),
 			opacity: 1,
 			ease,
 		});
@@ -378,55 +373,3 @@ export const pageTransitionOut = () => {
 
 	return outTl;
 };
-
-// Router page transition
-// export const defaultTransition = () => {
-//   return {
-//     name: "default-transition",
-//     leave() {
-//       const done = this.async()
-//       const outTl = gsap.timeline({
-//         onComplete: () => {
-//           // Destroy all active instances
-//           iman.map("destroy")
-//           done()
-//         }
-//       })
-
-//       outTl.add(pageTransitionIn())
-
-//       return outTl
-//     },
-//     enter({ next }) {
-//       const done = this.async()
-//       const nextContainer = next.container
-//       const nextPageName = next.namespace
-
-//       done()
-
-//       window.scrollTo(0, 0)
-//       router.setActiveView(nextPageName)
-//       iman.map("reinit", nextContainer)
-
-//       // Hide new page
-//       hidePage({
-//         pageName: nextPageName,
-//         container: nextContainer,
-//         immediate: true
-//       })
-
-//       const inTl = gsap.timeline({
-//         delay: 0.2,
-//       })
-
-//       inTl
-//         .add(pageTransitionOut())
-//         .add(revealPage({
-//           pageName: nextPageName,
-//           container: nextContainer
-//         }), 0)
-
-//       return inTl
-//     },
-//   }
-// }

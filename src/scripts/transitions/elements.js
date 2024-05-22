@@ -1,4 +1,4 @@
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 import iman from "../components/InstanceManager";
 import { ease } from "../helpers/animation";
 
@@ -26,7 +26,7 @@ export const dividerLabelReveal = (element) => {
 	return gsap
 		.timeline()
 		.to(labelIlls, {
-			duration: 1,
+			duration: 0.2,
 			clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
 			stagger: 0.08,
 			clearProps: "clipPath",
@@ -35,7 +35,7 @@ export const dividerLabelReveal = (element) => {
 		.to(
 			labelText,
 			{
-				duration: 1,
+				duration: 0.2,
 				yPercent: 0,
 				clearProps: "y",
 				ease,
@@ -68,7 +68,7 @@ export const textLinesReveal = (element) => {
 
 	if (linesInstance) {
 		return gsap.to(linesInstance.lines, {
-			duration: 1,
+			duration: 0.2,
 			yPercent: 0,
 			opacity: 1,
 			stagger: 0.08,
