@@ -1,6 +1,6 @@
 import iman from "../components/InstanceManager";
 
-import { ease, tlProp } from "../helpers/animation";
+import { ease, expo, tlProp } from "../helpers/animation";
 
 export const hidePage = ({
 	pageName,
@@ -116,6 +116,12 @@ export const hidePage = ({
 export const revealPage = ({ pageName, container = document, cb = false }) => {
 	const tl = gsap.timeline({
 		onComplete: () => {
+			gsap.to("#product-hunt-button", {
+				scale: 1,
+				opacity: 1,
+				duration: 0.25,
+				expo,
+			});
 			if (pageName === "homepage") {
 				const featuresCarouselInstance = iman.get("featuresCarousel");
 				if (featuresCarouselInstance) {
