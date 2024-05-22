@@ -219,7 +219,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 			tl.to(
 				companyHeroBadge,
 				{
-					duration: 0.2,
+					duration: 0.15,
 					opacity: 1,
 					y: 0,
 					ease,
@@ -229,7 +229,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					companyHeroTitle,
 					{
-						duration: 0.2,
+						duration: 0.15,
 						opacity: 1,
 						y: 0,
 						stagger: 0.02,
@@ -240,7 +240,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					companyHeroSubtitleWords,
 					{
-						duration: 0.2,
+						duration: 0.15,
 						opacity: 1,
 						y: 0,
 						stagger: 0.01,
@@ -251,7 +251,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					companyIllStripe,
 					{
-						duration: 0.2,
+						duration: 0.15,
 						strokeDashoffset: 0,
 						ease,
 					},
@@ -260,7 +260,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					companyIllBalls,
 					{
-						duration: 0.2,
+						duration: 0.15,
 						scale: 1,
 						stagger: 0.05,
 						ease,
@@ -268,7 +268,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 					"-=1",
 				)
 				.to(companyIllGlow, {
-					duration: 0.2,
+					duration: 0.15,
 					opacity: 1,
 					scale: 1,
 					ease,
@@ -276,7 +276,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					companyIllRad,
 					{
-						duration: 0.2,
+						duration: 0.15,
 						scale: 1,
 						opacity: 0.45,
 						ease,
@@ -286,7 +286,7 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 				.to(
 					companyHeroBg,
 					{
-						duration: 0.2,
+						duration: 0.15,
 						opacity: 1,
 						ease,
 					},
