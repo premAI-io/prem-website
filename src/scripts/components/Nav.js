@@ -1,10 +1,7 @@
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
 
 import router from "./Router";
 import { ease, tlProp } from "../helpers/animation";
-
-gsap.registerPlugin(ScrollTrigger);
 
 class Nav {
 	constructor() {

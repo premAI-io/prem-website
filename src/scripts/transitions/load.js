@@ -1,4 +1,4 @@
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 import iman from "../components/InstanceManager";
 import router from "../components/Router";
 import {

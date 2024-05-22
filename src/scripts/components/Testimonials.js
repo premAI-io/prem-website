@@ -1,11 +1,8 @@
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
 
 import layout from "./Layout";
 
 import { ease } from "../helpers/animation";
-
-gsap.registerPlugin(ScrollTrigger);
 
 class Testimonials {
 	constructor() {
