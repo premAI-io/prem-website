@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en-US">
+	{{> head}}
+
+	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+		{{> pre-content}} {{> page-loader}}
+
+		<div class="page__wrap" data-router-view="feature" id="top">
+			{{> nav}} {{#>hero variant="center" class="is-feature js-hero" }}
+
+			<div class="hero__ill" aria-hidden="true">
+				{{> illustrations/bg-ellipse}}
+			</div>
+
+			<div class="l-container hero__container">
+				<div class="divider-label hero__divider js-divider-label">
+					<div
+						class="divider-label__ill js-divider-label-ill"
+						aria-hidden="true"
+					>
+						{{> illustrations/divider-sm-left}}
+					</div>
+					<p class="divider-label__text h5 js-divider-label-text">Prem Lab</p>
+					<div
+						class="divider-label__ill js-divider-label-ill"
+						aria-hidden="true"
+					>
+						{{> illustrations/divider-sm-right}}
+					</div>
+				</div>
+
+				<h1 class="hero__title js-title" data-split="words">
+					<span class="t-grad">Compare multiple LLMS</span> <br />
+					at the same time.
+				</h1>
+
+				<p class="hero__subtitle js-subtitle" data-split="words">
+					Empirically test different models over the same prompt and choose the
+					right onw for your use case.
+				</p>
+
+				<div class="hero__cta">
+					{{#>button tag="a" href="https://app.premai.io/accounts/signup/"
+					target="_blank" rel="noopener" class="js-cta" }} Try Prem now
+					{{/button}}
+				</div>
+
+				<div class="hero__media js-media">
+					<div class="hero__feature-container">
+						<div class="hero__feature-media">
+							<img
+								src="./images/experiment-and-test.png"
+								alt="Experiment and Test"
+								draggable="false"
+								class="hero__feature-img"
+							/>
+						</div>
+					</div>
+
+					<div class="hero__img-ill" aria-hidden="true">
+						{{> illustrations/bg-radial-lines}}
+					</div>
+				</div>
+			</div>
+
+			{{/hero}}
+
+			<main>
+				{{#>timeline variant="media" }}
+				<div class="timeline__item" data-scroll-trigger="item">
+					<div class="timeline__item-content">
+						<p class="timeline__item-title h3">1. Select the models</p>
+						<p class="timeline__item-text">
+							Decide which LLMs you want to compare across a complete and update
+							list.
+						</p>
+					</div>
+					<div class="timeline__media">
+						<div class="timeline__media-wrap">
+							<img src="./images/sel-models.png" alt="" draggable="false" />
+						</div>
+					</div>
+
+					<div class="timeline__item-icon" aria-hidden="true"></div>
+				</div>
+
+				<div class="timeline__item" data-scroll-trigger="item">
+					<div class="timeline__item-content">
+						<p class="timeline__item-title h3">2. Choose your parameters</p>
+						<p class="timeline__item-text">
+							Decide which LLMs you want to compare across a complete and update
+							list.
+						</p>
+					</div>
+					<div class="timeline__media">
+						<div class="timeline__media-wrap">
+							<img src="./images/sel-models.png" alt="" draggable="false" />
+						</div>
+					</div>
+
+					<div class="timeline__item-icon" aria-hidden="true"></div>
+				</div>
+
+				{{/timeline}}
+
+				<section class="solution solution--feature">
+					<div class="divider-label solution__label" data-scroll-trigger="item">
+						<div class="divider-label__ill" aria-hidden="true">
+							{{> illustrations/divider-sm-left}}
+						</div>
+						<p class="divider-label__text h5">Lorem ipsum dolor</p>
+						<div class="divider-label__ill" aria-hidden="true">
+							{{> illustrations/divider-sm-right}}
+						</div>
+					</div>
+
+					<p class="h2 solution__title" data-scroll-trigger="item">
+						<span class="t-grad">Benefits</span>
+					</p>
+
+					<div data-scroll-trigger="anim-group">
+						<div class="solution__features js-anim-group">
+							<article class="solution__feature js-anim-item">
+								<div class="solution__feature-icon">
+									{{> icons/free-rights}}
+								</div>
+								<p class="solution__feature-text">
+									<strong>Prem Playground is Free.</strong> <br /><br />
+									Experiment and test with all the state of the art LLMs
+									available on the market.
+								</p>
+							</article>
+							<article class="solution__feature js-anim-item">
+								<div class="solution__feature-icon">{{> icons/settings}}</div>
+								<p class="solution__feature-text">
+									<strong>Make your Decision with Technical Insights.</strong
+									><br /><br />
+									Compare latency and quality in a single sandbox.
+								</p>
+							</article>
+							<article class="solution__feature js-anim-item">
+								<div class="solution__feature-icon">
+									{{> icons/adjustments}}
+								</div>
+								<p class="solution__feature-text">
+									<strong>Flexible for Advance Usage.</strong><br /><br />
+									Tweak the parameters for your needs.
+								</p>
+							</article>
+						</div>
+					</div>
+				</section>
+
+				<div class="glow-rad__section js-glow-cards">
+					<section
+						class="status status--llms glow-rad__item js-glow-card"
+						data-scroll-trigger="anim-group"
+					>
+						<div class="status__content js-anim-group">
+							<p class="status__title js-anim-item">
+								Choose the LLMs that fits your needs,
+								<span class="t-grad">it's Free</span>
+							</p>
+							<p class="status__text js-anim-item">
+								Let’s connect and explore how Prem can tailor solutions to meet
+								your unique needs.
+							</p>
+							<p class="h5 status__text js-anim-item"></p>
+							<div class="status__cta js-anim-item">
+								{{#>button tag="a" href="https://app.premai.io/accounts/signup/"
+								target="_blank" rel="noopener" }} Try Prem now {{/button}}
+							</div>
+						</div>
+
+						<div class="status__ill js-anim-group" aria-hidden="true">
+							<img
+								src="./images/llms.png"
+								alt="Status page screens"
+								draggable="false"
+								class="status__ill-main js-anim-item"
+							/>
+						</div>
+
+						<div class="glow-rad" aria-hidden="true"></div>
+					</section>
+				</div>
+			</main>
+
+			{{> footer}}
+		</div>
+
+		{{> tail}}
+	</body>
+</html>

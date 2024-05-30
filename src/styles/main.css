@@ -25,7 +25,9 @@
 @import "./components/certifications.css";
 @import "./components/platform-pw.css";
 @import "./components/platform.css";
+@import "./components/model-card.css";
 @import "./components/models.css";
+@import "./components/models-slm.css";
 @import "./components/solution.css";
 @import "./components/compute.css";
 @import "./components/testimonials.css";
@@ -35,6 +37,7 @@
 @import "./components/customer.css";
 @import "./components/vision.css";
 @import "./components/mission.css";
+@import "./components/slm.css";
 @import "./components/services.css";
 @import "./components/workflow.css";
 @import "./components/timeline.css";

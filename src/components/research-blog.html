@@ -1,0 +1,73 @@
+<section class="blog__section" data-scroll-trigger="anim-group">
+	<div class="divider-label blog__label" data-scroll-trigger="item">
+		<div class="divider-label__ill" aria-hidden="true">
+			{{> illustrations/divider-sm-left}}
+		</div>
+		<p class="divider-label__text h5">Latest communications</p>
+		<div class="divider-label__ill" aria-hidden="true">
+			{{> illustrations/divider-sm-right}}
+		</div>
+	</div>
+
+	<h2 class="blog__title" data-scroll-trigger="item">
+		The Newest Insights and <br />
+		Research from Our AI Team
+	</h2>
+
+	<div class="blog__previews-container js-anim-group">
+		<div class="blog__previews">
+			<a
+				href="https://blog.premai.io/slm-training/"
+				class="blog__card js-anim-item"
+				target="_blank"
+				rel="noopener"
+			>
+				<div class="blog__card__image__wrap">
+					<img
+						src="./images/blog/slm-journey.webp"
+						alt="SLM Journey Unveiled"
+						class="blog__card__image"
+						draggable="false"
+						loading="lazy"
+					/>
+				</div>
+
+				<p class="blog__card__title">SLM Journey Unveiled</p>
+				<p class="blog__card__excerpt">
+					In recent months, the landscape of language models has been enriched
+					by the emergence of several small language models...
+				</p>
+				<div class="blog__card__end">By Nicola Sosio</div>
+			</a>
+
+			<a
+				href="https://blog.premai.io/introducing-prem-1b/"
+				class="blog__card js-anim-item"
+				target="_blank"
+				rel="noopener"
+			>
+				<div class="blog__card__image__wrap">
+					<img
+						src="./images/blog/introducing-prem1b.jpeg"
+						alt="Introducing Prem-1B"
+						class="blog__card__image"
+						draggable="false"
+						loading="lazy"
+					/>
+				</div>
+
+				<p class="blog__card__title">Introducing Prem-1B</p>
+				<p class="blog__card__excerpt">
+					With great enthusiasm, we unveil the Prem-1B series, an open-source,
+					multipurpose large language model developed by Prem AI...
+				</p>
+				<div class="blog__card__end">By Rohit Gupta, Nicola Sosio</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="blog__cta" data-scroll-trigger="item">
+		{{#>button tag="a" href="https://blog.premai.io/" target="_blank"
+		rel="noopener" }} Discover more {{/button}}
+	</div>
+</section>
