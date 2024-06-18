@@ -1,0 +1,26 @@
+.slm {
+	@apply mb-28 lg:mb-48;
+}
+
+.slm__container {
+	@apply flex-col md:flex-row items-center max-w-[1200px] justify-between;
+}
+
+.slm__content {
+	@apply w-full md:w-[54%];
+}
+
+.slm__title {
+	@apply text-[28px] md:text-[32px] xl:text-[44px] leading-[1.136] font-medium mb-5;
+}
+
+.slm__text {
+	@apply text-[16px] lg:text-[18px] leading-[1.333] text-gray-200;
+}
+
+.slm__media {
+	@apply w-full md:w-[44%] xl:w-[40%];
+	svg {
+		@apply w-full h-auto;
+	}
+}

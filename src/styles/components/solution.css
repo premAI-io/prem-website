@@ -79,6 +79,12 @@
 	}
 }
 
+.solution--feature {
+	.solution__title {
+		@apply mb-20;
+	}
+}
+
 @media screen and (max-width: 767px) {
 	.solution__stats {
 		scroll-snap-type: x mandatory;

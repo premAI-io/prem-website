@@ -19,6 +19,7 @@ module.exports = {
 			pink: "#f58e8e",
 			wine: "#b57487",
 			caramel: "#f2d398",
+			orange: "#fbb35e",
 			malibu: "#7f96ff",
 		},
 		extend: {

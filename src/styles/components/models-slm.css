@@ -1,0 +1,31 @@
+.models-slm {
+	@apply mb-56;
+}
+
+.models-slm__container {
+	@apply flex-col;
+}
+
+.models-slm__label {
+	@apply mb-8;
+}
+
+.models-slm__title {
+	@apply text-center mb-8;
+}
+
+.models-slm__text {
+	@apply text-center text-gray-200 mb-16 max-w-[450px] mx-auto;
+}
+
+.models-slm__content {
+	@apply flex-col flex justify-center items-stretch gap-y-7 md:gap-y-0 gap-x-0 md:flex-row md:gap-x-7 lg:gap-x-14 mb-16;
+}
+
+.models-slm__item {
+	@apply w-full md:w-[30%] lg:w-[314px];
+}
+
+.models-slm__cta {
+	@apply flex justify-center;
+}

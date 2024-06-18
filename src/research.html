@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-US">
+	{{> head}}
+
+	<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+		{{> pre-content}} {{> page-loader}}
+
+		<div class="page__wrap" data-router-view="research" id="top">
+			{{> nav}} {{#>hero variant="center" class="is-research js-hero" }}
+
+			<div class="hero__ill" aria-hidden="true">
+				{{> illustrations/bg-ellipse}}
+			</div>
+
+			<div class="l-container hero__container">
+				<h1 class="hero__title js-title" data-split="words">
+					The Future is small
+				</h1>
+
+				<div class="hero__cta">
+					{{#>button tag="a" href="https://app.premai.io/accounts/signup/"
+					target="_blank" rel="noopener" class="js-cta" }} Try it now
+					{{/button}}
+				</div>
+
+				<div class="hero__media js-media">
+					<img
+						src="./images/research.png"
+						alt="Business Related screens overview"
+						class="hero__img"
+						draggable="false"
+					/>
+				</div>
+			</div>
+
+			{{/hero}}
+
+			<main>{{> slm}} {{> models-slm}} {{> research-blog}} {{> book}}</main>
+
+			{{> footer}}
+		</div>
+
+		{{> tail}}
+	</body>
+</html>

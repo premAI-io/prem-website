@@ -41,3 +41,29 @@
 .status__ill-mobile {
 	@apply w-full h-auto md:hidden block;
 }
+
+.status--llms {
+	@apply relative justify-between lg:py-16 xl:py-36 lg:px-16;
+
+	&::before {
+		content: "";
+		@apply absolute inset-0 rounded-2xl pointer-events-none;
+		background: radial-gradient(
+			108.94% 125.47% at 120% 80%,
+			rgba(245, 142, 142, 0.35) 0%,
+			rgba(127, 150, 255, 0.02) 88.5%
+		);
+	}
+
+	.status__ill {
+		@apply relative right-auto bottom-auto w-[90%] md:w-[45%];
+	}
+
+	.status__title {
+		@apply text-[28px] lg:text-[36px];
+	}
+
+	.status__content {
+		@apply order-1 mb-5 md:mb-0 md:order-1;
+	}
+}

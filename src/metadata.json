@@ -34,6 +34,16 @@
 		"title": "Prem - AI that you Own. Always - Cookies",
 		"description": "Accelerating the advent of personalized LLMs."
 	},
+	"/research.html": {
+		"pageName": "research",
+		"title": "Prem - AI that you Own. Always - Research",
+		"description": "Accelerating the advent of personalized LLMs."
+	},
+	"/template-feature.html": {
+		"pageName": "template-feature",
+		"title": "Prem - AI that you Own. Always - Template Feature",
+		"description": "Accelerating the advent of personalized LLMs."
+	},
 	"/terms.html": {
 		"pageName": "terms",
 		"title": "Prem - AI that you Own. Always - Terms",
