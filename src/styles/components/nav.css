@@ -28,11 +28,11 @@
 }
 
 .nav__items {
-	@apply hidden lg:flex justify-center items-center py-2 px-4 gap-x-3 rounded-3xl border border-white border-opacity-20 bg-gray-800;
+	@apply hidden lg:flex justify-center items-center px-3 gap-x-2 py-2 xl:px-4 xl:gap-x-3 rounded-3xl border border-white border-opacity-20 bg-gray-800;
 }
 
 .nav__link {
-	@apply relative flex py-3 px-4 rounded-3xl border-b border-b-gray-800;
+	@apply relative flex text-[14px] py-2 px-3 xl:py-3 xl:px-4 rounded-3xl border-b border-b-gray-800;
 	transition: border-color 0.4s var(--ease-power4);
 
 	&::after {

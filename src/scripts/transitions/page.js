@@ -85,7 +85,9 @@ export const hidePage = ({
 			break;
 		}
 		case "developers":
-		case "business": {
+		case "business":
+		case "research":
+		case "feature": {
 			const centerHero = container.querySelector(".js-hero");
 			const centerHeroLabel = centerHero.querySelector(".js-divider-label");
 			const centerHeroTitle = centerHero.querySelector(".js-title");
@@ -93,13 +95,21 @@ export const hidePage = ({
 			const centerHeroMedia = centerHero.querySelector(".js-media");
 			const centerHeroCta = centerHero.querySelector(".js-cta");
 
-			gsap.set(
-				[centerHeroLabel, centerHeroTitle, centerHeroSubtitle, centerHeroMedia],
-				{
+			if (centerHeroLabel) {
+				gsap.set(centerHeroLabel, { opacity: 0, y: 40 });
+			}
+
+			gsap.set([centerHeroTitle, centerHeroMedia], {
+				opacity: 0,
+				y: 40,
+			});
+
+			if (centerHeroSubtitle) {
+				gsap.set(centerHeroSubtitle, {
 					opacity: 0,
 					y: 40,
-				},
-			);
+				});
+			}
 
 			if (centerHeroCta) {
 				gsap.set(centerHeroCta, { opacity: 0, y: 40 });
@@ -297,7 +307,9 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 			break;
 		}
 		case "developers":
-		case "business": {
+		case "business":
+		case "research":
+		case "feature": {
 			const centerHero = container.querySelector(".js-hero");
 			const centerHeroLabel = centerHero.querySelector(".js-divider-label");
 			const centerHeroTitle = centerHero.querySelector(".js-title");
@@ -305,20 +317,31 @@ export const revealPage = ({ pageName, container = document, cb = false }) => {
 			const centerHeroMedia = centerHero.querySelector(".js-media");
 			const centerHeroCta = centerHero.querySelector(".js-cta");
 
-			tl.to(
-				[centerHeroLabel, centerHeroTitle, centerHeroSubtitle, centerHeroMedia],
-				{
-					duration: 0.05,
-					opacity: 1,
-					y: 0,
-					clearProps: "opacity,y",
-					stagger: {
-						from: "end",
-						amount: 0.1,
-					},
-					ease,
+			tl.to([centerHeroTitle, centerHeroSubtitle, centerHeroMedia], {
+				duration: 0.05,
+				opacity: 1,
+				y: 0,
+				clearProps: "opacity,y",
+				stagger: {
+					from: "end",
+					amount: 0.1,
 				},
-			);
+				ease,
+			});
+
+			if (centerHeroLabel) {
+				tl.to(
+					centerHeroLabel,
+					{
+						duration: 0.05,
+						opacity: 1,
+						y: 0,
+						clearProps: "opacity,y",
+						ease,
+					},
+					0,
+				);
+			}
 
 			if (centerHeroCta) {
 				tl.to(
